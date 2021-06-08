@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/profesor_drawer_layout"
     tools:context=".ProfesorMenuActivity">
 
     <LinearLayout
@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Home"
+            android:text="Profesor Home"
             android:textSize="50sp"
             android:textStyle="bold"
             android:gravity="center"/>

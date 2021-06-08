@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MenuActivity extends AppCompatActivity {
     //Inicializar variable
     DrawerLayout drawerLayout;
@@ -87,6 +89,8 @@ public class MenuActivity extends AppCompatActivity {
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                //Cerrar sesion
+                FirebaseAuth.getInstance().signOut();
                 //Terminar actividad
                 activity.finishAffinity();
                 //Salir de la app
