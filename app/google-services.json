@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "217336200457",
+    "firebase_url": "https://asesoriastecnm-default-rtdb.firebaseio.com",
+    "project_id": "asesoriastecnm",
+    "storage_bucket": "asesoriastecnm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217336200457:android:be52bd3a096b2a3b5ba7d8",
+        "android_client_info": {
+          "package_name": "com.example.proyectoasesoriastecnm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217336200457-dp6q3ui13bsu3us5l26kuk3lt2p115gc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyectoasesoriastecnm",
+            "certificate_hash": "679040c257f7a45546b40a55c42b28c69f0f6bd6"
+          }
+        },
+        {
+          "client_id": "217336200457-rbqi8ba4e6856qimp7btchcd23q014at.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzgHl0-5DUnVUPVNPEIpJOJtskZvC-CqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217336200457-rbqi8ba4e6856qimp7btchcd23q014at.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
