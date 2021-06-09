@@ -6,13 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".CarrerasActivity">
+    tools:context=".AgendarActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <include
             layout="@layout/main_toolbar"/>
+
         <ScrollView
             android:id="@+id/ScrollView1"
             android:layout_width="405dp"
@@ -204,14 +207,19 @@
 
             </RelativeLayout>
         </ScrollView>
+
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@android:color/white">
+
         <include
             layout="@layout/main_nav_drawer"/>
+
     </RelativeLayout>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -62,9 +62,10 @@ public class MenuActivity extends AppCompatActivity {
         //Redireccionar
         redirectActivity(this, ProfileActivity.class);
     }
+
     public void ClickAgendar(View view){
         //Redireccionar
-        redirectActivity(this, CarrerasActivity.class );
+        redirectActivity(this, AgendarActivity.class);
         //Toast.makeText(MenuActivity.this, "Boton Agendar", Toast.LENGTH_LONG).show();
 
     }
