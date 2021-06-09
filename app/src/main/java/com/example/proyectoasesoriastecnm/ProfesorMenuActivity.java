@@ -64,10 +64,10 @@ public class ProfesorMenuActivity extends AppCompatActivity {
         Toast.makeText(ProfesorMenuActivity.this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
 
     }
-    public void ClickAgendarP(View view){
+    public void ClickDashboardP(View view){
         //Redireccionar
         //redirectActivity(this, );
-        Toast.makeText(ProfesorMenuActivity.this, "Boton Agendar Profesor", Toast.LENGTH_LONG).show();
+        Toast.makeText(ProfesorMenuActivity.this, "Boton Dashboard", Toast.LENGTH_LONG).show();
 
     }
 

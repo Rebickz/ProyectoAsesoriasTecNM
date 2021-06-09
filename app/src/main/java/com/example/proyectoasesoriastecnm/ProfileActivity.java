@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProfileActivity extends AppCompatActivity {
     //Inicializar variable
-    DrawerLayout drawerLayout;
+    DrawerLayout drawerLayout; //Agregar
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,51 +31,51 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         //Asignar variable
-        drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout = findViewById(R.id.drawer_layout);//Agregar
 
     }
 
-    public void ClickMenu(View view){
+    public void ClickMenu(View view){//Agregar
         //Abrir drawer
         MenuActivity.openDrawer(drawerLayout);
     }
 
-    public void ClickLogo(View view){
+    public void ClickLogo(View view){//Agregar
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
     }
 
-    public void ClickHome(View view){
+    public void ClickHome(View view){//Agregar
         //Redireccionar al Home
         MenuActivity.redirectActivity(this,MenuActivity.class);
     }
 
-    public void ClickPerfil(View view){
+    public void ClickPerfil(View view){//Agregar
         //Recrear actividad
         recreate();
     }
 
-    public void ClickAgendar(View view){
+    public void ClickAgendar(View view){//Agregar
         //Redireccionar
         //redirectActivity(this, );
         Toast.makeText(ProfileActivity.this, "Boton Agendar", Toast.LENGTH_LONG).show();
 
     }
 
-    public void ClickCitas(View view){
+    public void ClickCitas(View view){//Agregar
         //Redireccionar
         //redirectActivity(this, );
         Toast.makeText(ProfileActivity.this, "Boton Citas", Toast.LENGTH_LONG).show();
 
     }
 
-    public void ClickLogout(View view){
+    public void ClickLogout(View view){//Agregar
         //Cerrar app
         MenuActivity.logout(this);
     }
 
     @Override
-    protected void onPause() {
+    protected void onPause() {//Agregar
         super.onPause();
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
