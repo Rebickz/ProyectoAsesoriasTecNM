@@ -57,14 +57,15 @@ public class MenuActivity extends AppCompatActivity {
         //Recrear la activity
         recreate();
     }
+
     public void ClickPerfil(View view){
         //Redireccionar
         redirectActivity(this, ProfileActivity.class);
     }
     public void ClickAgendar(View view){
         //Redireccionar
-        //redirectActivity(this, );
-        Toast.makeText(MenuActivity.this, "Boton Agendar", Toast.LENGTH_LONG).show();
+        redirectActivity(this, CarrerasActivity.class );
+        //Toast.makeText(MenuActivity.this, "Boton Agendar", Toast.LENGTH_LONG).show();
 
     }
 
