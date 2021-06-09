@@ -33,9 +33,11 @@ public class AgendarActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
 
 
-        //carrera = (ImageView) findViewById(R.id.ticsimageView);
+      /*  carrera = (ImageView) findViewById(R.id.ticsimageView);
 
-/*        carrera.setOnClickListener(new View.OnClickListener() {
+
+
+        carrera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switch (view.getId()){
@@ -54,6 +56,11 @@ public class AgendarActivity extends AppCompatActivity {
 
     }
 
+    public  void  ClickTics(View view){
+
+        MenuActivity.redirectActivity(this,MateriasActivity.class);
+
+    }
 
 
     public void ClickMenu(View view){

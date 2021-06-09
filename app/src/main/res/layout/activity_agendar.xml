@@ -69,6 +69,7 @@
 
                 <ImageView
                     android:id="@+id/ticsimageView"
+                    android:onClick="ClickTics"
                     android:layout_width="155dp"
                     android:layout_height="143dp"
                     android:layout_below="@id/admintextView"
