@@ -2,6 +2,7 @@ package com.example.proyectoasesoriastecnm;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -34,6 +35,7 @@ public class CarrerasActivity extends AppCompatActivity{
         setContentView(R.layout.content_carreras);
         //Asignar variable
         drawerLayout = findViewById(R.id.drawer_layout);//Agregar
+
     }
     public void ClickMenu(View view){//Agregar
         //Abrir drawer
@@ -54,7 +56,6 @@ public class CarrerasActivity extends AppCompatActivity{
     public void ClickAgendar(View view){//Agregar
         //Redireccionar
         recreate();
-
     }
     public void ClickCitas(View view){//Agregar
         //Redireccionar
@@ -71,29 +72,5 @@ public class CarrerasActivity extends AppCompatActivity{
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
     }
-
-
-    TextView sesion, alumno, horario;
-    ImageView carrera;
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
-
-
-    /*public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.content_carreras,container,false);
-
-        carrera = (ImageView) view.findViewById(R.id.ticsimageView);
-
-        carrera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // load Second Fragment
-
-                //loadFragment(new AgendaFragment());
-            }
-        });
-
-        return view;
-    }*/
 
 }
