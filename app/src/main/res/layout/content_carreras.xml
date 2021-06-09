@@ -1,204 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    android:id="@+id/drawer_layout"
+    tools:context=".CarrerasActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            layout="@layout/main_toolbar"/>
+        <ScrollView
+            android:id="@+id/ScrollView1"
+            android:layout_width="405dp"
+            android:layout_height="634dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-
-    <ScrollView
-        android:id="@+id/ScrollView1"
-        android:layout_width="405dp"
-        android:layout_height="634dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <RelativeLayout
-            android:id="@+id/RelativeLay"
-            android:layout_width="wrap_content"
-            android:layout_height="700dp"
-            app:layout_constraintStart_toEndOf="@+id/textViewCarreras"
-            app:layout_constraintStart_toStartOf="@+id/ScrollView1">
-
-            <ImageView
-                android:id="@+id/ElecimageView"
-                android:layout_width="155dp"
-                android:layout_height="143dp"
-                android:layout_below="@id/empresarialtextView"
-                android:layout_alignRight="@id/GestionimageView"
-                app:layout_constraintStart_toStartOf="@id/empresarialtextView"
-                app:srcCompat="@drawable/electronica"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:id="@+id/GestionimageView"
-                android:layout_width="155dp"
-                android:layout_height="143dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginLeft="200dp"
-                android:layout_marginTop="32dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent"
-                app:srcCompat="@drawable/gestion"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:id="@+id/industrialimageView"
-                android:layout_width="155dp"
-                android:layout_height="143dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="32dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/empresarialtextView"
-                app:srcCompat="@drawable/industrial"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:id="@+id/ticsimageView"
-                android:layout_width="155dp"
-                android:layout_height="143dp"
-                android:layout_below="@id/admintextView"
-                android:layout_alignLeft="@id/AdminimageView"
-                android:layout_marginEnd="28dp"
-                android:layout_marginRight="28dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/admintextView"
-                app:srcCompat="@drawable/tics"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:id="@+id/AdminimageView"
-                android:layout_width="155dp"
-                android:layout_height="143dp"
-                android:layout_below="@id/industrialtextView"
-                android:layout_alignLeft="@id/industrialimageView"
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentBottom="false"
-                app:layout_constraintEnd_toEndOf="@id/industrialtextView"
-                app:srcCompat="@drawable/administracion" />
-
-            <ImageView
-                android:id="@+id/materialesimageView"
-                android:layout_width="155dp"
-                android:layout_height="143dp"
-                android:layout_below="@id/ElectextView"
-                android:layout_alignRight="@id/ElecimageView"
-                app:layout_constraintStart_toStartOf="@id/ElectextView"
-                app:srcCompat="@drawable/materiales" />
-
-            <ImageView
-                android:id="@+id/mecanicaimageView"
-                android:layout_width="155dp"
-                android:layout_height="143dp"
-                android:layout_below="@id/ticstextView"
-                android:layout_alignRight="@id/ticsimageView"
-                app:srcCompat="@drawable/mecanica" />
-
-            <ImageView
-                android:id="@+id/quimicaimageView"
-                android:layout_width="155dp"
-                android:layout_height="143dp"
-                android:layout_below="@id/materialesTextView"
-                android:layout_alignRight="@id/materialesimageView"
-                app:srcCompat="@drawable/quimica" />
-
-            <TextView
-                android:id="@+id/ElectextView"
+            <RelativeLayout
+                android:id="@+id/RelativeLay"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ElecimageView"
-                android:layout_alignRight="@id/ElecimageView"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Ing Electronica"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:layout_height="700dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewCarreras"
+                app:layout_constraintStart_toStartOf="@+id/ScrollView1">
 
-            <TextView
-                android:id="@+id/empresarialtextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/GestionimageView"
-                android:layout_alignRight="@id/GestionimageView"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
-                android:text="Gestion Empresarial"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/GestionimageView" />
+                <ImageView
+                    android:id="@+id/ElecimageView"
+                    android:layout_width="155dp"
+                    android:layout_height="143dp"
+                    android:layout_below="@id/empresarialtextView"
+                    android:layout_alignRight="@id/GestionimageView"
+                    app:layout_constraintStart_toStartOf="@id/empresarialtextView"
+                    app:srcCompat="@drawable/electronica"
+                    tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/industrialtextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/industrialimageView"
-                android:layout_marginStart="70dp"
-                android:layout_marginLeft="70dp"
-                android:text="Ing Industrial"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/industrialimageView" />
+                <ImageView
+                    android:id="@+id/GestionimageView"
+                    android:layout_width="155dp"
+                    android:layout_height="143dp"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:srcCompat="@drawable/gestion"
+                    tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/ticstextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ticsimageView"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:text="Ing Tecnologias"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ticsimageView" />
+                <ImageView
+                    android:id="@+id/industrialimageView"
+                    android:layout_width="155dp"
+                    android:layout_height="143dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/empresarialtextView"
+                    app:srcCompat="@drawable/industrial"
+                    tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/admintextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/AdminimageView"
-                android:layout_alignLeft="@id/AdminimageView"
-                android:layout_marginStart="40dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginEnd="64dp"
-                android:layout_marginRight="64dp"
-                android:text="Lic. Admin"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/AdminimageView" />
+                <ImageView
+                    android:id="@+id/ticsimageView"
+                    android:layout_width="155dp"
+                    android:layout_height="143dp"
+                    android:layout_below="@id/admintextView"
+                    android:layout_alignLeft="@id/AdminimageView"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginRight="28dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/admintextView"
+                    app:srcCompat="@drawable/tics"
+                    tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/materialesTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/materialesimageView"
-                android:layout_alignRight="@id/materialesimageView"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Ing Materiales"
-                app:layout_constraintStart_toStartOf="@id/materialesimageView" />
+                <ImageView
+                    android:id="@+id/AdminimageView"
+                    android:layout_width="155dp"
+                    android:layout_height="143dp"
+                    android:layout_below="@id/industrialtextView"
+                    android:layout_alignLeft="@id/industrialimageView"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentBottom="false"
+                    app:layout_constraintEnd_toEndOf="@id/industrialtextView"
+                    app:srcCompat="@drawable/administracion" />
 
-            <TextView
-                android:id="@+id/mecanicatextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/mecanicaimageView"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:text="Ing Mecanica" />
+                <ImageView
+                    android:id="@+id/materialesimageView"
+                    android:layout_width="155dp"
+                    android:layout_height="143dp"
+                    android:layout_below="@id/ElectextView"
+                    android:layout_alignRight="@id/ElecimageView"
+                    app:layout_constraintStart_toStartOf="@id/ElectextView"
+                    app:srcCompat="@drawable/materiales" />
 
-            <TextView
-                android:id="@+id/quimicatextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/quimicaimageView"
-                android:layout_alignRight="@id/quimicaimageView"
-                android:layout_marginEnd="40dp"
-                android:layout_marginRight="40dp"
-                android:text="Ing Quimica" />
+                <ImageView
+                    android:id="@+id/mecanicaimageView"
+                    android:layout_width="155dp"
+                    android:layout_height="143dp"
+                    android:layout_below="@id/ticstextView"
+                    android:layout_alignRight="@id/ticsimageView"
+                    app:srcCompat="@drawable/mecanica" />
 
-        </RelativeLayout>
-    </ScrollView>
+                <ImageView
+                    android:id="@+id/quimicaimageView"
+                    android:layout_width="155dp"
+                    android:layout_height="143dp"
+                    android:layout_below="@id/materialesTextView"
+                    android:layout_alignRight="@id/materialesimageView"
+                    app:srcCompat="@drawable/quimica" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/ElectextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ElecimageView"
+                    android:layout_alignRight="@id/ElecimageView"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Ing Electronica"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/empresarialtextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/GestionimageView"
+                    android:layout_alignRight="@id/GestionimageView"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Gestion Empresarial"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GestionimageView" />
+
+                <TextView
+                    android:id="@+id/industrialtextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/industrialimageView"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:text="Ing Industrial"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/industrialimageView" />
+
+                <TextView
+                    android:id="@+id/ticstextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ticsimageView"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="Ing Tecnologias"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ticsimageView" />
+
+                <TextView
+                    android:id="@+id/admintextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/AdminimageView"
+                    android:layout_alignLeft="@id/AdminimageView"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginRight="64dp"
+                    android:text="Lic. Admin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/AdminimageView" />
+
+                <TextView
+                    android:id="@+id/materialesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/materialesimageView"
+                    android:layout_alignRight="@id/materialesimageView"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Ing Materiales"
+                    app:layout_constraintStart_toStartOf="@id/materialesimageView" />
+
+                <TextView
+                    android:id="@+id/mecanicatextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mecanicaimageView"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="Ing Mecanica" />
+
+                <TextView
+                    android:id="@+id/quimicatextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/quimicaimageView"
+                    android:layout_alignRight="@id/quimicaimageView"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="Ing Quimica" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+        <include
+            layout="@layout/main_nav_drawer"/>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
