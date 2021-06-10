@@ -35,7 +35,7 @@ public class MateriasActivity extends AppCompatActivity {
     DatabaseReference mref;
     Materia materia;
 
-    String x;
+    String y;
 
 
 
