@@ -65,7 +65,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void ClickAgendar(View view){
         //Redireccionar
-        //redirectActivity(this, AgendarActivity.class);
+        redirectActivity(this, AgendarActivity.class);
         //Toast.makeText(MenuActivity.this, "Boton Agendar", Toast.LENGTH_LONG).show();
 
     }
