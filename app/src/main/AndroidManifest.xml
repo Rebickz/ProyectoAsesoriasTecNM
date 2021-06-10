@@ -13,7 +13,6 @@
         <activity android:name=".DashboardMateriaActivity" />
         <activity android:name=".DashboardUsuarioActivity" />
         <activity android:name=".DashboardActivity" />
-        <activity android:name=".AgendarActivity" />
         <activity android:name=".ProfesorMenuActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".ProfileActivity" />
