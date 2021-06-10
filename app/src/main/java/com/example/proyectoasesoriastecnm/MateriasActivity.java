@@ -35,7 +35,7 @@ public class MateriasActivity extends AppCompatActivity {
     DatabaseReference mref;
     Materia materia;
 
-    String x;
+    String z;
 
 
 
@@ -71,36 +71,7 @@ public class MateriasActivity extends AppCompatActivity {
 
             }
         });
-/*        mref.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                String value = snapshot.getValue(String.class);
-                Log.d("My App",value);
-                myArrayList.add(value);
-                myArrayAdapter.notifyDataSetChanged();
-            }
 
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                myArrayAdapter.notifyDataSetChanged();
-                Log.d("My App","Error");
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull  DataSnapshot snapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull  DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });*/
     }
 
     public void ClickMenu(View view){
@@ -149,5 +120,17 @@ public class MateriasActivity extends AppCompatActivity {
         super.onPause();
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
+    }
+
+    public void ClickNombre_Materia(View view){
+
+        MenuActivity.redirectActivity(this, CitaActivity.class);
+
+        //myArrayList.indexOf( materia.getNombre().toString());
+
+
+
+
+
     }
 }
