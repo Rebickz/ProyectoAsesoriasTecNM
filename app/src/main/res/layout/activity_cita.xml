@@ -16,18 +16,62 @@
 
         <include layout="@layout/main_toolbar" />
 
+            <TextView
+                android:id="@+id/DatosPersonales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Datos Personales"
+                android:textStyle="bold"
+                android:textSize="@android:dimen/app_icon_size" />
+            <TextView
+                android:id="@+id/CorreoInstitucional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correo Institucional"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:padding="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/EditTextV1"
+                />
+
+            <TextView
+                android:id="@+id/NombreDeMateria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de la materia"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:padding="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/EditTextMateria"
+                />
+            <TextView
+                android:id="@+id/HoraAgendada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hora agendada "
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:padding="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/EditTextHora"
+                />
         <TextView
-            android:id="@+id/DatosPersonales"
+            android:id="@+id/ProfesorTextV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Datos Personales"
-            android:textStyle="bold"
-            android:textSize="@android:dimen/app_icon_size" />
-        <TextView
-            android:id="@+id/CorreoInstitucional"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Correo Institucional"
+            android:text="Profesor "
             android:textStyle="bold"
             android:textSize="25dp"
             android:padding="5dp"/>
@@ -35,45 +79,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:id="@+id/EditTextV1"
+            android:id="@+id/EditTextProfesor"
             />
 
-        <TextView
-            android:id="@+id/NombreDeMateria"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nombre de la materia"
-            android:textStyle="bold"
-            android:textSize="25dp"
-            android:padding="5dp"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/EditTextMateria"
-            />
-        <TextView
-            android:id="@+id/HoraAgendada"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hora agendada "
-            android:textStyle="bold"
-            android:textSize="25dp"
-            android:padding="5dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/EditTextHora"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Enviar Solicitud"
-            android:backgroundTint="#1B396A"
-            />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar Solicitud"
+                android:backgroundTint="#1B396A"
+                />
 
     </LinearLayout>
 
