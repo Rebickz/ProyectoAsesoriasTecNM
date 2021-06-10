@@ -21,7 +21,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class AgendarActivity extends AppCompatActivity {
 
-    ImageView carrera;
     DrawerLayout drawerLayout;
 
 
@@ -32,27 +31,25 @@ public class AgendarActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.drawer_layout);
 
-
-      /*  carrera = (ImageView) findViewById(R.id.ticsimageView);
-
+    }
 
 
-        carrera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switch (view.getId()){
-                    case R.id.ticsimageView: //id de ImageView.
 
-                        //realiza operación al dar clic al imageView.
-                        Intent Materias = new Intent(AgendarActivity.this, MateriasActivity.class);
-                        startActivity(Materias);
+    public  void  ClickElec(View view){
 
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });*/
+        MenuActivity.redirectActivity(this,MateriasActivity.class);
+
+    }
+
+    public  void  ClickGestion(View view){
+
+        MenuActivity.redirectActivity(this,MateriasActivity.class);
+
+    }
+
+    public  void  ClickIndustrial(View view){
+
+        MenuActivity.redirectActivity(this,MateriasActivity.class);
 
     }
 
@@ -61,6 +58,31 @@ public class AgendarActivity extends AppCompatActivity {
         MenuActivity.redirectActivity(this,MateriasActivity.class);
 
     }
+
+    public  void  ClickAdminI(View view){
+
+        MenuActivity.redirectActivity(this,MateriasActivity.class);
+
+    }
+
+    public  void  ClickMateriales(View view){
+
+        MenuActivity.redirectActivity(this,MateriasActivity.class);
+
+    }
+
+    public  void  ClickMecanica(View view){
+
+        MenuActivity.redirectActivity(this,MateriasActivity.class);
+
+    }
+
+    public  void  ClickQuimica(View view){
+
+        MenuActivity.redirectActivity(this,MateriasActivity.class);
+
+    }
+
 
 
     public void ClickMenu(View view){
