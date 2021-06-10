@@ -93,7 +93,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp">
 
-                <Button
+                <!--Button
                     android:id="@+id/icon_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                     android:id="@+id/icon_delete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Borrar"/>
+                    android:text="Borrar"/-->
 
             </LinearLayout>
 
