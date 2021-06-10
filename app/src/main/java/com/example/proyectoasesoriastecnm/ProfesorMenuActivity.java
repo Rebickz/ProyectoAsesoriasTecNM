@@ -60,7 +60,7 @@ public class ProfesorMenuActivity extends AppCompatActivity {
     }
     public void ClickPerfilP(View view){
         //Redireccionar
-        //redirectActivity(this, ProfileActivity.class);
+        redirectActivity(this, ProfesorProfileActivity.class);
         Toast.makeText(ProfesorMenuActivity.this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
 
     }
