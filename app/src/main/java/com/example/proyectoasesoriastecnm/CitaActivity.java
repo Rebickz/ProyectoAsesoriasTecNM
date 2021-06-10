@@ -33,6 +33,6 @@ public class CitaActivity extends AppCompatActivity {
         EditHora = (EditText) findViewById(R.id.EditTextHora);
         String horaAgendada = getIntent().getStringExtra("horaAgendada");
         EditHora.setText(horaAgendada);
-        
+
     }
 }

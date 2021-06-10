@@ -65,8 +65,8 @@ public class MateriasActivity extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     materia = ds.getValue(Materia.class);
-                    myArrayList.add(materia.getNombre().toString());
-                    myArrayList.add(materia.getCarrera().toString());
+                    myArrayList.add(materia.getNombre().toString() + " " + materia.getHorario());
+                    //myArrayList.add(materia.getCarrera().toString());
                 }
 
                 myListView.setAdapter(adapter);
