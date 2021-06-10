@@ -18,11 +18,48 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Profesor Home"
-            android:textSize="50sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:layout_height="wrap_content"
+            android:text="DESCRIPCIÓN"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:paddingTop="20dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_asesorias"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agenda tu cita, facilita tu proceso de aprendizaje a distancia"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:paddingTop="20dp"
+
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_schedule"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario. "
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:paddingTop="20dp"
+
+            />
+
+
+
 
     </LinearLayout>
 

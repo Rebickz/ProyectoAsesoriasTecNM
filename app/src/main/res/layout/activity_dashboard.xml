@@ -18,7 +18,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="260dp"
             android:padding="10dp"
             android:layout_marginTop="40dp"
             app:cardElevation="10dp"
@@ -45,7 +45,7 @@
             </TextView>
 
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        <!--androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:padding="10dp"
@@ -73,10 +73,10 @@
 
             </TextView>
 
-        </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView-->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="260dp"
             android:padding="10dp"
             android:layout_marginTop="40dp"
             app:cardElevation="10dp"

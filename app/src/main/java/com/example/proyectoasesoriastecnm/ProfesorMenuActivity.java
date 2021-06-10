@@ -61,7 +61,7 @@ public class ProfesorMenuActivity extends AppCompatActivity {
     public void ClickPerfilP(View view){
         //Redireccionar
         redirectActivity(this, ProfesorProfileActivity.class);
-        Toast.makeText(ProfesorMenuActivity.this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
+        //Toast.makeText(ProfesorMenuActivity.this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
 
     }
     public void ClickDashboardP(View view){
@@ -73,8 +73,8 @@ public class ProfesorMenuActivity extends AppCompatActivity {
 
     public void ClickCitasP(View view){
         //Redireccionar
-        //redirectActivity(this, );
-        Toast.makeText(ProfesorMenuActivity.this, "Boton Citas Profesor", Toast.LENGTH_LONG).show();
+        redirectActivity(this, ProfesorCitasActivity.class);
+        //Toast.makeText(ProfesorMenuActivity.this, "Boton Citas Profesor", Toast.LENGTH_LONG).show();
 
     }
     public void ClickLogoutP(View view){

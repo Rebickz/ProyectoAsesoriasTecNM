@@ -25,9 +25,9 @@ public class DashboardActivity extends AppCompatActivity {
         ProfesorMenuActivity.redirectActivity(this, DashboardUsuarioActivity.class);
     }
 
-    public void ClickAsesorias(View view){
+    /*public void ClickAsesorias(View view){
         ProfesorMenuActivity.redirectActivity(this, DashboardAsesoriaActivity.class);
-    }
+    }*/
 
     public void ClickMaterias(View view){
         ProfesorMenuActivity.redirectActivity(this, DashboardMateriaActivity.class);
