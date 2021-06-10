@@ -65,7 +65,7 @@ public class MateriasActivity extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     materia = ds.getValue(Materia.class);
-                    myArrayList.add(materia.getNombre().toString() + " " + materia.getHorario());
+                    myArrayList.add(materia.getNombre().toString() + " " + materia.getHorario() + " " + materia.getCarrera());
                     //myArrayList.add(materia.getCarrera().toString());
                 }
 
@@ -138,6 +138,7 @@ public class MateriasActivity extends AppCompatActivity {
         i.putExtra("dato", user.getEmail());
         i.putExtra("materia", materia.getNombre().toString());
         i.putExtra("horaAgendada", materia.getHorario().toString());
+        i.putExtra("profesor", materia.getCarrera().toString());
         //MenuActivity.redirectActivity(this, CitaActivity.class);
 
         startActivity(i);
