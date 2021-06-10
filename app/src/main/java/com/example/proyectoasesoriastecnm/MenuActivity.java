@@ -72,8 +72,8 @@ public class MenuActivity extends AppCompatActivity {
 
     public void ClickCitas(View view){ //Agregar
         //Redireccionar
-        //redirectActivity(this, );
-        Toast.makeText(MenuActivity.this, "Boton Citas", Toast.LENGTH_LONG).show();
+        redirectActivity(this, CitasV2.class );
+        //Toast.makeText(MenuActivity.this, "Boton Citas", Toast.LENGTH_LONG).show();
 
     }
     public void ClickLogout(View view){
