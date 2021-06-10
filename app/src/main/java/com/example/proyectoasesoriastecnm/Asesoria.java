@@ -1,4 +1,4 @@
-package com.example.proyectoasesoriastecnm.model;
+package com.example.proyectoasesoriastecnm;
 
 public class Asesoria {
 
