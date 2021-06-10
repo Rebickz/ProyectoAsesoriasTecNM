@@ -1,16 +1,36 @@
 package com.example.proyectoasesoriastecnm;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.UUID;
 
 public class DashboardUsuarioActivity extends AppCompatActivity {
 
     //Inicializar variable
     DrawerLayout drawerLayoutP;
+
+    //CRUD
+    EditText nomUser, apeUser, emailUser, passUser, rolUser;
+    ListView listV_User;
+
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
+    //TERMINA CRUD
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,16 +39,98 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
 
         //Asignar la variable drawerLayout
         drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
+
+        //CRUD
+        nomUser = findViewById(R.id.txt_nameUsuario);
+        apeUser = findViewById(R.id.txt_lastNameUsuario);
+        emailUser = findViewById(R.id.txt_emailUsuario);
+        passUser = findViewById(R.id.txt_passwordUsuario);
+        rolUser = findViewById(R.id.txt_rolUsuario);
+        listV_User = findViewById(R.id.lv_datosUsuario);
+        inicializarFirebase();
+        //TERMINA CRUD
+
+    }
+    //CRUD
+    private void inicializarFirebase() {
+        FirebaseApp.initializeApp(this);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
     }
 
-    
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        String nombre = nomUser.getText().toString();
+        String apellidos = apeUser.getText().toString();
+        String correo = emailUser.getText().toString();
+        String password = passUser.getText().toString();
+        String rol = rolUser.getText().toString();
+
+        switch(item.getItemId()){
+            case R.id.icon_add:
+                if(nombre.equals("") || apellidos.equals("") || correo.equals("") || password.equals("") || rol.equals("")){
+                    validacion();
+                }else {
+                    Usuario u = new Usuario();
+                    u.setUid(UUID.randomUUID().toString());
+                    u.setName(nombre);
+                    u.setLastName(apellidos);
+                    u.setEmail(correo);
+                    u.setPassword(password);
+                    u.setRol(rol);
+                    databaseReference.child("Users").child(u.getUid()).setValue(u);
+                    Toast.makeText(this, "Agregado", Toast.LENGTH_SHORT).show();
+                    limpiarCajas();
+                }
+                break;
+            case R.id.icon_save:
+                Toast.makeText(this,"Guardado",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.icon_delete:
+                Toast.makeText(this,"Eliminado",Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
+    }
+
+    private void limpiarCajas() {
+        nomUser.setText("");
+        apeUser.setText("");
+        emailUser.setText("");
+        passUser.setText("");
+        rolUser.setText("");
+    }
+
+    private void validacion() {
+        String nombre = nomUser.getText().toString();
+        String apellidos = apeUser.getText().toString();
+        String correo = emailUser.getText().toString();
+        String password = passUser.getText().toString();
+        String rol = rolUser.getText().toString();
+
+        if(nombre.equals("")){
+            nomUser.setError("Requerido");
+        }else if(apellidos.equals("")){
+            apeUser.setError("Requerido");
+        }else if(correo.equals("")){
+            emailUser.setError("Requerido");
+        }else if(password.equals("")){
+            passUser.setError("Requerido");
+        }else if(rol.equals("")){
+            rolUser.setError("Requerido");
+
+        }
+    }
 
 
-
-
-
-
-
+    //TERMINA CRUD
 
     public void ClickMenuP(View view){
         //Abrir Drawer
