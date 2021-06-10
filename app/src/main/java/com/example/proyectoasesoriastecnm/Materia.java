@@ -18,6 +18,14 @@ public class Materia {
         Horario = horario;
     }
 
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -48,5 +56,14 @@ public class Materia {
 
     public void setHorario(String horario) {
         Horario = horario;
+    }
+
+    @Override
+    public String toString() {
+        return "\nMateria: \n" +
+                "\nNombre: " + nombre + '\'' +
+                "\nCarrera" + carrera + '\'' +
+                "\nSemestre" + semestre + '\'' +
+                "\nHorario" + Horario + '\'';
     }
 }

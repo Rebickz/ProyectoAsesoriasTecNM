@@ -63,10 +63,15 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
         listV_User = findViewById(R.id.lv_datosUsuario);
         inicializarFirebase();
         listarDatos(); //Listar
-        listV_User.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listV_User.setOnItemClickListener(new AdapterView.OnItemClickListener() { //Actualizar
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                usuarioSelected = (Usuario) parent.getItemAtPosition(position);
+                nomUser.setText(usuarioSelected.getName());
+                apeUser.setText(usuarioSelected.getLastName());
+                emailUser.setText(usuarioSelected.getEmail());
+                passUser.setText(usuarioSelected.getPassword());
+                rolUser.setText(usuarioSelected.getRol());
             }
         });
         //TERMINA CRUD
@@ -136,10 +141,23 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.icon_save:
-                Toast.makeText(this,"Guardado",Toast.LENGTH_SHORT).show();
+                Usuario u = new Usuario();
+                u.setUid(usuarioSelected.getUid());
+                u.setName(nomUser.getText().toString().trim());
+                u.setLastName(apeUser.getText().toString().trim());
+                u.setEmail(emailUser.getText().toString().trim());
+                u.setPassword(passUser.getText().toString().trim());
+                u.setRol(rolUser.getText().toString().trim());
+                databaseReference.child("Users").child(u.getUid()).setValue(u);
+                Toast.makeText(this,"Actualizado",Toast.LENGTH_SHORT).show();
+                limpiarCajas();
                 break;
-            case R.id.icon_delete:
+            case R.id.icon_delete://Eliminar solo es esto
+                Usuario us = new Usuario();
+                us.setUid(usuarioSelected.getUid());
+                databaseReference.child("Users").child(us.getUid()).removeValue();
                 Toast.makeText(this,"Eliminado",Toast.LENGTH_SHORT).show();
+                limpiarCajas();
                 break;
         }
         return true;
