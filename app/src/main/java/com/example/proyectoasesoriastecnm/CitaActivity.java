@@ -3,13 +3,21 @@ package com.example.proyectoasesoriastecnm;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class CitaActivity extends AppCompatActivity {
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.UUID;
+
+public class CitaActivity extends AppCompatActivity implements View.OnClickListener {
 
     DrawerLayout drawerLayout;
 
@@ -17,28 +25,39 @@ public class CitaActivity extends AppCompatActivity {
     private EditText materiA;
     private EditText EditHora;
     private EditText Profesor;
+    private Button BotonEnvio;
+    String dato;
+    String materia;
+    String horaAgendada;
+    String profesor;
+
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cita);
+        BotonEnvio = (Button) findViewById(R.id.ButtonSend);
+        //onClick(BotonEnvio);
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
 
         tv1 = (EditText) findViewById(R.id.EditTextV1);
-         String dato = getIntent().getStringExtra("dato");
+          dato = getIntent().getStringExtra("dato");
          tv1.setText(dato);
 
          materiA = (EditText) findViewById(R.id.EditTextMateria);
-        String materia = getIntent().getStringExtra("materia");
+         materia = getIntent().getStringExtra("materia");
         materiA.setText(materia);
 
         EditHora = (EditText) findViewById(R.id.EditTextHora);
-        String horaAgendada = getIntent().getStringExtra("horaAgendada");
+         horaAgendada = getIntent().getStringExtra("horaAgendada");
         EditHora.setText(horaAgendada);
 
         Profesor = (EditText) findViewById(R.id.EditTextProfesor);
-        String profesor = getIntent().getStringExtra("profesor");
+         profesor = getIntent().getStringExtra("profesor");
         Profesor.setText(profesor);
 
     }
@@ -78,6 +97,8 @@ public class CitaActivity extends AppCompatActivity {
 
     }
 
+
+
     public void ClickLogout(View view){//Agregar
         //Cerrar app
         MenuActivity.logout(this);
@@ -89,4 +110,55 @@ public class CitaActivity extends AppCompatActivity {
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
     }
+
+    private void iniciarFirebase() {
+        FirebaseApp.initializeApp(this);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
+    }
+
+    public void ClickButtonSend(View view){//Agregar
+        //Redireccionar
+        //redirectActivity(this, );
+        onClick(BotonEnvio);
+
+    }
+
+
+    @Override
+    public void onClick(View view) {
+
+
+        switch(view.getId()){
+            case R.id.ButtonSend:
+                registerCita();
+                break;
+
+        }
+
+    }
+
+    public void registerCita(){
+
+        iniciarFirebase();
+
+        Cita cita = new Cita();
+
+        cita.setEmail(dato);
+        cita.setHorario(horaAgendada);
+        cita.setMateria(materia);
+        cita.setProfesor(profesor);
+
+        cita.setUid(UUID.randomUUID().toString());
+
+        databaseReference.child("citas").child(cita.getUid()).setValue(cita);
+        Toast.makeText(this, "Se solicito su sesion", Toast.LENGTH_LONG).show();
+
+    }
+
+
+
+
+
+
 }

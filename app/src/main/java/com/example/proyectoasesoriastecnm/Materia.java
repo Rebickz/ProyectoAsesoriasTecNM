@@ -2,6 +2,7 @@ package com.example.proyectoasesoriastecnm;
 
 public class Materia {
 
+    private String uid;
     private String nombre;
     private String carrera;
     private String semestre;

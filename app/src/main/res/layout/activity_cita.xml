@@ -88,6 +88,8 @@
                 android:layout_height="wrap_content"
                 android:text="Enviar Solicitud"
                 android:backgroundTint="#1B396A"
+                android:id="@+id/ButtonSend"
+                android:onClick="ClickButtonSend"
                 />
 
     </LinearLayout>
