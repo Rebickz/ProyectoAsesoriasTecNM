@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class ProfesorDashboardActivity extends AppCompatActivity {
+public class DashboardAsesoriaActivity extends AppCompatActivity {
 
     //Inicializar variable
     DrawerLayout drawerLayoutP;
@@ -15,22 +15,10 @@ public class ProfesorDashboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profesor_dashboard);
+        setContentView(R.layout.activity_dashboard_asesoria);
 
         //Asignar la variable drawerLayout
         drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
-    }
-
-    public void ClickUsers(View view){
-
-    }
-
-    public void ClickAsesorias(View view){
-
-    }
-
-    public void ClickMaterias(View view){
-
     }
 
     public void ClickMenuP(View view){
@@ -47,24 +35,24 @@ public class ProfesorDashboardActivity extends AppCompatActivity {
     public void ClickHomeP(View view){
         //Recrear la activity
         ProfesorMenuActivity.redirectActivity(this, ProfesorMenuActivity.class);
-        //recreate();
     }
     public void ClickPerfilP(View view){
         //Redireccionar
         //redirectActivity(this, ProfileActivity.class);
-        Toast.makeText(ProfesorDashboardActivity.this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
 
     }
     public void ClickDashboardP(View view){
         //Redireccionar
-        //redirectActivity(this, );
-        recreate();
+        ProfesorMenuActivity.redirectActivity(this, DashboardActivity.class);
+        //Toast.makeText(ProfesorMenuActivity.this, "Dashboard", Toast.LENGTH_LONG).show();
+
     }
 
     public void ClickCitasP(View view){
         //Redireccionar
         //redirectActivity(this, );
-        Toast.makeText(ProfesorDashboardActivity.this, "Boton Citas Profesor", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Boton Citas Profesor", Toast.LENGTH_LONG).show();
 
     }
     public void ClickLogoutP(View view){

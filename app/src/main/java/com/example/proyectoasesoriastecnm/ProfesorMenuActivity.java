@@ -66,7 +66,9 @@ public class ProfesorMenuActivity extends AppCompatActivity {
     }
     public void ClickDashboardP(View view){
         //Redireccionar
-        redirectActivity(this, ProfesorDashboardActivity.class);
+        redirectActivity(this, DashboardActivity.class);
+        //Toast.makeText(ProfesorMenuActivity.this, "Dashboard", Toast.LENGTH_LONG).show();
+
     }
 
     public void ClickCitasP(View view){
