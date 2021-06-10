@@ -24,6 +24,11 @@ public class ProfileActivity extends AppCompatActivity {
     //Inicializar variable
     DrawerLayout drawerLayout; //Agregar
 
+    private FirebaseUser user;
+    private DatabaseReference reference;
+    private String userID;
+
+    private Button logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -32,6 +37,55 @@ public class ProfileActivity extends AppCompatActivity {
 
         //Asignar variable
         drawerLayout = findViewById(R.id.drawer_layout);//Agregar
+
+        logout = (Button) findViewById(R.id.signOut);
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(ProfileActivity.this, MainActivity.class));
+            }
+        });
+
+        user = FirebaseAuth.getInstance().getCurrentUser(); //Referenciar al usuario logeado actualmente
+        reference = FirebaseDatabase.getInstance().getReference("Users"); //Referenciar la tabla
+        userID = user.getUid(); //Obtener Unique ID
+
+        //Crear TextView Objects con final
+        //por que vamos a acceder a las variables en nuestras clases
+        final TextView greetingTextView = (TextView) findViewById(R.id.greeting);
+        final TextView nameTextView = (TextView) findViewById(R.id.name);
+        final TextView emailTextView = (TextView) findViewById(R.id.emailAddress);
+        final TextView lastNameTextView = (TextView) findViewById(R.id.lastName);
+
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User userProfile = snapshot.getValue(User.class);
+
+                if(userProfile != null){
+                    String name = userProfile.name;
+                    String email = userProfile.email;
+                    String lastName =userProfile.lastName;
+                    String rol = userProfile.rol;
+
+                    if((userProfile.rol).equals("ALUMNO")){
+                        greetingTextView.setText("Alumno: " + name );
+                    }else{
+                        greetingTextView.setText("Profesor:" + name );
+                    }
+                    nameTextView.setText(name);
+                    emailTextView.setText(email);
+                    lastNameTextView.setText(lastName);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(ProfileActivity.this, "Ocurrió un error al cargar los datos",Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
@@ -57,8 +111,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     public void ClickAgendar(View view){//Agregar
         //Redireccionar
-        //redirectActivity(this, );
-        Toast.makeText(ProfileActivity.this, "Boton Agendar", Toast.LENGTH_LONG).show();
+        MenuActivity.redirectActivity(this, AgendarActivity.class);
 
     }
 
