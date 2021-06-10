@@ -62,6 +62,9 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return name;
+        return "\nUsuario\n" +
+                "\nNombre:" + name + '\'' +
+                "\nCorreo: " + email + '\'' +
+                "\nRol: " + rol + '\'';
     }
 }

@@ -8,20 +8,32 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class DashboardUsuarioActivity extends AppCompatActivity {
 
     //Inicializar variable
     DrawerLayout drawerLayoutP;
+    //Listar
+    private List<Usuario> listUsuario = new ArrayList<Usuario>();
+    ArrayAdapter<Usuario> arrayAdapterUsuario;
 
     //CRUD
     EditText nomUser, apeUser, emailUser, passUser, rolUser;
@@ -29,6 +41,8 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+
+    Usuario usuarioSelected; //Actualizar
 
     //TERMINA CRUD
 
@@ -48,13 +62,44 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
         rolUser = findViewById(R.id.txt_rolUsuario);
         listV_User = findViewById(R.id.lv_datosUsuario);
         inicializarFirebase();
+        listarDatos(); //Listar
+        listV_User.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
         //TERMINA CRUD
 
     }
+
+    private void listarDatos() { //Listar
+        databaseReference.child("Users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                listUsuario.clear();
+                for(DataSnapshot objSnapshot : snapshot.getChildren()){
+                    Usuario u = objSnapshot.getValue(Usuario.class);
+                    listUsuario.add(u);
+
+                    arrayAdapterUsuario = new ArrayAdapter<Usuario>(DashboardUsuarioActivity.this, android.R.layout.simple_list_item_1,listUsuario);
+                    listV_User.setAdapter(arrayAdapterUsuario);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+            }
+        });
+    }
+
     //CRUD
     private void inicializarFirebase() {
         FirebaseApp.initializeApp(this);
         firebaseDatabase = FirebaseDatabase.getInstance();
+        //firebaseDatabase.setPersistenceEnabled(true); //PERSISTENCIA DE DATOS
         databaseReference = firebaseDatabase.getReference();
     }
 
