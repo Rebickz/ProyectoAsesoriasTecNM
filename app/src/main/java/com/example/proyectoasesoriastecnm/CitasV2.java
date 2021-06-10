@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -87,7 +88,8 @@ public class CitasV2 extends AppCompatActivity {
 
     public void ClickPerfil(View view){
         //Recrear actividad
-        Toast.makeText(this, "Boton Perfil", Toast.LENGTH_LONG).show();
+        MenuActivity.redirectActivity(this, ProfileActivity.class);
+        //Toast.makeText(this, "Boton Perfil", Toast.LENGTH_LONG).show();
 
     }
 
@@ -102,8 +104,8 @@ public class CitasV2 extends AppCompatActivity {
     public void ClickCitas(View view){
         //Redireccionar
         //redirectActivity(this, );
-        Toast.makeText(this, "Boton Citas", Toast.LENGTH_LONG).show();
-
+        //Toast.makeText(this, "Boton Citas", Toast.LENGTH_LONG).show();
+        recreate();
     }
 
     public void ClickLogout(View view){

@@ -99,8 +99,8 @@ public class MateriasActivity extends AppCompatActivity {
 
     public void ClickPerfil(View view){
         //Recrear actividad
-        Toast.makeText(this, "Boton Perfil", Toast.LENGTH_LONG).show();
-
+        //Toast.makeText(this, "Boton Perfil", Toast.LENGTH_LONG).show();
+        MenuActivity.redirectActivity(this,ProfileActivity.class);
     }
 
     public void ClickAgendar(View view){
@@ -114,8 +114,8 @@ public class MateriasActivity extends AppCompatActivity {
     public void ClickCitas(View view){
         //Redireccionar
         //redirectActivity(this, );
-        Toast.makeText(this, "Boton Citas", Toast.LENGTH_LONG).show();
-
+        //Toast.makeText(this, "Boton Citas", Toast.LENGTH_LONG).show();
+        MenuActivity.redirectActivity(this,CitasV2.class);
     }
 
     public void ClickLogout(View view){
