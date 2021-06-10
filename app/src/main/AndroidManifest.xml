@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoAsesoriasTecNM">
-        <activity android:name=".AgendarActivity"></activity>
+        <activity android:name=".DashboardAsesoriaActivity"></activity>
+        <activity android:name=".DashboardMateriaActivity" />
+        <activity android:name=".DashboardUsuarioActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".AgendarActivity" />
         <activity android:name=".ProfesorMenuActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".ProfileActivity" />
