@@ -23,6 +23,8 @@
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:divider="@color/browser_actions_bg_grey"
+                android:dividerHeight="5dp"
                 android:id="@+id/ListViewMaterias">
 
                 <!--LinearLayout

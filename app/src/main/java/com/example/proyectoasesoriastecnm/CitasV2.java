@@ -119,4 +119,7 @@ public class CitasV2 extends AppCompatActivity {
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
     }
+
+
+
 }
