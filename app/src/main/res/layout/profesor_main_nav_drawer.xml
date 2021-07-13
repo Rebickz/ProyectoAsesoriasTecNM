@@ -17,10 +17,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TecNM Campus Aguascalientes"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:textColor="#636363"
         android:gravity="center_horizontal" />
 
     <View
@@ -28,7 +28,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#636363"/>
+        android:background="@color/white"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,6 +43,7 @@
             android:layout_weight="1"
             android:text="Home"
             android:padding="12dp"
+            android:textColor="@color/white"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp" />
 
@@ -68,6 +69,7 @@
             android:layout_weight="1"
             android:text="Perfil"
             android:padding="12dp"
+            android:textColor="@color/white"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp" />
 
@@ -92,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Dashboard"
+            android:textColor="@color/white"
             android:padding="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp" />
@@ -117,6 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Citas"
+            android:textColor="@color/white"
             android:padding="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp" />
@@ -142,6 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Cerrar sesión"
+            android:textColor="@color/white"
             android:padding="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp" />
@@ -152,6 +157,64 @@
             android:layout_marginEnd="48dp"
             android:layout_marginRight="48dp"
             android:src="@drawable/ic_logout"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="ClickPerfilP">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ayuda"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_help"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="ClickPerfilP">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Contacto"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_contact"/>
 
     </LinearLayout>
 
