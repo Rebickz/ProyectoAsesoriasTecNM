@@ -3,27 +3,30 @@
 
     <!--GENERALES-->
     <string name="correo">Correo Electronico</string>
-    <string name="email">E-mail</string>
     <string name="contraseña">Contraseña</string>
-    <string name="password">Password</string>
     <string name="iniciar_sesion">INICIAR SESIÓN</string>
-    <string name="login">LOGIN</string>
     <string name="registrarme">registrarme</string>
-    <string name="sign_up">sign up</string>
+    <string name="olvide_contraseña">Olvide Contraseña</string>
 
 
     <!--ALUMNO-->
     <string name="asesorias_alumnos">Asesorias Alumnos</string>
+    <string name="home">Inicio</string>
     <string name="descripcion">Descripción</string>
     <string name="perfil">Perfil</string>
     <string name="agendar">Agendar</string>
     <string name="citas">Citas</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
-
     <string name="nombre">Nombre</string>
-    <string name="name">Name</string>
     <string name="apellido">Apellido</string>
-    <string name="lastname">Lastname</string>
+
+
+    <string name="datos_personales">Datos Personales</string>
+    <string name="correo_institucional">Correo Institucional</string>
+    <string name="nombre_materia">Nombre de la materia</string>
+    <string name="hora_agendada">Hora agendada</string>
+    <string name="profesor_detalle">Profesor</string>
+
 
     <!--PROFESOR-->
 
