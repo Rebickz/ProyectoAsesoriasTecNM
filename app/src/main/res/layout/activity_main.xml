@@ -15,7 +15,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="50dp">
+            android:paddingBottom="50dp"
+            android:layout_margin="16dp">
 
             <ImageView
                 android:id="@+id/tecnmimage"
@@ -30,7 +31,7 @@
 
             <TextView
                 android:id="@+id/banner"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TecNM \nCampus Aguascalientes"
                 android:textSize="24sp"
@@ -45,7 +46,7 @@
 
             <TextView
                 android:id="@+id/bannerDescription"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/iniciar_sesion"
                 android:textStyle="italic"
@@ -59,7 +60,7 @@
 
             <EditText
                 android:id="@+id/email"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:ems="10"
@@ -73,7 +74,7 @@
 
             <EditText
                 android:id="@+id/password"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPassword"
@@ -87,7 +88,7 @@
 
             <Button
                 android:id="@+id/signIn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginTop="24dp"
                 android:backgroundTint="#1B396A"
@@ -105,7 +106,7 @@
                 android:id="@+id/forgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="36dp"
                 android:layout_marginTop="25dp"
                 android:textSize="16sp"
                 android:text="@string/olvide_contraseña"
@@ -119,12 +120,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/registrarme"
+                android:layout_marginRight="36dp"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="@+id/forgotPassword"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintLeft_toRightOf="@+id/forgotPassword"
-                android:layout_marginLeft="80dp"
-                />
+
+                app:layout_constraintTop_toTopOf="@+id/forgotPassword" />
 
             <ProgressBar
                 android:id="@+id/progressBar"

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TecNM Consultancy</string>
+    <string name="app_name">Asesorias TecNM</string>
 
     <!--GENERALES-->
     <string name="correo">E-mail</string>
     <string name="contraseña">Password</string>
     <string name="iniciar_sesion">LOGIN</string>
-    <string name="registrarme">sign up</string>
+    <string name="registrarme">Sign up</string>
     <string name="olvide_contraseña">Forgot Password</string>
 
 
     <!--ALUMNO-->
     <string name="asesorias_alumnos">Asesorias Alumnos</string>
     <string name="home">Home</string>
-    <string name="descripcion">description</string>
+    <string name="descripcion">Description</string>
     <string name="perfil">Profile</string>
     <string name="agendar">Schedule</string>
     <string name="citas">Appointments</string>
-    <string name="cerrar_sesion">Sign off</string>
+    <string name="cerrar_sesion">Logout</string>
     <string name="nombre">Name</string>
-    <string name="apellido">LastName</string>
+    <string name="apellido">Last Name</string>
 
     <string name="datos_personales">Personal Data</string>
     <string name="correo_institucional">Academic email</string>

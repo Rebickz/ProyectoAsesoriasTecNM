@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="36dp"
+            android:layout_margin="16dp"
             >
             <ImageView
                 android:id="@+id/tecnmimage"
@@ -31,7 +32,7 @@
 
             <TextView
                 android:id="@+id/banner"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TecNM \nCampus Aguascalientes"
                 android:textSize="24sp"
@@ -47,7 +48,7 @@
 
             <TextView
                 android:id="@+id/bannerDescription"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Registro"
                 android:textStyle="italic"
@@ -61,7 +62,7 @@
 
             <EditText
                 android:id="@+id/name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
@@ -75,7 +76,7 @@
 
             <EditText
                 android:id="@+id/lastName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
@@ -89,7 +90,7 @@
 
             <EditText
                 android:id="@+id/email"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
@@ -103,7 +104,7 @@
 
             <EditText
                 android:id="@+id/password"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Contraseña"
@@ -117,7 +118,7 @@
 
             <Button
                 android:id="@+id/registerUser"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginTop="24dp"
                 android:backgroundTint="#1B396A"
