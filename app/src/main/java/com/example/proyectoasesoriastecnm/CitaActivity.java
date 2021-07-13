@@ -38,11 +38,12 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cita);
+        drawerLayout = findViewById(R.id.drawer_layout);
         BotonEnvio = (Button) findViewById(R.id.ButtonSend);
         //onClick(BotonEnvio);
 
 
-        drawerLayout = findViewById(R.id.drawer_layout);
+
 
         tv1 = (EditText) findViewById(R.id.EditTextV1);
           dato = getIntent().getStringExtra("dato");
@@ -80,20 +81,20 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
 
     public void ClickPerfil(View view){//Agregar
         //Recrear actividad
-        recreate();
+        //recreate();
     }
 
     public void ClickAgendar(View view){//Agregar
         //Redireccionar
         //redirectActivity(this, );
-        Toast.makeText(CitaActivity.this, "Boton Agendar", Toast.LENGTH_LONG).show();
+        //Toast.makeText(CitaActivity.this, "Boton Agendar", Toast.LENGTH_LONG).show();
 
     }
 
     public void ClickCitas(View view){//Agregar
         //Redireccionar
         //redirectActivity(this, );
-        Toast.makeText(CitaActivity.this, "Boton Citas", Toast.LENGTH_LONG).show();
+        //Toast.makeText(CitaActivity.this, "Boton Citas", Toast.LENGTH_LONG).show();
 
     }
 
@@ -121,7 +122,6 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
         //Redireccionar
         //redirectActivity(this, );
         onClick(BotonEnvio);
-
     }
 
 
