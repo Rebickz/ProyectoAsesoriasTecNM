@@ -9,73 +9,82 @@
 
     tools:context=".ProfesorMenuActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#C0CCDA"
         >
-
-        <include
-            layout="@layout/profesor_main_toolbar"/>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/white">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Home"
-                android:background="@color/white"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:paddingTop="10dp"
-                android:layout_marginBottom="10dp"
-                />
+            android:background="#C0CCDA"
+            >
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
-                android:src="@drawable/ic_asesorias"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Agenda tu cita, facilita tu proceso de aprendizaje a distancia"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:background="@color/white"
-                android:textSize="20dp"
-                android:paddingTop="16dp"
+            <include
+                layout="@layout/profesor_main_toolbar"/>
 
-                />
-
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/ic_schedule"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario. "
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:paddingTop="20dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
 
-                />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_asesorias"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Acutaliza constantemente tu disponibilidad para asesorias. Minimo 2 horas semanales"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:background="@color/white"
+                    android:textSize="20dp"
+                    android:paddingTop="16dp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_asesorias"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario. "
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:paddingTop="20dp"
+
+                    />
+            </LinearLayout>
+
         </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="300dp"
