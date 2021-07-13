@@ -6,60 +6,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/profesor_drawer_layout"
+
     tools:context=".ProfesorMenuActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#C0CCDA"
+        >
 
         <include
             layout="@layout/profesor_main_toolbar"/>
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DESCRIPCIÓN"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:paddingTop="20dp"
-            />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/ic_asesorias"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Agenda tu cita, facilita tu proceso de aprendizaje a distancia"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:paddingTop="20dp"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_asesorias"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agenda tu cita, facilita tu proceso de aprendizaje a distancia"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:background="@color/white"
+                android:textSize="20dp"
+                android:paddingTop="16dp"
 
-            />
+                />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/ic_schedule"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario. "
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:paddingTop="20dp"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_schedule"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario. "
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:paddingTop="20dp"
 
-            />
-
-
-
+                />
+        </LinearLayout>
 
     </LinearLayout>
 
