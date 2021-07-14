@@ -8,26 +8,24 @@
     android:id="@+id/profesor_drawer_layout"
     tools:context=".ProfesorMenuActivity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#C0CCDA">
+        android:background="@color/white"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <include
+            layout="@layout/profesor_main_toolbar"/>
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="#C0CCDA">
-
-            <include
-                layout="@layout/profesor_main_toolbar"/>
-
+            android:padding="4dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_margin="8dp"
                 android:background="@color/white">
                 <TextView
                     android:layout_width="match_parent"
@@ -77,8 +75,10 @@
                     />
             </LinearLayout>
 
-        </LinearLayout>
-    </ScrollView>
+
+        </ScrollView>
+    </LinearLayout>
+
 
 
     <RelativeLayout
