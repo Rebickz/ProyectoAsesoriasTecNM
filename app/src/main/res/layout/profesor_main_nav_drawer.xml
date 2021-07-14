@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:onClick="ClickPerfilP">
+                android:onClick="ClickAyudaP">
 
                 <TextView
                     android:layout_width="0dp"
@@ -205,7 +205,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:onClick="ClickPerfilP">
+                android:onClick="ClickContactoP">
 
                 <TextView
                     android:layout_width="0dp"

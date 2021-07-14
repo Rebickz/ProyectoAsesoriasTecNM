@@ -9,7 +9,10 @@
         android:roundIcon="@drawable/tecnm"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoAsesoriasTecNM">
-        <activity android:name=".QRLector"></activity>
+        <activity android:name=".ForgotPasswordActivity"></activity>
+        <activity android:name=".ProfesorContactoActivity" />
+        <activity android:name=".ProfesorAyudaActivity" />
+        <activity android:name=".QRLector" />
         <activity android:name=".DashboardEstadisticasActivity" />
         <activity android:name=".ContactoActivity" />
         <activity android:name=".AyudaActivity" />

@@ -80,7 +80,13 @@ public class ProfesorMenuActivity extends AppCompatActivity {
     public void ClickLogoutP(View view){
         logout(this);
     }
+    public void ClickAyudaP(View View){
+        ProfesorMenuActivity.redirectActivity(this,ProfesorAyudaActivity.class);
+    }
 
+    public void ClickContactoP(View View){
+        ProfesorMenuActivity.redirectActivity(this,ProfesorContactoActivity.class);
+    }
     public static void logout(Activity activity) {
         //Inicializar el dialogo de alerta
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);

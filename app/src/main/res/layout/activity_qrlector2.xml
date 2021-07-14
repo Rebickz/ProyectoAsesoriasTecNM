@@ -5,9 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/QRLectorD"
+    android:id="@+id/drawer_layout"
     tools:context=".QRLector">
-
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -232,7 +232,13 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
     public void ClickLogoutP(View view){
         ProfesorMenuActivity.logout(this);
     }
+    public void ClickAyudaP(View View){
+        ProfesorMenuActivity.redirectActivity(this,ProfesorAyudaActivity.class);
+    }
 
+    public void ClickContactoP(View View){
+        ProfesorMenuActivity.redirectActivity(this,ProfesorContactoActivity.class);
+    }
     @Override
     protected void onPause() {
         super.onPause();

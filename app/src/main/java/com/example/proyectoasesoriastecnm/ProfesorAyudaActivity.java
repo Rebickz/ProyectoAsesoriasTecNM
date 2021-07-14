@@ -5,9 +5,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-public class DashboardEstadisticasActivity extends AppCompatActivity {
+public class ProfesorAyudaActivity extends AppCompatActivity {
 
     //Inicializar variable
     DrawerLayout drawerLayoutP;
@@ -15,10 +14,9 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard_estadisticas);
+        setContentView(R.layout.activity_profesor_ayuda);
+        drawerLayoutP= findViewById(R.id.profesor_drawer_layout);
 
-        //Asignar la variable drawerLayout
-        drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
     }
 
     public void ClickMenuP(View view){
@@ -39,8 +37,6 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
     public void ClickPerfilP(View view){
         //Redireccionar
         ProfesorMenuActivity.redirectActivity(this, ProfesorProfileActivity.class);
-        //Toast.makeText(this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
-
     }
     public void ClickDashboardP(View view){
         //Redireccionar
@@ -51,24 +47,26 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
 
     public void ClickCitasP(View view){
         //Redireccionar
+        //redirectActivity(this, );
         ProfesorMenuActivity.redirectActivity(this, ProfesorCitasActivity.class);
-        //Toast.makeText(this, "Boton Citas Profesor", Toast.LENGTH_LONG).show();
 
     }
     public void ClickLogoutP(View view){
         ProfesorMenuActivity.logout(this);
     }
+
     public void ClickAyudaP(View View){
-        ProfesorMenuActivity.redirectActivity(this,ProfesorAyudaActivity.class);
+        recreate();
     }
 
     public void ClickContactoP(View View){
-        ProfesorMenuActivity.redirectActivity(this,ProfesorContactoActivity.class);
+        ProfesorMenuActivity.redirectActivity(this,ContactoActivity.class);
     }
+
     @Override
     protected void onPause() {
         super.onPause();
-        //Cerramos drawer
+        //Cerrar drawer
         ProfesorMenuActivity.closeDrawer(drawerLayoutP);
     }
 }

@@ -51,7 +51,7 @@ public class DashboardActivity extends AppCompatActivity {
     public void ClickPerfilP(View view){
         //Redireccionar
         //redirectActivity(this, ProfileActivity.class);
-        Toast.makeText(this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
+        ProfesorMenuActivity.redirectActivity(this, ProfesorProfileActivity.class);
 
     }
     public void ClickDashboardP(View view){
@@ -64,13 +64,19 @@ public class DashboardActivity extends AppCompatActivity {
     public void ClickCitasP(View view){
         //Redireccionar
         //redirectActivity(this, );
-        Toast.makeText(this, "Boton Citas Profesor", Toast.LENGTH_LONG).show();
+        ProfesorMenuActivity.redirectActivity(this, ProfesorCitasActivity.class);
 
     }
     public void ClickLogoutP(View view){
         ProfesorMenuActivity.logout(this);
     }
+    public void ClickAyudaP(View View){
+        ProfesorMenuActivity.redirectActivity(this,ProfesorAyudaActivity.class);
+    }
 
+    public void ClickContactoP(View View){
+        ProfesorMenuActivity.redirectActivity(this,ProfesorContactoActivity.class);
+    }
     @Override
     protected void onPause() {
         super.onPause();
