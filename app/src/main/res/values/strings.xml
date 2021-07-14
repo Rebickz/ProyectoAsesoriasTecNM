@@ -41,6 +41,15 @@
 
     <string name="Rol">Rol de usuario</string>
     <string name="Guardar">Guardar</string>
+    <string name="mensaje_principalP">Verifica las asesorías que se te asignan y confirmala. Minimo dos horas por semana.</string>
+    <string name="mensaje_secundarioP">Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario.</string>
+    <string name="mensaje_calendarioP">Verifica fechas de tus asesorias</string>
 
 
+    <!--CONTACTO-->
+    <string name="contactus">Contactanos</string>
+    <string name="telefono">Telefono</string>
+    <string name="redessociales">Facebook</string>
+    <string name="enviar">Enviar</string>
+    <string name="mensajeContacto">Escribe tu mensaje aqui</string>
 </resources>

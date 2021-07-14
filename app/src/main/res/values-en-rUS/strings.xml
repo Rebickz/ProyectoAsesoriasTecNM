@@ -40,5 +40,17 @@
 
     <string name="Rol">Type of user</string>
     <string name="Guardar">Save</string>
+    <string name="mensaje_principalP">Verify and confirm your assigned counseling. Minimum two hours per week.</string>
+    <string name="mensaje_secundarioP">This application will help to streamline the process of conducting consultancies in a simple and user-friendly way.</string>
+    <string name="mensaje_calendarioP">Verify dates of your consultancies</string>
+    <!--CONTACTO-->
+    <string name="contactus">Contact us</string>
+    <string name="telefono">Phone</string>
+    <string name="redessociales">Facebook</string>
+    <string name="enviar">Send</string>
+    <string name="mensajeContacto">Write your message here</string>
+
+
+
 
 </resources>
