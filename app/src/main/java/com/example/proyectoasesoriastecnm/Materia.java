@@ -60,10 +60,12 @@ public class Materia {
 
     @Override
     public String toString() {
-        return "\nMateria: \n" +
+        return "\nDatos Materia: \n" +
                 "\nNombre: " + nombre + '\'' +
-                "\nCarrera" + carrera + '\'' +
-                "\nSemestre" + semestre + '\'' +
-                "\nHorario" + Horario + '\'';
+                "\nSemestre: " + semestre + '\'' +
+                "\nCarrera: " + carrera + '\'' +
+                "\nDepartamento: " + "Ciencias básicas " + '\'' +
+                "\nLugar: " + "Aula 45 " + '\'' +
+                "\nHorario: " + Horario + '\'';
     }
 }
