@@ -50,15 +50,14 @@
                 android:id="@+id/bannerDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Registro"
-                android:textStyle="italic"
-                android:textSize="18sp"
-                android:textAlignment="center"
                 android:gravity="center_horizontal"
-                app:layout_constraintTop_toBottomOf="@+id/banner"
+                android:text="@string/registrarme"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="italic"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
 
             <EditText
                 android:id="@+id/name"

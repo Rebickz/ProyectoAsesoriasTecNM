@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.forgotPassword:
-                //startActivity(new Intent(this, ForgotPasswordActivity.class));
+                startActivity(new Intent(this, ForgotPasswordActivity.class));
                 break;
         }
 

@@ -7,6 +7,8 @@
     <string name="iniciar_sesion">INICIAR SESIÓN</string>
     <string name="registrarme">Registrarme</string>
     <string name="olvide_contraseña">Olvide Contraseña</string>
+    <string name="recuperar_contraseña">Recuperar Contraseña</string>
+
 
 
     <!--ALUMNO-->
