@@ -19,7 +19,7 @@ public class MenuActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
@@ -70,10 +70,10 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
-    public void ClickCitas(View view){
+    public void ClickCitas(View view){ //Agregar
         //Redireccionar
-        //redirectActivity(this, );
-        Toast.makeText(MenuActivity.this, "Boton Citas", Toast.LENGTH_LONG).show();
+        redirectActivity(this, CitasV2.class );
+        //Toast.makeText(MenuActivity.this, "Boton Citas", Toast.LENGTH_LONG).show();
 
     }
     public void ClickLogout(View view){

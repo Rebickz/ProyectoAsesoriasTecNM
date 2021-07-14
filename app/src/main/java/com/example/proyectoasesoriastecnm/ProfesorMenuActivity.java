@@ -60,21 +60,21 @@ public class ProfesorMenuActivity extends AppCompatActivity {
     }
     public void ClickPerfilP(View view){
         //Redireccionar
-        //redirectActivity(this, ProfileActivity.class);
-        Toast.makeText(ProfesorMenuActivity.this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
+        redirectActivity(this, ProfesorProfileActivity.class);
+        //Toast.makeText(ProfesorMenuActivity.this, "Boton Perfil Profesor", Toast.LENGTH_LONG).show();
 
     }
-    public void ClickAgendarP(View view){
+    public void ClickDashboardP(View view){
         //Redireccionar
-        //redirectActivity(this, );
-        Toast.makeText(ProfesorMenuActivity.this, "Boton Agendar Profesor", Toast.LENGTH_LONG).show();
+        redirectActivity(this, DashboardActivity.class);
+        //Toast.makeText(ProfesorMenuActivity.this, "Dashboard", Toast.LENGTH_LONG).show();
 
     }
 
     public void ClickCitasP(View view){
         //Redireccionar
-        //redirectActivity(this, );
-        Toast.makeText(ProfesorMenuActivity.this, "Boton Citas Profesor", Toast.LENGTH_LONG).show();
+        redirectActivity(this, ProfesorCitasActivity.class);
+        //Toast.makeText(ProfesorMenuActivity.this, "Boton Citas Profesor", Toast.LENGTH_LONG).show();
 
     }
     public void ClickLogoutP(View view){

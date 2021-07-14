@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">ProyectoAsesoriasTecNM</string>
+    <string name="app_name">Asesorias TecNM</string>
+
+    <!--GENERALES-->
+    <string name="correo">Correo Electronico</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="iniciar_sesion">INICIAR SESIÓN</string>
+    <string name="registrarme">Registrarme</string>
+    <string name="olvide_contraseña">Olvide Contraseña</string>
+
+
+    <!--ALUMNO-->
+    <string name="asesorias_alumnos">Asesorias Alumnos</string>
+    <string name="home">Inicio</string>
+    <string name="descripcion">Descripción</string>
+    <string name="perfil">Perfil</string>
+    <string name="agendar">Agendar</string>
+    <string name="citas">Citas</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+
+
+    <string name="datos_personales">Datos Personales</string>
+    <string name="correo_institucional">Correo Institucional</string>
+    <string name="nombre_materia">Nombre de la materia</string>
+    <string name="hora_agendada">Hora agendada</string>
+    <string name="profesor_detalle">Profesor</string>
+
+
+    <!--PROFESOR-->
+
 </resources>

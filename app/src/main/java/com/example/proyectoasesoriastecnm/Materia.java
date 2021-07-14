@@ -2,6 +2,7 @@ package com.example.proyectoasesoriastecnm;
 
 public class Materia {
 
+    private String uid;
     private String nombre;
     private String carrera;
     private String semestre;
@@ -15,6 +16,14 @@ public class Materia {
         this.carrera = carrera;
         this.semestre = semestre;
         Horario = horario;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getNombre() {
@@ -47,5 +56,14 @@ public class Materia {
 
     public void setHorario(String horario) {
         Horario = horario;
+    }
+
+    @Override
+    public String toString() {
+        return "\nMateria: \n" +
+                "\nNombre: " + nombre + '\'' +
+                "\nCarrera" + carrera + '\'' +
+                "\nSemestre" + semestre + '\'' +
+                "\nHorario" + Horario + '\'';
     }
 }
