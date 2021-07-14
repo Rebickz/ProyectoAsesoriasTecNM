@@ -17,7 +17,7 @@
     <string name="perfil">Profile</string>
     <string name="agendar">Schedule</string>
     <string name="citas">Appointments</string>
-    <string name="cerrar_sesion">Logout</string>
+    <string name="cerrar_sesion">Log out</string>
     <string name="nombre">Name</string>
     <string name="apellido">Last Name</string>
 
@@ -29,6 +29,10 @@
     <string name="enviar_solicitud">Send request</string>
 
     <string name="Alumno">Student</string>
+    <string name="Logout_mensaje">Are you sure you want to log out?</string>
+
+
+
     <!--PROFESOR-->
 
 
