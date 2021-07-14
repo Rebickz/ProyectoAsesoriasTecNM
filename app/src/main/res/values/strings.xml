@@ -29,9 +29,12 @@
     <string name="enviar_solicitud">Enviar Solicitud</string>
 
     <string name="Alumno">Alumno</string>
-
-
+    <string name="Logout_mensaje">Estas seguro que quieres cerrar sesion?</string>
 
     <!--PROFESOR-->
+
+    <string name="Rol">Rol de usuario</string>
+    <string name="Guardar">Guardar</string>
+
 
 </resources>
