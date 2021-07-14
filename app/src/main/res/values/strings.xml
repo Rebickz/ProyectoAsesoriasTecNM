@@ -26,7 +26,7 @@
     <string name="nombre_materia">Nombre de la materia</string>
     <string name="hora_agendada">Hora agendada</string>
     <string name="profesor_detalle">Profesor</string>
-
+    <string name="enviar_solicitud">Enviar Solicitud</string>
 
     <!--PROFESOR-->
 
