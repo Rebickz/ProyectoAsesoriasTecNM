@@ -25,7 +25,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nombre">
+                android:hint="@string/nombreMateria">
                 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_nombreMateria"
@@ -41,7 +41,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Semestre">
+                android:hint="@string/semestreMateria">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_semestreMateria"
@@ -57,7 +57,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Carrera">
+                android:hint="@string/carreraMateria">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_carreraMateria"
@@ -73,7 +73,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Departamento">
+                android:hint="@string/dptoMateria">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_dptoMateria"
@@ -88,7 +88,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Lugar">
+                android:hint="@string/lugarMateria">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_lugarMateria"
@@ -104,7 +104,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Horario">
+                android:hint="@string/horarioMateria">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_horarioMateria"
@@ -150,7 +150,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lista de materias"
+                android:text="@string/listaMateria"
                 android:textSize="30dp"
                 android:layout_margin="10dp"
                 android:layout_gravity="center_horizontal"/>

@@ -35,7 +35,8 @@ public class ProfesorContactoActivity extends AppCompatActivity {
     }
     public void ClickPerfilP(View view){
         //Redireccionar
-        recreate();
+        ProfesorMenuActivity.redirectActivity(this, ProfesorProfileActivity.class);
+
     }
     public void ClickDashboardP(View view){
         //Redireccionar

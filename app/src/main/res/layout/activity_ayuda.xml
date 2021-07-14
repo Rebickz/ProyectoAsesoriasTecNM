@@ -28,7 +28,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Preguntas frecuentes"
+                    android:text="@string/preguntasFrecuentes"
                     android:textSize="30dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_horizontal"/>
@@ -39,7 +39,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Como puedo agendar una cita?"
+                    android:text="@string/pregunta1"
                     android:textSize="20dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_horizontal"/>
@@ -50,7 +50,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Como puedo presentar una queja?"
+                    android:text="@string/pregunta2"
                     android:textSize="20dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_horizontal"/>
@@ -61,7 +61,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Como saber si un alumno asiste?"
+                    android:text="@string/pregunta3"
                     android:textSize="20dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_horizontal"/>
@@ -72,7 +72,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Cómo puedo dar de baja una asesoria?"
+                    android:text="@string/pregunta4"
                     android:textSize="20dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_horizontal"/>
@@ -83,7 +83,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿No has encontrado solucion a tu problema?"
+                    android:text="@string/noSolucion"
                     android:textSize="30dp"
                     android:textAlignment="center"
                     android:paddingTop="49dp"
@@ -95,7 +95,7 @@
                     android:layout_height="79dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
-                    android:text="Ponte en contacto con nosotros, para poder atenderte de manera mas personalizada"
+                    android:text="@string/txtSolucion"
                     android:textAlignment="center"
                     android:textSize="20dp" />
 
@@ -108,7 +108,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#1B396A"
-                        android:text="@string/cerrar_sesion"
+                        android:text="@string/contacto"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold"
