@@ -77,4 +77,7 @@ public class DashboardActivity extends AppCompatActivity {
         //Cerramos drawer
         ProfesorMenuActivity.closeDrawer(drawerLayoutP);
     }
+
+    public void ClickStatistics(View view) {
+    }
 }
