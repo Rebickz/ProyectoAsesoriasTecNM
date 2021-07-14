@@ -70,10 +70,13 @@ public class ProfileActivity extends AppCompatActivity {
                     String lastName =userProfile.lastName;
                     String rol = userProfile.rol;
 
+                    String Alumno = getResources().getString(R.string.Alumno);
+                    String Profesor = getResources().getString(R.string.profesor_detalle);
+
                     if((userProfile.rol).equals("ALUMNO")){
-                        greetingTextView.setText("Alumno: " + name );
+                        greetingTextView.setText(Alumno + " : " +  name );
                     }else{
-                        greetingTextView.setText("Profesor:" + name );
+                        greetingTextView.setText(Profesor + " : " +  name );
                     }
                     nameTextView.setText(name);
                     emailTextView.setText(email);
