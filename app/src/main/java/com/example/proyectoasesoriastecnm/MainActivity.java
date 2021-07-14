@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Theme_ProyectoAsesoriasTecNM);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
