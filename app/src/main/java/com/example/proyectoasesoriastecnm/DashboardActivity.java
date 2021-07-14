@@ -79,5 +79,6 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     public void ClickStatistics(View view) {
+        ProfesorMenuActivity.redirectActivity(this, DashboardEstadisticasActivity.class);
     }
 }
