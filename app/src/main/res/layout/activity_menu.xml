@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DESCRIPCIÓN"
+            android:text="@string/Descripcion"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textSize="20dp"
@@ -34,7 +34,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Agenda tu cita, facilita tu proceso de aprendizaje a distancia"
+            android:text="@string/mensaje_principal"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textSize="20dp"
@@ -46,11 +46,11 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="30dp"
-            android:src="@drawable/ic_schedule"/>
+            android:src="@drawable/ic_baseline_calendar_today_24"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario. "
+            android:text="@string/mensaje_secundario"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textSize="20dp"
