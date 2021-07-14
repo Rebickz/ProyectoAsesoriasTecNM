@@ -12,14 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#C0CCDA"
-        >
+        android:background="#C0CCDA">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="#C0CCDA"
-            >
+            android:background="#C0CCDA">
 
             <include
                 layout="@layout/profesor_main_toolbar"/>
@@ -28,10 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_margin="8dp"
                 android:background="@color/white">
                 <TextView
                     android:layout_width="match_parent"
