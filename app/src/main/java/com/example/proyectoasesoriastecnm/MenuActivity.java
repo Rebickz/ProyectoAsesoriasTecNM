@@ -80,6 +80,14 @@ public class MenuActivity extends AppCompatActivity {
         logout(this);
     }
 
+    public void ClickAyuda(View View){
+        redirectActivity(this,AyudaActivity.class);
+
+    }
+    public void ClickContacto(View View){
+        redirectActivity(this,ContactoActivity.class);
+    }
+
     public static void logout(Activity activity) {
 
         //Inicializar el dialogo de alerta

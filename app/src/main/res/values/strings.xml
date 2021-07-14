@@ -17,6 +17,8 @@
     <string name="agendar">Agendar</string>
     <string name="citas">Citas</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="contacto">Contacto</string>
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
 

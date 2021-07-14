@@ -63,7 +63,8 @@
                         android:layout_height="wrap_content"
                         android:text="@string/redessociales"
                         tools:layout_editor_absoluteX="78dp"
-                        tools:layout_editor_absoluteY="143dp" />
+                        tools:layout_editor_absoluteY="143dp"
+                        tools:ignore="MissingConstraints" />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -71,7 +72,8 @@
                         android:layout_height="wrap_content"
                         android:text="449 910 50 02"
                         tools:layout_editor_absoluteX="78dp"
-                        tools:layout_editor_absoluteY="99dp" />
+                        tools:layout_editor_absoluteY="99dp"
+                        tools:ignore="MissingConstraints" />
 
                     <Button
                         android:id="@+id/btnContacto"
@@ -95,7 +97,8 @@
                         android:layout_height="wrap_content"
                         android:text="@string/correo"
                         tools:layout_editor_absoluteX="78dp"
-                        tools:layout_editor_absoluteY="16dp" />
+                        tools:layout_editor_absoluteY="16dp"
+                        tools:ignore="MissingConstraints" />
 
                     <TextView
                         android:id="@+id/textView2"
@@ -103,7 +106,8 @@
                         android:layout_height="wrap_content"
                         android:text="coordinacion@aguascalientes.tecnm.mx"
                         tools:layout_editor_absoluteX="78dp"
-                        tools:layout_editor_absoluteY="35dp" />
+                        tools:layout_editor_absoluteY="35dp"
+                        tools:ignore="MissingConstraints" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -111,7 +115,8 @@
                         android:layout_height="wrap_content"
                         android:text="TecNM Campus Aguascalientes"
                         tools:layout_editor_absoluteX="78dp"
-                        tools:layout_editor_absoluteY="161dp" />
+                        tools:layout_editor_absoluteY="161dp"
+                        tools:ignore="MissingConstraints" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -119,7 +124,8 @@
                         android:layout_height="wrap_content"
                         android:text="@string/telefono"
                         tools:layout_editor_absoluteX="78dp"
-                        tools:layout_editor_absoluteY="80dp" />
+                        tools:layout_editor_absoluteY="80dp"
+                        tools:ignore="MissingConstraints" />
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -127,7 +133,8 @@
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/ic_email"
                         tools:layout_editor_absoluteX="38dp"
-                        tools:layout_editor_absoluteY="16dp" />
+                        tools:layout_editor_absoluteY="16dp"
+                        tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
                     <ImageView
                         android:id="@+id/imageView4"
@@ -135,7 +142,8 @@
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/ic_social"
                         tools:layout_editor_absoluteX="38dp"
-                        tools:layout_editor_absoluteY="142dp" />
+                        tools:layout_editor_absoluteY="142dp"
+                        tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
                     <ImageView
                         android:id="@+id/imageView5"
@@ -143,13 +151,15 @@
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/ic_phone"
                         tools:layout_editor_absoluteX="38dp"
-                        tools:layout_editor_absoluteY="80dp" />
+                        tools:layout_editor_absoluteY="80dp"
+                        tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="409dp"
                         android:layout_height="wrap_content"
                         tools:layout_editor_absoluteX="1dp"
-                        tools:layout_editor_absoluteY="235dp">
+                        tools:layout_editor_absoluteY="235dp"
+                        tools:ignore="MissingConstraints">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"

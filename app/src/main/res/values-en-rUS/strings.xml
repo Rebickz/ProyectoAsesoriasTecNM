@@ -18,6 +18,8 @@
     <string name="agendar">Schedule</string>
     <string name="citas">Appointments</string>
     <string name="cerrar_sesion">Log out</string>
+    <string name="ayuda">Help</string>
+    <string name="contacto">Contact</string>
     <string name="nombre">Name</string>
     <string name="apellido">Last Name</string>
 

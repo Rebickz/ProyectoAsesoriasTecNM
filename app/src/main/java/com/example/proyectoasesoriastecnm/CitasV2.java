@@ -113,6 +113,14 @@ public class CitasV2 extends AppCompatActivity {
         MenuActivity.logout(this);
     }
 
+    public void ClickAyuda(View View){
+        MenuActivity.redirectActivity(this,AyudaActivity.class);
+
+    }
+    public void ClickContacto(View View){
+        MenuActivity.redirectActivity(this,ContactoActivity.class);
+    }
+
     @Override
     protected void onPause() {
         super.onPause();

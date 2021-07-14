@@ -185,13 +185,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:onClick="ClickPerfilP">
+                android:onClick="ClickAyuda">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Ayuda"
+                    android:text="@string/ayuda"
                     android:padding="12dp"
                     android:textColor="@color/white"
                     android:layout_marginStart="16dp"
@@ -210,13 +210,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:onClick="ClickPerfilP">
+                android:onClick="ClickContacto">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Contacto"
+                    android:text="@string/contacto"
                     android:padding="12dp"
                     android:textColor="@color/white"
                     android:layout_marginStart="16dp"
