@@ -65,7 +65,7 @@ public class MateriasActivity extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     materia = ds.getValue(Materia.class);
-                    myArrayList.add(materia.getNombre().toString() + " " + materia.getHorario() + " " + materia.getCarrera());
+                    myArrayList.add(materia.getNombre().toString() + "\n" + materia.getHorario() + "\n" + materia.getCarrera()+ "\nDepartamento: Sistemas y computacion\nLugar: Aula 45");
                     //myArrayList.add(materia.getCarrera().toString());
                 }
 

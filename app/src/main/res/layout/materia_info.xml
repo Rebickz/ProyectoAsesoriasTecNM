@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:onClick="ClickNombre_Materia"
         android:text="Nombre"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
 

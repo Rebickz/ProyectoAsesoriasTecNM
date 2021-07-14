@@ -55,8 +55,8 @@ public class CitasV2 extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     cita = ds.getValue(Cita.class);
-                    myArrayList.add(cita.getMateria().toString() + " " + cita.getHorario() + " " + cita.getProfesor());
-                    //myArrayList.add(materia.getCarrera().toString());
+                    //myArrayList.add(cita.getMateria().toString() + " " + cita.getHorario() + " " + cita.getProfesor());
+                    myArrayList.add("Datos cita\nMateria:Fundamentos de programación\nCarrera:TICS\nDepartamento:Sistemas y computacion\nHorario:12:00-13:00hrs\nLugar:Aula 45");
                 }
 
                 myListView.setAdapter(adapter);
