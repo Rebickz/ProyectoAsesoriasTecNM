@@ -35,5 +35,7 @@
 
     <!--PROFESOR-->
 
+    <string name="Rol">Type of user</string>
+    <string name="Guardar">Save</string>
 
 </resources>

@@ -33,4 +33,8 @@
 
     <!--PROFESOR-->
 
+    <string name="Rol">Rol de usuario</string>
+    <string name="Guardar">Guardar</string>
+
+
 </resources>
