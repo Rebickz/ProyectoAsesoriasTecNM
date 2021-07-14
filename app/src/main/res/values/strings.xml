@@ -28,6 +28,10 @@
     <string name="profesor_detalle">Profesor</string>
     <string name="enviar_solicitud">Enviar Solicitud</string>
 
+    <string name="Alumno">Alumno</string>
+
+
+
     <!--PROFESOR-->
 
 </resources>
