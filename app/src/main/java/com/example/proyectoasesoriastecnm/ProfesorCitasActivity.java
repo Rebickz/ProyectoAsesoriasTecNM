@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -46,7 +47,7 @@ public class ProfesorCitasActivity extends AppCompatActivity {
         mref = database.getReference("citas");
 
         myArrayList = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this, R.layout.materia_info,R.id.nombre_materia, myArrayList);
+        adapter = new ArrayAdapter<String>(this, R.layout.profesor_cita_info,R.id.Profesornombre_cita, myArrayList);
 
         mref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -120,5 +121,10 @@ public class ProfesorCitasActivity extends AppCompatActivity {
         super.onPause();
         //Cerramos drawer
         ProfesorMenuActivity.closeDrawer(drawerLayoutP);
+    }
+
+    public void ClickProfesorNombre_Cita(View view){
+        Intent i = new Intent( this, ProfesorDetalleCitaActivity.class);
+        startActivity(i);
     }
 }
