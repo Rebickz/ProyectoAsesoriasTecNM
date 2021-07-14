@@ -34,6 +34,7 @@
     <string name="Descripcion">DESCRIPTION</string>
     <string name="mensaje_principal">Schedule an appointment, make it your online learning process easier</string>
     <string name="mensaje_secundario">This application helps streamline the process of consulting in a simple and user-friendly way.</string>
+    <string name="solicitud_sesion">Your request has been sent</string>
 
     <!--PROFESOR-->
 

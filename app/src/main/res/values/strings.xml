@@ -34,7 +34,7 @@
     <string name="Descripcion">DESCRIPCIÓN</string>
     <string name="mensaje_principal">Agenda tu cita, facilita tu proceso de aprendizaje a distancia</string>
     <string name="mensaje_secundario">Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario.</string>
-
+    <string name="solicitud_sesion">Se solicito su sesion.</string>
 
 
     <!--PROFESOR-->

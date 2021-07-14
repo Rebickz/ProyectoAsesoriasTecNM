@@ -42,9 +42,6 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
         BotonEnvio = (Button) findViewById(R.id.ButtonSend);
         //onClick(BotonEnvio);
 
-
-
-
         tv1 = (EditText) findViewById(R.id.EditTextV1);
           dato = getIntent().getStringExtra("dato");
          tv1.setText(dato);
@@ -132,8 +129,6 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.ButtonSend:
                 registerCita();
                 break;
-
-
         }
 
     }
@@ -152,11 +147,9 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
         cita.setUid(UUID.randomUUID().toString());
 
         databaseReference.child("citas").child(cita.getUid()).setValue(cita);
-        Toast.makeText(this, "Se solicito su sesion", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.solicitud_sesion, Toast.LENGTH_LONG).show();
 
     }
-
-
 
 
 
