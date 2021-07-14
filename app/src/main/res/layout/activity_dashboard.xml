@@ -29,14 +29,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Menu Dashboard"
-                    android:background="@color/white"
                     android:layout_gravity="center"
-                    android:textAlignment="center"
-                    android:textSize="20dp"
-                    android:padding="16dp"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:background="@color/white"
+                    android:padding="16dp"
+                    android:text="@string/tituloDashboard"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -56,13 +55,14 @@
                         android:onClick="ClickUsers">
 
                     </ImageView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Usuarios"
                         android:layout_gravity="center"
-                        android:textSize="25sp"
-                        android:layout_marginTop="50dp">
+                        android:layout_marginTop="50dp"
+                        android:text="@string/usuario"
+                        android:textSize="25sp">
 
                     </TextView>
 
@@ -85,13 +85,14 @@
                         android:onClick="ClickMaterias">
 
                     </ImageView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Materias"
                         android:layout_gravity="center"
-                        android:textSize="25sp"
-                        android:layout_marginTop="50dp">
+                        android:layout_marginTop="50dp"
+                        android:text="@string/materias"
+                        android:textSize="25sp">
 
                     </TextView>
 
@@ -117,10 +118,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Estadisticas"
                         android:layout_gravity="center"
-                        android:textSize="25sp"
-                        android:layout_marginTop="50dp">
+                        android:layout_marginTop="50dp"
+                        android:text="@string/estadisticas"
+                        android:textSize="25sp">
 
                     </TextView>
 

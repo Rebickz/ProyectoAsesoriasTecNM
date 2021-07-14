@@ -8,6 +8,8 @@
     <string name="iniciar_sesion">LOGIN</string>
     <string name="registrarme">Sign up</string>
     <string name="olvide_contraseña">Forgot Password</string>
+    <string name="recuperar_contraseña">Recover Password</string>
+
 
 
     <!--ALUMNO-->
@@ -45,6 +47,33 @@
     <string name="mensaje_principalP">Verify and confirm your assigned counseling. Minimum two hours per week.</string>
     <string name="mensaje_secundarioP">This application will help to streamline the process of conducting consultancies in a simple and user-friendly way.</string>
     <string name="mensaje_calendarioP">Verify dates of your consultancies</string>
+    <!--DASHBOARD-->
+    <string name="usuario">Users</string>
+    <string name="materias">Subjects</string>
+    <string name="estadisticas">Analytics</string>
+    <string name="tituloDashboard">Dashboard Menu</string>
+
+    <string name="nombreMateria">Subject</string>
+    <string name="semestreMateria">Semester</string>
+    <string name="carreraMateria">Career</string>
+    <string name="dptoMateria">Departmen</string>
+    <string name="lugarMateria">Place</string>
+    <string name="horarioMateria">Hour</string>
+    <string name="listaMateria">Sunject List</string>
+    <string name="listaUsuarios">Users List</string>
+    <string name="interaccionUsuarios">User Interaction</string>
+    <string name="usuariosActivos">Active Users</string>
+
+
+    <!--AYUDA-->
+    <string name="preguntasFrecuentes">FAQ</string>
+    <string name="pregunta1">How can I schedule an appointment?</string>
+    <string name="pregunta2">How do I file a complaint?</string>
+    <string name="pregunta3">How do I know if a student is attending? </string>
+    <string name="pregunta4">How can I cancel an assessment? </string>
+    <string name="noSolucion">Havent you found a solution to your problem?</string>
+    <string name="txtSolucion">Contact us, so we can assist you in a more personalized way</string>
+
     <!--CONTACTO-->
     <string name="contactus">Contact us</string>
     <string name="telefono">Phone</string>
