@@ -13,20 +13,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <include
-        layout="@layout/main_toolbar"/>
+        <include
+            layout="@layout/main_toolbar"/>
 
-
-        <ImageView
-            android:id="@+id/QRView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/purple_700"
-            app:srcCompat="@drawable/splash_screen"
-            />
-
-
-
+            <ImageView
+                android:id="@+id/QRView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_700"
+                app:srcCompat="@drawable/ic_baseline_qr_code_scanner_24"
+                tools:ignore="VectorDrawableCompat" />
 
     </LinearLayout>
 

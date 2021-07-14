@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
@@ -47,7 +48,7 @@ public class CitasV2 extends AppCompatActivity {
         mref = database.getReference("citas");
 
         myArrayList = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this, R.layout.materia_info,R.id.nombre_materia, myArrayList);
+        adapter = new ArrayAdapter<String>(this, R.layout.cita_info,R.id.nombre_cita, myArrayList);
 
         mref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -126,5 +127,10 @@ public class CitasV2 extends AppCompatActivity {
         super.onPause();
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
+    }
+
+    public void ClickNombre_Cita(View view){
+        Intent i = new Intent( this, QRLector.class);
+        startActivity(i);
     }
 }
