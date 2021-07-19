@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/profesor_drawer_layout"
     tools:context=".DashboardMateriaActivity">
 
     <LinearLayout
@@ -13,8 +12,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include
-            layout="@layout/profesor_main_toolbar"/>
+        <!--include
+            layout="@layout/profesor_main_toolbar"/-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -167,7 +166,7 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <!--RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
@@ -176,6 +175,6 @@
         <include
             layout="@layout/profesor_main_nav_drawer"/>
 
-    </RelativeLayout>
+    </RelativeLayout-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

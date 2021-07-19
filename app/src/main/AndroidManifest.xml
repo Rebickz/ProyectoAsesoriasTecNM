@@ -23,10 +23,13 @@
         <activity android:name=".CitaActivity" />
         <activity android:name=".AgendarActivity" />
         <activity android:name=".MateriasActivity" />
-        <activity android:name=".DashboardAsesoriaActivity" />
-        <activity android:name=".DashboardMateriaActivity" />
-        <activity android:name=".DashboardUsuarioActivity" />
         <activity android:name=".DashboardActivity" />
+        <activity android:name=".DashboardAsesoriaActivity" />
+        <activity android:name=".DashboardMateriaActivity"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar"/>
+
+        <activity android:name=".DashboardUsuarioActivity" />
         <activity android:name=".ProfesorMenuActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".ProfileActivity" />
