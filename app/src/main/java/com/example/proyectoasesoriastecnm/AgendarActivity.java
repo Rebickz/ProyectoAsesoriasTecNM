@@ -123,6 +123,14 @@ public class AgendarActivity extends AppCompatActivity {
     public void ClickLogout(View view){
         //Cerrar app
         MenuActivity.logout(this);
+
+    }
+    public void ClickAyuda(View View){
+        MenuActivity.redirectActivity(this,AyudaActivity.class);
+
+    }
+    public void ClickContacto(View View){
+        MenuActivity.redirectActivity(this,ContactoActivity.class);
     }
 
     @Override

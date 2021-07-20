@@ -1,5 +1,6 @@
 package com.example.proyectoasesoriastecnm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,17 +41,17 @@ public class CitaS extends AppCompatActivity  {
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_materias);
+        setContentView(R.layout.activity_citas_v2);
 
         drawerLayout = findViewById(R.id.drawer_layout);
 
         cita = new Cita();
-        myListView = (ListView) findViewById(R.id.ListViewMaterias);
+        myListView = (ListView) findViewById(R.id.ListViewCitas);
         database = FirebaseDatabase.getInstance();
         mref = database.getReference("citas");
 
         myArrayList = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this, R.layout.materia_info,R.id.nombre_materia, myArrayList);
+        adapter = new ArrayAdapter<String>(this, R.layout.cita_info,R.id.nombre_cita, myArrayList);
 
         mref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -89,8 +91,8 @@ public class CitaS extends AppCompatActivity  {
     }
 
     public void ClickPerfil(View view){
-        //Recrear actividad
-        Toast.makeText(this, "Boton Perfil", Toast.LENGTH_LONG).show();
+        MenuActivity.redirectActivity(this,ProfileActivity.class);
+        //Toast.makeText(this, "Boton Perfil", Toast.LENGTH_LONG).show();
 
     }
 
@@ -98,14 +100,12 @@ public class CitaS extends AppCompatActivity  {
         //Redireccionar
         MenuActivity.redirectActivity(this, AgendarActivity.class);
         //recreate();
-
-
     }
 
     public void ClickCitas(View view){
         //Redireccionar
-        //redirectActivity(this, );
-        Toast.makeText(this, "Boton Citas", Toast.LENGTH_LONG).show();
+        MenuActivity.redirectActivity(this,CitasV2.class);
+        //Toast.makeText(this, "Boton Citas", Toast.LENGTH_LONG).show();
 
     }
 
@@ -114,10 +114,26 @@ public class CitaS extends AppCompatActivity  {
         MenuActivity.logout(this);
     }
 
+    public void ClickAyuda(View View){
+        MenuActivity.redirectActivity(this,AyudaActivity.class);
+
+    }
+    public void ClickContacto(View View){
+        MenuActivity.redirectActivity(this,ContactoActivity.class);
+    }
+
     @Override
     protected void onPause() {
         super.onPause();
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
     }
+
+    public void ClickNombre_Cita(View view){
+        Intent i = new Intent( this, QRLector.class);
+        startActivity(i);
+    }
+
+
+
 }

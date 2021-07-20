@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/detalle_drawer_layout"
+    android:id="@+id/drawer_layout"
     tools:context=".CitaActivity">
 
 
@@ -22,14 +22,14 @@
                 android:id="@+id/DatosPersonales"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Datos Personales"
+                android:text="@string/datos_personales"
                 android:textStyle="bold"
                 android:textSize="@android:dimen/app_icon_size" />
             <TextView
                 android:id="@+id/CorreoInstitucional"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Correo Institucional"
+                android:text="@string/correo_institucional"
                 android:textStyle="bold"
                 android:textSize="25dp"
                 android:padding="5dp"/>
@@ -44,7 +44,7 @@
                 android:id="@+id/NombreDeMateria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre de la materia"
+                android:text="@string/nombre_materia"
                 android:textStyle="bold"
                 android:textSize="25dp"
                 android:padding="5dp"/>
@@ -59,7 +59,7 @@
                 android:id="@+id/HoraAgendada"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hora agendada "
+                android:text="@string/hora_agendada"
                 android:textStyle="bold"
                 android:textSize="25dp"
                 android:padding="5dp"/>
@@ -73,7 +73,7 @@
                 android:id="@+id/ProfesorTextV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Profesor "
+                android:text="@string/profesor_detalle"
                 android:textStyle="bold"
                 android:textSize="25dp"
                 android:padding="5dp"/>
@@ -88,7 +88,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enviar Solicitud"
+                android:text="@string/enviar_solicitud"
                 android:backgroundTint="#1B396A"
                 android:id="@+id/ButtonSend"
                 android:onClick="ClickButtonSend"

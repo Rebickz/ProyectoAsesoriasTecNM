@@ -65,7 +65,7 @@ public class MateriasActivity extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     materia = ds.getValue(Materia.class);
-                    myArrayList.add(materia.getNombre().toString() + " " + materia.getHorario() + " " + materia.getCarrera());
+                    myArrayList.add(materia.getNombre().toString() + "\n" + materia.getHorario() + "\n" + materia.getCarrera()+ "\nDepartamento: Sistemas y computacion\nLugar: Aula 45");
                     //myArrayList.add(materia.getCarrera().toString());
                 }
 
@@ -121,6 +121,14 @@ public class MateriasActivity extends AppCompatActivity {
     public void ClickLogout(View view){
         //Cerrar app
         MenuActivity.logout(this);
+    }
+
+    public void ClickAyuda(View View){
+        MenuActivity.redirectActivity(this,AyudaActivity.class);
+
+    }
+    public void ClickContacto(View View){
+        MenuActivity.redirectActivity(this,ContactoActivity.class);
     }
 
     @Override

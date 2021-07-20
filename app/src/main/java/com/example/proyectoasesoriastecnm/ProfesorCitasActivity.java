@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -46,7 +47,7 @@ public class ProfesorCitasActivity extends AppCompatActivity {
         mref = database.getReference("citas");
 
         myArrayList = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this, R.layout.materia_info,R.id.nombre_materia, myArrayList);
+        adapter = new ArrayAdapter<String>(this, R.layout.profesor_cita_info,R.id.Profesornombre_cita, myArrayList);
 
         mref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -54,8 +55,8 @@ public class ProfesorCitasActivity extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     cita = ds.getValue(Cita.class);
-                    myArrayList.add(cita.getMateria().toString() + " " + cita.getHorario() + " " + cita.getProfesor());
-                    //myArrayList.add(materia.getCarrera().toString());
+                    //myArrayList.add(cita.getMateria().toString() + " " + cita.getHorario() + " " + cita.getProfesor());
+                    myArrayList.add("Datos cita\nMateria:Fundamentos de programación\nCarrera:TICS\nDepartamento:Sistemas y computacion\nHorario:12:00-13:00hrs\nLugar:Aula 45");
                 }
 
                 myListView.setAdapter(adapter);
@@ -108,11 +109,22 @@ public class ProfesorCitasActivity extends AppCompatActivity {
     public void ClickLogoutP(View view){
         ProfesorMenuActivity.logout(this);
     }
+    public void ClickAyudaP(View View){
+        ProfesorMenuActivity.redirectActivity(this,ProfesorAyudaActivity.class);
+    }
 
+    public void ClickContactoP(View View){
+        ProfesorMenuActivity.redirectActivity(this,ProfesorContactoActivity.class);
+    }
     @Override
     protected void onPause() {
         super.onPause();
         //Cerramos drawer
         ProfesorMenuActivity.closeDrawer(drawerLayoutP);
+    }
+
+    public void ClickProfesorNombre_Cita(View view){
+        Intent i = new Intent( this, ProfesorDetalleCitaActivity.class);
+        startActivity(i);
     }
 }

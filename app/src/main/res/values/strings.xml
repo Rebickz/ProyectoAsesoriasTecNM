@@ -7,6 +7,8 @@
     <string name="iniciar_sesion">INICIAR SESIÓN</string>
     <string name="registrarme">Registrarme</string>
     <string name="olvide_contraseña">Olvide Contraseña</string>
+    <string name="recuperar_contraseña">Recuperar Contraseña</string>
+
 
 
     <!--ALUMNO-->
@@ -17,6 +19,8 @@
     <string name="agendar">Agendar</string>
     <string name="citas">Citas</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="contacto">Contacto</string>
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
 
@@ -26,8 +30,61 @@
     <string name="nombre_materia">Nombre de la materia</string>
     <string name="hora_agendada">Hora agendada</string>
     <string name="profesor_detalle">Profesor</string>
+    <string name="enviar_solicitud">Enviar Solicitud</string>
+
+    <string name="Alumno">Alumno</string>
+    <string name="Logout_mensaje">Estas seguro que quieres cerrar sesion?</string>
+
+    <string name="Descripcion">DESCRIPCIÓN</string>
+    <string name="mensaje_principal">Agenda tu cita, facilita tu proceso de aprendizaje a distancia</string>
+    <string name="mensaje_secundario">Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario.</string>
+    <string name="solicitud_sesion">Se solicito su sesion.</string>
 
 
     <!--PROFESOR-->
 
+    <string name="Rol">Rol de usuario</string>
+    <string name="Guardar">Guardar</string>
+    <string name="mensaje_principalP">Verifica las asesorías que se te asignan y confirmala. Minimo dos horas por semana.</string>
+    <string name="mensaje_secundarioP">Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario.</string>
+    <string name="mensaje_calendarioP">Verifica fechas de tus asesorias</string>
+
+    <!--DASHBOARD-->
+    <string name="usuario">Usuario</string>
+    <string name="materias">Materias</string>
+    <string name="estadisticas">Estadisticas</string>
+    <string name="tituloDashboard">Menu Dashboard</string>
+
+    <string name="nombreMateria">Materia</string>
+    <string name="semestreMateria">Semestre</string>
+    <string name="carreraMateria">Carrera</string>
+    <string name="dptoMateria">Departamento</string>
+    <string name="lugarMateria">Lugar</string>
+    <string name="horarioMateria">Horario</string>
+    <string name="listaMateria">Lista de materias</string>
+    <string name="listaUsuarios">Lista de usuarios</string>
+    <string name="interaccionUsuarios">Interaccion de usuarios</string>
+    <string name="usuariosActivos">Usuarios Activos</string>
+
+
+    <!--AYUDA-->
+    <string name="preguntasFrecuentes">Preguntas frecuentes</string>
+    <string name="pregunta1">¿Como puedo agendar una cita?</string>
+    <string name="pregunta2">¿Como puedo presentar una queja?</string>
+    <string name="pregunta3">¿Como saber si un alumno asiste?</string>
+    <string name="pregunta4">¿Cómo puedo dar de baja una asesoria?</string>
+    <string name="noSolucion">¿No has encontrado solucion a tu problema?</string>
+    <string name="txtSolucion">Ponte en contacto con nosotros, para poder atenderte de manera mas personalizada</string>
+
+
+
+
+
+
+    <!--CONTACTO-->
+    <string name="contactus">Contactanos</string>
+    <string name="telefono">Telefono</string>
+    <string name="redessociales">Facebook</string>
+    <string name="enviar">Enviar</string>
+    <string name="mensajeContacto">Escribe tu mensaje aqui</string>
 </resources>

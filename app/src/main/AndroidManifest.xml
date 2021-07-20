@@ -9,7 +9,15 @@
         android:roundIcon="@drawable/tecnm"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoAsesoriasTecNM">
-        <activity android:name=".ProfesorCitasActivity"></activity>
+        <activity android:name=".ForgotPasswordActivity"></activity>
+        <activity android:name=".ProfesorContactoActivity" />
+        <activity android:name=".ProfesorAyudaActivity" />
+        <activity android:name=".QRLector" />
+        <activity android:name=".DashboardEstadisticasActivity" />
+        <activity android:name=".ContactoActivity" />
+        <activity android:name=".AyudaActivity" />
+        <activity android:name=".ProfesorDetalleCitaActivity" />
+        <activity android:name=".ProfesorCitasActivity" />
         <activity android:name=".ProfesorProfileActivity" />
         <activity android:name=".CitasV2" />
         <activity android:name=".CitaActivity" />
@@ -23,7 +31,9 @@
         <activity android:name=".MenuActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".RegisterUserActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -80,13 +80,22 @@ public class MenuActivity extends AppCompatActivity {
         logout(this);
     }
 
+    public void ClickAyuda(View View){
+        redirectActivity(this,AyudaActivity.class);
+
+    }
+    public void ClickContacto(View View){
+        redirectActivity(this,ContactoActivity.class);
+    }
+
     public static void logout(Activity activity) {
+
         //Inicializar el dialogo de alerta
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         //Agregar titulo
-        builder.setTitle("Logout");
+        builder.setTitle(R.string.cerrar_sesion);
         //Agregar mensaje
-        builder.setMessage("Estas seguro que quieres cerrar sesion?");
+        builder.setMessage(R.string.Logout_mensaje);
         //Boton "si"
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override

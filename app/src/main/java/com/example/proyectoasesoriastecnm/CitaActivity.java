@@ -42,9 +42,6 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
         BotonEnvio = (Button) findViewById(R.id.ButtonSend);
         //onClick(BotonEnvio);
 
-
-
-
         tv1 = (EditText) findViewById(R.id.EditTextV1);
           dato = getIntent().getStringExtra("dato");
          tv1.setText(dato);
@@ -80,29 +77,35 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void ClickPerfil(View view){//Agregar
-        //Recrear actividad
+        MenuActivity.redirectActivity(this,ProfileActivity.class);
         //recreate();
     }
 
     public void ClickAgendar(View view){//Agregar
         //Redireccionar
-        //redirectActivity(this, );
+        MenuActivity.redirectActivity(this,AgendarActivity.class);
         //Toast.makeText(CitaActivity.this, "Boton Agendar", Toast.LENGTH_LONG).show();
 
     }
 
     public void ClickCitas(View view){//Agregar
         //Redireccionar
-        //redirectActivity(this, );
+        MenuActivity.redirectActivity(this,CitasV2.class);
         //Toast.makeText(CitaActivity.this, "Boton Citas", Toast.LENGTH_LONG).show();
 
     }
 
-
-
     public void ClickLogout(View view){//Agregar
         //Cerrar app
         MenuActivity.logout(this);
+    }
+
+    public void ClickAyuda(View View){
+        MenuActivity.redirectActivity(this,AyudaActivity.class);
+
+    }
+    public void ClickContacto(View View){
+        MenuActivity.redirectActivity(this,ContactoActivity.class);
     }
 
     @Override
@@ -132,8 +135,6 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.ButtonSend:
                 registerCita();
                 break;
-
-
         }
 
     }
@@ -152,11 +153,9 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
         cita.setUid(UUID.randomUUID().toString());
 
         databaseReference.child("citas").child(cita.getUid()).setValue(cita);
-        Toast.makeText(this, "Se solicito su sesion", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.solicitud_sesion, Toast.LENGTH_LONG).show();
 
     }
-
-
 
 
 
