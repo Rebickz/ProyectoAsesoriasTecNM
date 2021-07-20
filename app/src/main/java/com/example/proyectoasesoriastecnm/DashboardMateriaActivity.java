@@ -30,7 +30,7 @@ import java.util.UUID;
 public class DashboardMateriaActivity extends AppCompatActivity {
 
     //Inicializar variable
-    DrawerLayout drawerLayoutP;
+    //DrawerLayout drawerLayoutP;
     private List<Materia> listMateria = new ArrayList<Materia>();
     ArrayAdapter<Materia> arrayAdapterMateria;
 
@@ -49,9 +49,9 @@ public class DashboardMateriaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_materia);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //Asignar la variable drawerLayout
-        drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
+        //drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
 
         //CRUD
         nomMateria = findViewById(R.id.txt_nombreMateria);
@@ -187,12 +187,12 @@ public class DashboardMateriaActivity extends AppCompatActivity {
 
     public void ClickMenuP(View view){
         //Abrir Drawer
-        ProfesorMenuActivity.openDrawer(drawerLayoutP);
+        //ProfesorMenuActivity.openDrawer(drawerLayoutP);
     }
 
     public void ClickLogoP(View view){
         //Cerrar drawer
-        ProfesorMenuActivity.closeDrawer(drawerLayoutP);
+        //ProfesorMenuActivity.closeDrawer(drawerLayoutP);
     }
 
     //Opciones del menu
@@ -233,6 +233,6 @@ public class DashboardMateriaActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         //Cerramos drawer
-        ProfesorMenuActivity.closeDrawer(drawerLayoutP);
+        //ProfesorMenuActivity.closeDrawer(drawerLayoutP);
     }
 }
