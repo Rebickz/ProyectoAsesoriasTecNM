@@ -139,7 +139,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     String rol = userProfile.rol;
 
                                     if((userProfile.rol).equals("ALUMNO")){
+
+
+
+
                                         startActivity(new Intent(MainActivity.this, MenuActivity.class));
+
+
+
+
                                     }else{
                                         startActivity(new Intent(MainActivity.this, ProfesorMenuActivity.class));
                                     }
