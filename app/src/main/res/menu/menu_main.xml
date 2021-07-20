@@ -10,7 +10,7 @@
     <item android:id="@+id/icon_save"
         android:icon="@drawable/ic_save"
         android:title="Edit done"
-        app:showAsAction="always"/>
+        app:showAsAction="withText"/>
 
     <item android:id="@+id/icon_delete"
         android:icon="@drawable/ic_delete"
