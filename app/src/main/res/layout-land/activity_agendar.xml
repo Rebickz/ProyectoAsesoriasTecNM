@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".AgendarActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/main_toolbar"/>
+
+        <ScrollView
+            android:id="@+id/ScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/RelativeLay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewCarreras"
+                app:layout_constraintStart_toStartOf="@+id/ScrollView1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/firstCon">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/industrialimageView"
+                            android:layout_width="155dp"
+                            android:layout_height="143dp"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="40dp"
+                            android:onClick="ClickIndustrial"
+                            app:srcCompat="@drawable/industrial"
+                            tools:ignore="MissingConstraints" />
+
+                        <ImageView
+                            android:id="@+id/GestionimageView"
+                            android:layout_width="155dp"
+                            android:layout_height="143dp"
+                            android:layout_marginStart="200dp"
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="40dp"
+                            android:onClick="ClickGestion"
+                            app:srcCompat="@drawable/gestion"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/SecondCon"
+                    app:layout_constraintTop_toBottomOf="@+id/firstCon"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/industrialtextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginLeft="140dp"
+                            android:text="Ing Industrial" />
+
+                        <TextView
+                            android:id="@+id/empresarialtextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/GestionimageView"
+                            android:layout_marginStart="250dp"
+                            android:layout_marginLeft="250dp"
+                            android:text="Gestion Empresarial" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ThirdCon"
+                    app:layout_constraintTop_toBottomOf="@+id/SecondCon">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <ImageView
+                            android:id="@+id/AdminimageView"
+                            android:layout_width="155dp"
+                            android:layout_height="143dp"
+                            android:layout_marginStart="100dp"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="20dp"
+                            android:onClick="ClickAdminI"
+                            app:srcCompat="@drawable/administracion"
+                            tools:ignore="MissingConstraints" />
+
+                        <ImageView
+                            android:id="@+id/ElecimageView"
+                            android:layout_width="155dp"
+                            android:layout_height="143dp"
+                            android:layout_marginStart="200dp"
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="20dp"
+                            android:onClick="ClickElec"
+                            app:srcCompat="@drawable/electronica" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/FourthCon"
+                    app:layout_constraintTop_toBottomOf="@+id/ThirdCon">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/admintextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginLeft="140dp"
+                            android:text="Lic. Admin" />
+
+                        <TextView
+                            android:id="@+id/ElectextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="280dp"
+                            android:layout_marginLeft="280dp"
+                            android:text="Ing Electronica" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/FifthCon"
+                    app:layout_constraintTop_toBottomOf="@id/FourthCon">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ticsimageView"
+                            android:layout_width="155dp"
+                            android:layout_height="143dp"
+                            android:layout_marginStart="100dp"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="20dp"
+                            android:onClick="ClickTics"
+                            app:srcCompat="@drawable/tics" />
+
+                        <ImageView
+                            android:id="@+id/materialesimageView"
+                            android:layout_width="155dp"
+                            android:layout_height="143dp"
+                            android:layout_marginStart="200dp"
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="20dp"
+                            android:onClick="ClickMateriales"
+                            app:srcCompat="@drawable/materiales"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/SixtCon"
+                    app:layout_constraintTop_toBottomOf="@+id/FifthCon">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/ticstextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="130dp"
+                            android:layout_marginLeft="130dp"
+                            android:text="Ing Tecnologias" />
+
+                        <TextView
+                            android:id="@+id/materialesTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="250dp"
+                            android:layout_marginLeft="250dp"
+                            android:text="Ing Materiales" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/SeventhCon"
+                    app:layout_constraintTop_toBottomOf="@id/SixtCon">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/mecanicaimageView"
+                            android:layout_width="155dp"
+                            android:layout_height="143dp"
+                            android:layout_marginStart="100dp"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="20dp"
+                            android:onClick="ClickMecanica"
+                            app:srcCompat="@drawable/mecanica"
+                            tools:ignore="MissingConstraints" />
+
+                        <ImageView
+                            android:id="@+id/quimicaimageView"
+                            android:layout_width="155dp"
+                            android:layout_height="143dp"
+                            android:layout_marginStart="200dp"
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="20dp"
+                            android:onClick="ClickQuimica"
+                            app:srcCompat="@drawable/quimica" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/EightCon"
+                    app:layout_constraintTop_toBottomOf="@id/SeventhCon">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/mecanicatextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginLeft="140dp"
+                            android:text="Ing Mecanica" />
+
+                        <TextView
+                            android:id="@+id/quimicatextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="270dp"
+                            android:layout_marginLeft="270dp"
+                            android:text="Ing Quimica"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
