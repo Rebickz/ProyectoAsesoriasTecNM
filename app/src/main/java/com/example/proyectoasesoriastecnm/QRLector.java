@@ -1,23 +1,33 @@
 package com.example.proyectoasesoriastecnm;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.vision.CameraSource;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
+import org.w3c.dom.Text;
+
 
 public class QRLector extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
-    //private CameraSource cameraSource;
+    private CameraSource cameraSource;
     private SurfaceView cameraView;
     private final int MY_PERMISSIONS_REQUEST_CAMERA = 1;
     private String token = "";
@@ -26,17 +36,22 @@ public class QRLector extends AppCompatActivity {
     private Camera camara;
     private boolean encendida;
     private Button boton;
+    private TextView txt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrlector2);
-        //drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout = findViewById(R.id.drawer_layout);
 
+        txt = (TextView)findViewById(R.id.texto);
         boton = (Button)findViewById(R.id.boton);
         cameraView = (SurfaceView)findViewById(R.id.camera_view);
 
         surfaceholder = cameraView.getHolder();
+
+
 
         encendida=false;
         boton.setOnClickListener(new View.OnClickListener() {
@@ -50,10 +65,24 @@ public class QRLector extends AppCompatActivity {
             }
         });
 
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
+
+        String datos =  result.getContents();
+        txt.setText(datos);
+
     }
 
     private void startCamera() throws Exception{
-        if (ActivityCompat.shouldShowRequestPermissionRationale(QRLector.this,
+
+       /* if (ActivityCompat.shouldShowRequestPermissionRationale(QRLector.this,
                 Manifest.permission.CAMERA)) {
 
             if(!encendida){
@@ -74,6 +103,11 @@ public class QRLector extends AppCompatActivity {
                     new String[]{Manifest.permission.CAMERA},
                     MY_PERMISSIONS_REQUEST_CAMERA);
         }
+
+        */
+
+
+        new IntentIntegrator(this).initiateScan();
 
     }
 
@@ -134,8 +168,6 @@ public class QRLector extends AppCompatActivity {
         MenuActivity.closeDrawer(drawerLayout);
     }
 
+
+
 }
-
-
-
-
