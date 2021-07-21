@@ -11,7 +11,9 @@
     <string name="recuperar_contraseña">Recover Password</string>
     <string name="qr">QR code for students to capture</string>
 
-
+    <string name="click_autenticar">Button to authenticate</string>
+    <string name="autenticar_huella">Authenticate</string>
+    <string name="mensaje_huella">The login is now more secure, please provide the necessary permissions to use the login with your fingerprint.</string>
 
     <!--ALUMNO-->
     <string name="asesorias_alumnos">Asesorias Alumnos</string>
@@ -41,6 +43,8 @@
     <string name="mensaje_secundario">This application helps streamline the process of consulting in a simple and user-friendly way.</string>
     <string name="solicitud_sesion">Your request has been sent</string>
 
+
+    <string name="scan_qrcode">Home</string>
     <!--PROFESOR-->
 
     <string name="Rol">Type of user</string>

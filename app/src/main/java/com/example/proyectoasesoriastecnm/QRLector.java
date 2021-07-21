@@ -24,7 +24,7 @@ import com.google.zxing.integration.android.IntentResult;
 import org.w3c.dom.Text;
 
 
-public class QRLector extends AppCompatActivity {
+public class QRLector extends AppCompatActivity  {
 
     DrawerLayout drawerLayout;
     private CameraSource cameraSource;
@@ -47,24 +47,28 @@ public class QRLector extends AppCompatActivity {
 
         txt = (TextView)findViewById(R.id.texto);
         boton = (Button)findViewById(R.id.boton);
-        cameraView = (SurfaceView)findViewById(R.id.camera_view);
+        //cameraView = (SurfaceView)findViewById(R.id.camera_view);
 
-        surfaceholder = cameraView.getHolder();
+        //surfaceholder = cameraView.getHolder();
 
-
+        try {
+            startCamera();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         encendida=false;
-        boton.setOnClickListener(new View.OnClickListener() {
+/*        boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try{
-                    startCamera();
+                    //startCamera();
                 }catch (Exception e ){
                     e.printStackTrace();
                 }
             }
         });
-
+*/
 
 
     }
@@ -167,7 +171,6 @@ public class QRLector extends AppCompatActivity {
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
     }
-
 
 
 }

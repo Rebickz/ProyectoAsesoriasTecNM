@@ -10,6 +10,9 @@
     <string name="recuperar_contraseña">Recuperar Contraseña</string>
     <string name="qr">Codigo QR para que alumnos capturen</string>
 
+    <string name="click_autenticar">Toca el boton Autenticar</string>
+    <string name="autenticar_huella">Autenticar</string>
+    <string name="mensaje_huella">El inicio de sesión ahora es más seguro, favor de proporcionar los permisos necesarios para hacer uso del inicio de sesión con su huella.</string>
 
     <!--ALUMNO-->
     <string name="asesorias_alumnos">Asesorias Alumnos</string>
@@ -40,6 +43,7 @@
     <string name="mensaje_secundario">Esta aplicacion, ayudará a agilizar el proceso de realizar asesorias de una manera sencilla y amigable para el usuario.</string>
     <string name="solicitud_sesion">Se solicito su sesion.</string>
 
+    <string name="scan_qrcode">Inicio</string>
 
     <!--PROFESOR-->
 

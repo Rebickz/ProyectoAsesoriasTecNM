@@ -108,6 +108,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#1B396A"
+                        android:onClick="ClickContacto"
                         android:text="@string/contacto"
                         android:textColor="@color/white"
                         android:textSize="12sp"
