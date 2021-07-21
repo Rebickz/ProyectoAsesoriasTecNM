@@ -34,7 +34,7 @@ import java.util.Map;
 public class DashboardEstadisticasActivity extends AppCompatActivity {
 
     //Inicializar variable
-    DrawerLayout drawerLayoutP;
+    //DrawerLayout drawerLayoutP;
 
     FirebaseDatabase database;
     DatabaseReference mref;
@@ -46,7 +46,7 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard_estadisticas);
 
         //Asignar la variable drawerLayout
-        drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
+        //drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
 
         database = FirebaseDatabase.getInstance();
         mref = database.getReference().child("Analytics").child("Usr");
