@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!--include
-            layout="@layout/profesor_main_toolbar"/-->
+        <include
+            layout="@layout/profesor_main_toolbar"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -39,12 +39,10 @@
                     android:textSize="20dp"
                     android:layout_margin="10dp"
                     />
-
-                <ImageView
-                    android:id="@+id/imageView"
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chartInt"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/interaccion" />
+                    android:layout_height="221dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -53,11 +51,10 @@
                     android:layout_margin="10dp"
                     />
 
-                <ImageView
-                    android:id="@+id/imageView2"
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chartUsr"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/activeusers" />
+                    android:layout_height="221dp" />
             </LinearLayout>
 
         </ScrollView>
@@ -66,7 +63,7 @@
 
     </LinearLayout>
 
-    <!--RelativeLayout
+    <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
@@ -75,6 +72,6 @@
         <include
             layout="@layout/profesor_main_nav_drawer"/>
 
-    </RelativeLayout-->
+    </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

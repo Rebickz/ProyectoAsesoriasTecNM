@@ -13,7 +13,7 @@ public class ProfesorDetalleCitaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profesor_detalle_cita);
-        String texto = "Pase de lista confirmado";
+        String texto = "Datos cita\nMateria:Fundamentos de programación\nCarrera:TICS\nDepartamento:Sistemas y computacion\nHorario:12:00-13:00hrs\nLugar:Aula 45\n\n\nSesion registrada\nESTATUS DE LA SESION: COMPLETADA\n\n";
         Bitmap bitmap = QRCode.from(texto).bitmap();
 
         ImageView imagenCodigo = findViewById(R.id.qr);
