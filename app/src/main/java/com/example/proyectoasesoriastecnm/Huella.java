@@ -81,8 +81,11 @@ public class Huella extends AppCompatActivity {
         promptInfo = new BiometricPrompt.PromptInfo.Builder()
                 .setTitle("Autenticación con huella")
                 .setSubtitle("Inicio de sesión con un toque")
-
+                .setNegativeButtonText(" Introduzca su huella")
                 .build();
+
+
+        
 
 
 
