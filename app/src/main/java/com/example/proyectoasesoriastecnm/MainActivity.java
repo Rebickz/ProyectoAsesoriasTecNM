@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     if((userProfile.rol).equals("ALUMNO")){
 
                                         Intent intA = new Intent(MainActivity.this, Huella.class);
-
+                                        progressBar.setVisibility(View.INVISIBLE);
                                         intA.putExtra("rolValue",0);
                                         startActivity(intA);
 
@@ -152,6 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                                     }else{
                                         Intent intP = new Intent(MainActivity.this, Huella.class);
+                                        progressBar.setVisibility(View.INVISIBLE);
                                         intP.putExtra("rolValue",1);
                                         startActivity(intP);
                                     }
@@ -161,6 +162,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
+                                progressBar.setVisibility(View.INVISIBLE);
                                 Toast.makeText(MainActivity.this, "ERROR PRUEBA",Toast.LENGTH_LONG).show();
                             }
                         });
@@ -170,10 +172,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     }else{
                         user.sendEmailVerification();
+                        progressBar.setVisibility(View.INVISIBLE);
                         Toast.makeText(MainActivity.this, "Checa tu correo para verificar tu cuenta", Toast.LENGTH_LONG).show();
                     }
 
                 }else{
+                    progressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(MainActivity.this, "Error al iniciar sesion, verifica los datos", Toast.LENGTH_LONG).show();
                 }
             }

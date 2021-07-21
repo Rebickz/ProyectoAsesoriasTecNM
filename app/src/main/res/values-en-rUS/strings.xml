@@ -61,10 +61,10 @@
     <string name="nombreMateria">Subject</string>
     <string name="semestreMateria">Semester</string>
     <string name="carreraMateria">Career</string>
-    <string name="dptoMateria">Departmen</string>
+    <string name="dptoMateria">Department</string>
     <string name="lugarMateria">Place</string>
     <string name="horarioMateria">Hour</string>
-    <string name="listaMateria">Sunject List</string>
+    <string name="listaMateria">Subject List</string>
     <string name="listaUsuarios">Users List</string>
     <string name="interaccionUsuarios">User Interaction</string>
     <string name="usuariosActivos">Active Users</string>
@@ -76,7 +76,7 @@
     <string name="pregunta2">How do I file a complaint?</string>
     <string name="pregunta3">How do I know if a student is attending? </string>
     <string name="pregunta4">How can I cancel an assessment? </string>
-    <string name="noSolucion">Havent you found a solution to your problem?</string>
+    <string name="noSolucion">Have not you found a solution to your problem?</string>
     <string name="txtSolucion">Contact us, so we can assist you in a more personalized way</string>
 
     <!--CONTACTO-->
