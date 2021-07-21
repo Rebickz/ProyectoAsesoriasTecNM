@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.HeaderViewListAdapter;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -139,9 +140,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     String rol = userProfile.rol;
 
                                     if((userProfile.rol).equals("ALUMNO")){
-                                        startActivity(new Intent(MainActivity.this, MenuActivity.class));
+
+                                        Intent intA = new Intent(MainActivity.this, Huella.class);
+
+                                        intA.putExtra("rolValue",0);
+                                        startActivity(intA);
+
+
+
+
+
                                     }else{
-                                        startActivity(new Intent(MainActivity.this, ProfesorMenuActivity.class));
+                                        Intent intP = new Intent(MainActivity.this, Huella.class);
+                                        intP.putExtra("rolValue",1);
+                                        startActivity(intP);
                                     }
 
                                 }

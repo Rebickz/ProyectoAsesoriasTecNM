@@ -11,8 +11,6 @@
     <string name="qr">Codigo QR para que alumnos capturen</string>
 
 
-
-
     <!--ALUMNO-->
     <string name="asesorias_alumnos">Asesorias Alumnos</string>
     <string name="home">Inicio</string>
@@ -77,10 +75,6 @@
     <string name="pregunta4">¿Cómo puedo dar de baja una asesoria?</string>
     <string name="noSolucion">¿No has encontrado solucion a tu problema?</string>
     <string name="txtSolucion">Ponte en contacto con nosotros, para poder atenderte de manera mas personalizada</string>
-
-
-
-
 
 
     <!--CONTACTO-->
