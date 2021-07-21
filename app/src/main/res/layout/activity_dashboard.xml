@@ -33,99 +33,47 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/white"
                     android:padding="16dp"
+                    android:textColor="@color/black"
                     android:text="@string/tituloDashboard"
                     android:textAlignment="center"
                     android:textSize="20dp" />
 
-                <androidx.cardview.widget.CardView
+                <Button
+                    android:text="@string/estadisticas"
+                    android:drawableTop="@drawable/ic_statistics"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:padding="10dp"
-                    android:layout_marginTop="16dp"
-                    app:cardElevation="5dp"
-                    app:cardBackgroundColor="#fff"
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:id="@+id/Estadisticas"
+                    android:layout_weight="1"
+                    />
 
-                    >
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_users"
-                        android:layout_gravity="center"
-                        android:onClick="ClickUsers">
-
-                    </ImageView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/usuario"
-                        android:textSize="25sp">
-
-                    </TextView>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                <Button
+                    android:text="@string/usuario"
+                    android:drawableTop="@drawable/ic_dashusers"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:padding="10dp"
-                    android:layout_marginTop="16dp"
-                    app:cardElevation="5dp"
-                    app:cardBackgroundColor="#fff"
-                    >
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:id="@+id/Usuarios"
+                    android:layout_weight="1"
+                    />
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_materia"
-                        android:layout_gravity="center"
-                        android:onClick="ClickMaterias">
-
-                    </ImageView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/materias"
-                        android:textSize="25sp">
-
-                    </TextView>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                <Button
+                    android:text="@string/materias"
+                    android:drawableTop="@drawable/ic_materia"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:padding="10dp"
-                    android:layout_marginTop="16dp"
-                    app:cardElevation="10dp"
-                    app:cardBackgroundColor="#fff"
-                    >
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:id="@+id/Materias"
+                    android:layout_weight="1"
+                    />
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_statistics"
-                        android:layout_gravity="center"
-                        android:onClick="ClickStatistics">
-                    </ImageView>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/estadisticas"
-                        android:textSize="25sp">
 
-                    </TextView>
 
-                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
 

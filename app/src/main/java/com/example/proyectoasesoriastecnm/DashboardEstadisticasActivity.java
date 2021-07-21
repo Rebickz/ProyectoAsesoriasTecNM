@@ -10,18 +10,19 @@ import android.widget.Toast;
 public class DashboardEstadisticasActivity extends AppCompatActivity {
 
     //Inicializar variable
-    DrawerLayout drawerLayoutP;
+    //DrawerLayout drawerLayoutP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_estadisticas);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Asignar la variable drawerLayout
-        drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
+        //drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
     }
 
-    public void ClickMenuP(View view){
+    /*public void ClickMenuP(View view){
         //Abrir Drawer
         ProfesorMenuActivity.openDrawer(drawerLayoutP);
     }
@@ -70,5 +71,5 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
         super.onPause();
         //Cerramos drawer
         ProfesorMenuActivity.closeDrawer(drawerLayoutP);
-    }
+    }*/
 }

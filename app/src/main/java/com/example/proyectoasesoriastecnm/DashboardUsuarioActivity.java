@@ -30,7 +30,7 @@ import java.util.UUID;
 public class DashboardUsuarioActivity extends AppCompatActivity {
 
     //Inicializar variable
-    DrawerLayout drawerLayoutP;
+    //DrawerLayout drawerLayoutP;
     //Listar
     private List<Usuario> listUsuario = new ArrayList<Usuario>();
     ArrayAdapter<Usuario> arrayAdapterUsuario;
@@ -50,9 +50,10 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_usuario);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Asignar la variable drawerLayout
-        drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
+        //drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
 
         //CRUD
         nomUser = findViewById(R.id.txt_nameUsuario);
@@ -124,6 +125,9 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
         String rol = rolUser.getText().toString();
 
         switch(item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                break;
             case R.id.icon_add:
                 if(nombre.equals("") || apellidos.equals("") || correo.equals("") || password.equals("") || rol.equals("")){
                     validacion();
@@ -195,7 +199,7 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
 
     //TERMINA CRUD
 
-    public void ClickMenuP(View view){
+    /*public void ClickMenuP(View view){
         //Abrir Drawer
         ProfesorMenuActivity.openDrawer(drawerLayoutP);
     }
@@ -244,5 +248,5 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
         super.onPause();
         //Cerramos drawer
         ProfesorMenuActivity.closeDrawer(drawerLayoutP);
-    }
+    }*/
 }

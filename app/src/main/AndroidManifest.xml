@@ -16,7 +16,18 @@
         <activity android:name=".ProfesorContactoActivity" />
         <activity android:name=".ProfesorAyudaActivity" />
         <activity android:name=".QRLector" />
-        <activity android:name=".DashboardEstadisticasActivity" />
+        <activity android:name=".DashboardMateriaActivity"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar">
+        </activity>
+        <activity android:name=".DashboardUsuarioActivity"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar">
+        </activity>
+        <activity android:name=".DashboardEstadisticasActivity"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar">
+        </activity>
         <activity android:name=".ContactoActivity" />
         <activity android:name=".AyudaActivity" />
         <activity android:name=".ProfesorDetalleCitaActivity" />
@@ -28,11 +39,6 @@
         <activity android:name=".MateriasActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".DashboardAsesoriaActivity" />
-        <activity
-            android:name=".DashboardMateriaActivity"
-            android:parentActivityName=".DashboardActivity"
-            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar" />
-        <activity android:name=".DashboardUsuarioActivity" />
         <activity android:name=".ProfesorMenuActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".ProfileActivity" />

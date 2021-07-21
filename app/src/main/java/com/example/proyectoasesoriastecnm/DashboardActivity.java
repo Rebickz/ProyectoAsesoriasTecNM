@@ -3,35 +3,55 @@ package com.example.proyectoasesoriastecnm;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-public class DashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends AppCompatActivity implements View.OnClickListener{
 
     //Inicializar variable
     DrawerLayout drawerLayoutP;
+    Button btnUsers, btnMaterias,btnStatistics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        btnUsers =(Button) findViewById(R.id.Usuarios);
+        btnUsers.setOnClickListener(this);
+
+        btnMaterias =(Button) findViewById(R.id.Materias);
+        btnMaterias.setOnClickListener(this);
+
+        btnStatistics =(Button) findViewById(R.id.Estadisticas);
+        btnStatistics.setOnClickListener(this);
+
         //Asignar la variable drawerLayout
         drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
     }
 
-    public void ClickUsers(View view){
-        ProfesorMenuActivity.redirectActivity(this, DashboardUsuarioActivity.class);
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.Estadisticas:
+                startActivity(new Intent(this, DashboardEstadisticasActivity.class));
+                break;
+            case R.id.Usuarios:
+                startActivity(new Intent(this,DashboardUsuarioActivity.class));
+                break;
+
+            case R.id.Materias:
+                startActivity(new Intent(this,DashboardMateriaActivity.class));
+                break;
+
+
+        }
     }
 
-    /*public void ClickAsesorias(View view){
-        ProfesorMenuActivity.redirectActivity(this, DashboardAsesoriaActivity.class);
-    }*/
 
-    public void ClickMaterias(View view){
-        ProfesorMenuActivity.redirectActivity(this, DashboardMateriaActivity.class);
-    }
 
     public void ClickMenuP(View view){
         //Abrir Drawer
@@ -84,7 +104,5 @@ public class DashboardActivity extends AppCompatActivity {
         ProfesorMenuActivity.closeDrawer(drawerLayoutP);
     }
 
-    public void ClickStatistics(View view) {
-        ProfesorMenuActivity.redirectActivity(this, DashboardEstadisticasActivity.class);
-    }
+
 }

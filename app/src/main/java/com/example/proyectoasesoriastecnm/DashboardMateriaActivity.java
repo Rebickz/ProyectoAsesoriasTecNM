@@ -50,6 +50,7 @@ public class DashboardMateriaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_materia);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //Asignar la variable drawerLayout
         //drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
 
@@ -72,6 +73,7 @@ public class DashboardMateriaActivity extends AppCompatActivity {
             }
         });
         //TERMINA CRUD
+
 
     }
 
@@ -120,6 +122,9 @@ public class DashboardMateriaActivity extends AppCompatActivity {
         String horario = horaMateria.getText().toString();
 
         switch(item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                break;
             case R.id.icon_add:
                 if(nombre.equals("") || semestre.equals("") || carrera.equals("") || horario.equals("")){
                     validacion();
@@ -185,7 +190,7 @@ public class DashboardMateriaActivity extends AppCompatActivity {
 
     //TERMINA CRUD
 
-    public void ClickMenuP(View view){
+    /*public void ClickMenuP(View view){
         //Abrir Drawer
         //ProfesorMenuActivity.openDrawer(drawerLayoutP);
     }
@@ -234,5 +239,5 @@ public class DashboardMateriaActivity extends AppCompatActivity {
         super.onPause();
         //Cerramos drawer
         //ProfesorMenuActivity.closeDrawer(drawerLayoutP);
-    }
+    }*/
 }
