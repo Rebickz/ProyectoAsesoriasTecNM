@@ -2,6 +2,8 @@ package com.example.proyectoasesoriastecnm;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -13,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -45,6 +48,11 @@ public class CitaS extends AppCompatActivity  {
 
         drawerLayout = findViewById(R.id.drawer_layout);
 
+        //SE AGREGA SHIMMER
+        ShimmerFrameLayout container =
+                (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container2);
+        container.startShimmer(); // If auto-start is set to false
+
         cita = new Cita();
         myListView = (ListView) findViewById(R.id.ListViewCitas);
         database = FirebaseDatabase.getInstance();
@@ -62,6 +70,14 @@ public class CitaS extends AppCompatActivity  {
                     myArrayList.add(cita.getMateria().toString() + " " + cita.getHorario() + " " + cita.getProfesor());
                     //myArrayList.add(materia.getCarrera().toString());
                 }
+                final Handler handler = new Handler(Looper.getMainLooper());
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Do something after 100ms
+                        container.hideShimmer();
+                    }
+                }, 500);
 
                 myListView.setAdapter(adapter);
             }

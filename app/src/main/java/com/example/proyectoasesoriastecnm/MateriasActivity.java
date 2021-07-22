@@ -7,12 +7,15 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -48,6 +51,12 @@ public class MateriasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_materias);
+        //SE AGREGA SHIMMER
+        ShimmerFrameLayout container =
+                (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
+        container.startShimmer(); // If auto-start is set to false
+
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
 
@@ -69,6 +78,14 @@ public class MateriasActivity extends AppCompatActivity {
                     //myArrayList.add(materia.getCarrera().toString());
                 }
 
+                final Handler handler = new Handler(Looper.getMainLooper());
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Do something after 100ms
+                        container.hideShimmer();
+                    }
+                }, 500);
                 myListView.setAdapter(adapter);
 
 
