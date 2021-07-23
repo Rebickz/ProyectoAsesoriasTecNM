@@ -14,6 +14,12 @@
     <string name="click_autenticar">Button to authenticate</string>
     <string name="autenticar_huella">Authenticate</string>
     <string name="mensaje_huella">The login is now more secure, please provide the necessary permissions to use the login with your fingerprint.</string>
+    <string name="huella_exitosa">Successful authentication.</string>
+    <string name="Listo_Huella">Welcome</string>
+    <string name="error_huella">"Authentication failed"</string>
+    <string name="huella_title">"Fingerprint authentication"</string>
+    <string name="huella_subtitle">"Log in"</string>
+    <string name="huella_introduzca">" Enter your fingerprint"</string>
 
     <!--ALUMNO-->
     <string name="asesorias_alumnos">Asesorias Alumnos</string>

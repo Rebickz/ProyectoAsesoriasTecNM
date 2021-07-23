@@ -47,8 +47,8 @@ public class Huella extends AppCompatActivity {
             @Override
             public void onAuthenticationSucceeded(@NonNull @NotNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                authStatusTv.setText("Autenticación exitosa");
-                Toast.makeText(Huella.this,"Listo", Toast.LENGTH_SHORT).show();
+                authStatusTv.setText(R.string.huella_exitosa);
+                Toast.makeText(Huella.this,R.string.Listo_Huella, Toast.LENGTH_SHORT).show();
 
 
                 int valor = getIntent().getExtras().getInt("rolValue");
@@ -70,18 +70,22 @@ public class Huella extends AppCompatActivity {
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
-                authStatusTv.setText("Autenticación fallida");
-                Toast.makeText(Huella.this,"Autenticación fallida",Toast.LENGTH_SHORT).show();
+                authStatusTv.setText(R.string.error_huella);
+                Toast.makeText(Huella.this,R.string.error_huella,Toast.LENGTH_SHORT).show();
 
                 finish();
 
             }
         });
 
+        String tittle = getString(R.string.huella_title);
+        String subtittle = getString(R.string.huella_subtitle);
+        String introduzca = getString(R.string.huella_introduzca);
+
         promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                .setTitle("Autenticación con huella")
-                .setSubtitle("Inicio de sesión con un toque")
-                .setNegativeButtonText(" Introduzca su huella")
+                .setTitle(tittle)
+                .setSubtitle(subtittle)
+                .setNegativeButtonText(introduzca)
                 .build();
 
 

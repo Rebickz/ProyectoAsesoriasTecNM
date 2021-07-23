@@ -13,6 +13,15 @@
     <string name="click_autenticar">Toca el boton Autenticar</string>
     <string name="autenticar_huella">Autenticar</string>
     <string name="mensaje_huella">El inicio de sesión ahora es más seguro, favor de proporcionar los permisos necesarios para hacer uso del inicio de sesión con su huella.</string>
+    <string name="huella_exitosa">Autenticación exitosa.</string>
+    <string name="Listo_Huella">Bienvenido</string>
+    <string name="error_huella">"Autenticación fallida"</string>
+    <string name="huella_title">"Autenticación con huella"</string>
+    <string name="huella_subtitle">"Inicio de sesión"</string>
+    <string name="huella_introduzca">" Introduzca su huella"</string>
+
+
+
 
     <!--ALUMNO-->
     <string name="asesorias_alumnos">Asesorias Alumnos</string>
