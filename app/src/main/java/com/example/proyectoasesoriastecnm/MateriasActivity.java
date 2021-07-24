@@ -43,9 +43,6 @@ public class MateriasActivity extends AppCompatActivity {
 
     private FirebaseUser user;
 
-    String z;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +60,7 @@ public class MateriasActivity extends AppCompatActivity {
         materia = new Materia();
         myListView = (ListView) findViewById(R.id.ListViewMaterias);
         database = FirebaseDatabase.getInstance();
-        mref = database.getReference("Materias");
+        mref = database.getReference("tablaMaterias");
 
         myArrayList = new ArrayList<>();
         adapter = new ArrayAdapter<String>(this, R.layout.materia_info,R.id.nombre_materia, myArrayList);
@@ -74,7 +71,7 @@ public class MateriasActivity extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     materia = ds.getValue(Materia.class);
-                    myArrayList.add(materia.getNombre().toString() + "\n" + materia.getHorario() + "\n" + materia.getCarrera()+ "\nDepartamento: Sistemas y computacion\nLugar: Aula 45");
+                    myArrayList.add(materia.getNombre() + "\n" + materia.getHorario() + "\n" + materia.getProfesor()+ "\n"+ materia.getDepartamento()+ "\n"+ materia.getLugar());
                     //myArrayList.add(materia.getCarrera().toString());
                 }
 
@@ -160,10 +157,15 @@ public class MateriasActivity extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
 
         Intent i = new Intent( this, CitaActivity.class);
+        i.putExtra("carrera", materia.getCarrera());
         i.putExtra("dato", user.getEmail());
-        i.putExtra("materia", materia.getNombre().toString());
+        i.putExtra("fecha", materia.getFecha());
         i.putExtra("horaAgendada", materia.getHorario().toString());
-        i.putExtra("profesor", materia.getCarrera().toString());
+        i.putExtra("Lugar", materia.getLugar());
+        i.putExtra("materia", materia.getNombre().toString());
+        i.putExtra("profesor", materia.getProfesor().toString());
+        i.putExtra("semestre", materia.getSemestre());
+        i.putExtra("status", "pendiente");
         //MenuActivity.redirectActivity(this, CitaActivity.class);
 
         startActivity(i);

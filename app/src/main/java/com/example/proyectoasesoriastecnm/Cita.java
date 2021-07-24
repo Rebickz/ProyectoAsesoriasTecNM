@@ -3,19 +3,29 @@ package com.example.proyectoasesoriastecnm;
 public class Cita {
 
     private String uid;
+    private String carrera;
     private String email;
-    private String profesor;
+    private String fecha;
+    private String horario;
+    private String lugar;
     private String materia;
-    private String Horario;
+    private String profesor;
+    private String semestre;
+    private String status;
 
     public Cita() {
     }
 
-    public Cita(String email, String profesor, String materia, String horario) {
+    public Cita(String carrera  , String email, String fecha, String horario, String lugar, String materia,String profesor, String semestre, String status) {
+        this.carrera = carrera;
         this.email = email;
-        this.profesor = profesor;
+        this.fecha = fecha;
+        this.horario = horario;
+        this.lugar = lugar;
         this.materia = materia;
-        Horario = horario;
+        this.profesor = profesor;
+        this.semestre = semestre;
+        this.status = status;
     }
 
     public String getUid() {
@@ -51,20 +61,45 @@ public class Cita {
     }
 
     public String getHorario() {
-        return Horario;
+        return horario;
     }
 
     public void setHorario(String horario) {
-        Horario = horario;
+        this.horario = horario;
     }
+
+    public String getCarrera() { return carrera; }
+
+    public void setCarrera(String carrera) { this.carrera = carrera; }
+
+    public String getFecha() { return fecha; }
+
+    public void setFecha(String fecha) { this.fecha = fecha; }
+
+    public String getLugar() { return lugar; }
+
+    public void setLugar(String lugar) { this.lugar = lugar; }
+
+    public String getSemestre() { return semestre; }
+
+    public void setSemestre(String semestre) { this.semestre = semestre; }
+
+    public String getStatus() { return status; }
+
+    public void setStatus(String status) { this.status = status; }
 
     @Override
     public String toString() {
         return "\nCita: \n" +
+                "\nCarrera: " + carrera + '\'' +
                 "\nEmail: " + email + '\'' +
-                "\nProfesor" + profesor + '\'' +
+                "\nFecha: " + fecha + '\'' +
+                "\nHorario: " + horario + '\'' +
+                "\nLugar: " + lugar + '\'' +
                 "\nMateria" + materia + '\'' +
-                "\nHorario" + Horario + '\'';
+                "\nProfesor" + profesor + '\'' +
+                "\nSemestre: " + semestre + '\'' +
+                "\nStatus" + status + '\'';
     }
 
 }

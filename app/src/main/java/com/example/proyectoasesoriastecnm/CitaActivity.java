@@ -26,10 +26,15 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
     private EditText EditHora;
     private EditText Profesor;
     private Button BotonEnvio;
+    String carrera;
     String dato;
-    String materia;
+    String fecha;
     String horaAgendada;
+    String lugar;
+    String materia;
     String profesor;
+    String semestre;
+    String status;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -145,14 +150,19 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
 
         Cita cita = new Cita();
 
+        cita.setCarrera(carrera);
         cita.setEmail(dato);
+        cita.setFecha(fecha);
         cita.setHorario(horaAgendada);
+        cita.setLugar(lugar);
         cita.setMateria(materia);
         cita.setProfesor(profesor);
+        cita.setSemestre(semestre);
+        cita.setStatus(status);
 
         cita.setUid(UUID.randomUUID().toString());
 
-        databaseReference.child("citas").child(cita.getUid()).setValue(cita);
+        databaseReference.child("tablaCitas").child(cita.getUid()).setValue(cita);
         Toast.makeText(this, R.string.solicitud_sesion, Toast.LENGTH_LONG).show();
 
     }
