@@ -19,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -123,9 +124,12 @@ public class RegisterUserActivity extends AppCompatActivity implements View.OnCl
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            User user = new User(name, lastName, email, rol);
 
-                            FirebaseDatabase.getInstance().getReference("Users")
+                            String uid = FirebaseAuth.getInstance().getUid();
+
+                            Usuario user = new Usuario(name, lastName, email, password, rol, uid);
+
+                            FirebaseDatabase.getInstance().getReference("tablaUsuarios")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

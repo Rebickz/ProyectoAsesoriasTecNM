@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     user = FirebaseAuth.getInstance().getCurrentUser();
                     //Lineas de prueba
-                    reference = FirebaseDatabase.getInstance().getReference("Users"); //Referenciar la tabla
+                    reference = FirebaseDatabase.getInstance().getReference("tablaUsuarios"); //Referenciar la tabla
                     userID = user.getUid(); //Obtener Unique ID
                     //Termina
 

@@ -80,7 +80,7 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
     }
 
     private void listarDatos() { //Listar
-        databaseReference.child("Users").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("tablaUsuarios").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 listUsuario.clear();
@@ -139,7 +139,7 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
                     u.setEmail(correo);
                     u.setPassword(password);
                     u.setRol(rol);
-                    databaseReference.child("Users").child(u.getUid()).setValue(u);
+                    databaseReference.child("tablaUsuarios").child(u.getUid()).setValue(u);
                     Toast.makeText(this, "Agregado", Toast.LENGTH_SHORT).show();
                     limpiarCajas();
                 }
@@ -152,14 +152,14 @@ public class DashboardUsuarioActivity extends AppCompatActivity {
                 u.setEmail(emailUser.getText().toString().trim());
                 u.setPassword(passUser.getText().toString().trim());
                 u.setRol(rolUser.getText().toString().trim());
-                databaseReference.child("Users").child(u.getUid()).setValue(u);
+                databaseReference.child("tablaUsuarios").child(u.getUid()).setValue(u);
                 Toast.makeText(this,"Actualizado",Toast.LENGTH_SHORT).show();
                 limpiarCajas();
                 break;
             case R.id.icon_delete://Eliminar solo es esto
                 Usuario us = new Usuario();
                 us.setUid(usuarioSelected.getUid());
-                databaseReference.child("Users").child(us.getUid()).removeValue();
+                databaseReference.child("tablaUsuarios").child(us.getUid()).removeValue();
                 Toast.makeText(this,"Eliminado",Toast.LENGTH_SHORT).show();
                 limpiarCajas();
                 break;

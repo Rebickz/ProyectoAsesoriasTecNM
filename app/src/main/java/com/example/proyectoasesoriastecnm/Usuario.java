@@ -12,6 +12,15 @@ public class Usuario {
     public Usuario() {
     }
 
+    public Usuario(String name,String lastName, String email, String password, String rol, String uid){
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.rol = rol;
+        this.uid = uid;
+    }
+
     public String getUid() {
         return uid;
     }
