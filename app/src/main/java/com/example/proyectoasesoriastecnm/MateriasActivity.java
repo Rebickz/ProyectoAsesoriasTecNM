@@ -161,11 +161,11 @@ public class MateriasActivity extends AppCompatActivity {
         i.putExtra("dato", user.getEmail());
         i.putExtra("fecha", materia.getFecha());
         i.putExtra("horaAgendada", materia.getHorario().toString());
-        i.putExtra("Lugar", materia.getLugar());
+        i.putExtra("lugar", materia.getLugar());
         i.putExtra("materia", materia.getNombre().toString());
         i.putExtra("profesor", materia.getProfesor().toString());
         i.putExtra("semestre", materia.getSemestre());
-        i.putExtra("status", "pendiente");
+        i.putExtra("status", "PENDIENTE");
         //MenuActivity.redirectActivity(this, CitaActivity.class);
 
         startActivity(i);

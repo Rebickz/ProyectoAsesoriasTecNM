@@ -47,21 +47,30 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
         BotonEnvio = (Button) findViewById(R.id.ButtonSend);
         //onClick(BotonEnvio);
 
+        carrera = getIntent().getStringExtra("carrera");
+
         tv1 = (EditText) findViewById(R.id.EditTextV1);
           dato = getIntent().getStringExtra("dato");
          tv1.setText(dato);
 
-         materiA = (EditText) findViewById(R.id.EditTextMateria);
-         materia = getIntent().getStringExtra("materia");
-        materiA.setText(materia);
+        fecha = getIntent().getStringExtra("fecha");
 
         EditHora = (EditText) findViewById(R.id.EditTextHora);
-         horaAgendada = getIntent().getStringExtra("horaAgendada");
+        horaAgendada = getIntent().getStringExtra("horaAgendada");
         EditHora.setText(horaAgendada);
+
+        lugar = getIntent().getStringExtra("lugar");
+
+         materiA = (EditText) findViewById(R.id.EditTextMateria);
+         materia = getIntent().getStringExtra("materia");
+         materiA.setText(materia);
 
         Profesor = (EditText) findViewById(R.id.EditTextProfesor);
          profesor = getIntent().getStringExtra("profesor");
         Profesor.setText(profesor);
+
+        semestre = getIntent().getStringExtra("semestre");
+        status = getIntent().getStringExtra("status");
 
     }
 
