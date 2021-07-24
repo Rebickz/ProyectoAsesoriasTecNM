@@ -69,11 +69,15 @@
     <string name="carreraMateria">Career</string>
     <string name="dptoMateria">Department</string>
     <string name="lugarMateria">Place</string>
-    <string name="horarioMateria">Hour</string>
+    <string name="horaInicioMateria">Start time (Double click)</string>
+    <string name="horaFinalMateria">End time (Double click)</string>
     <string name="listaMateria">Subject List</string>
     <string name="listaUsuarios">Users List</string>
     <string name="interaccionUsuarios">User Interaction</string>
     <string name="usuariosActivos">Active Users</string>
+    <string name="profesorMateria">Teacher</string>
+    <string name="fechaMateria">Date (Double click)</string>
+
 
 
     <!--AYUDA-->

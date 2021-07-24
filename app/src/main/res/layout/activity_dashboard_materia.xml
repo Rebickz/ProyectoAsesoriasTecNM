@@ -15,154 +15,213 @@
         <!--include
             layout="@layout/profesor_main_toolbar"/-->
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="12dp"
-            android:orientation="vertical">
-            
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/nombreMateria">
-                
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_nombreMateria"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:paddingTop="25dp"
-                    />
-                
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/semestreMateria">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_semestreMateria"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:paddingTop="25dp"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/carreraMateria">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_carreraMateria"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:paddingTop="25dp"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/dptoMateria">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_dptoMateria"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:paddingTop="25dp"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/lugarMateria">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_lugarMateria"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:paddingTop="25dp"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/horarioMateria">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_horarioMateria"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:paddingTop="25dp"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
+            >
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:orientation="vertical">
 
-                <!--Button
-                    android:id="@+id/icon_add"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nombreMateria">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_nombreMateria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingTop="25dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/semestreMateria">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_semestreMateria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingTop="25dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/carreraMateria">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_carreraMateria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingTop="25dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dptoMateria">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_dptoMateria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingTop="25dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lugarMateria">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_lugarMateria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingTop="25dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profesorMateria">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_ProfesorMateria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingTop="25dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fechaMateria">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_fechaMateria"
+                        android:onClick="ClickFechaMateria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingTop="25dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/horaInicioMateria">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_horaInicioMateria"
+                        android:onClick="ClickHoraInicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingTop="25dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/horaFinalMateria">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_horaFinMateria"
+                        android:onClick="ClickHoraFinal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingTop="25dp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginRight="20dp"
-                    android:text="Agregar"/>
+                    android:layout_marginLeft="20dp">
 
-                <Button
-                    android:id="@+id/icon_save"
+                    <!--Button
+                        android:id="@+id/icon_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="Agregar"/>
+
+                    <Button
+                        android:id="@+id/icon_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="Guardar"/>
+
+                    <Button
+                        android:id="@+id/icon_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Borrar"/-->
+
+                </LinearLayout>
+
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:text="Guardar"/>
+                    android:text="@string/listaMateria"
+                    android:textSize="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_horizontal"/>
 
-                <Button
-                    android:id="@+id/icon_delete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Borrar"/-->
+
+                <ListView
+                    android:id="@+id/lv_datosMateria"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
 
             </LinearLayout>
 
+        </ScrollView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/listaMateria"
-                android:textSize="30dp"
-                android:layout_margin="10dp"
-                android:layout_gravity="center_horizontal"/>
-
-
-            <ListView
-                android:id="@+id/lv_datosMateria"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-
-            
-        </LinearLayout>
 
     </LinearLayout>
 
