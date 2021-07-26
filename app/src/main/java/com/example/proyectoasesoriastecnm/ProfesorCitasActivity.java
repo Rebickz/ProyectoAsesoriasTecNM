@@ -6,11 +6,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,22 +35,28 @@ public class ProfesorCitasActivity extends AppCompatActivity {
     Cita cita;
 
     private FirebaseUser user;
+    private String userID;
+
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profesor_citas);
+        setContentView(R.layout.activity_materias);
+        //SE AGREGA SHIMMER
+        ShimmerFrameLayout container =
+                (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
+        container.startShimmer(); // If auto-start is set to false
 
-        //Asignar la variable drawerLayout
-        drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
+        drawerLayoutP = findViewById(R.id.drawer_layout);
 
         cita = new Cita();
         myListView = (ListView) findViewById(R.id.ListViewMaterias);
         database = FirebaseDatabase.getInstance();
-        mref = database.getReference("citas");
+        mref = database.getReference("tablaCitas");
 
         myArrayList = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this, R.layout.profesor_cita_info,R.id.Profesornombre_cita, myArrayList);
+        adapter = new ArrayAdapter<String>(this, R.layout.cita_info,R.id.nombre_cita, myArrayList);
 
         mref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -55,9 +64,19 @@ public class ProfesorCitasActivity extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     cita = ds.getValue(Cita.class);
-                    //myArrayList.add(cita.getMateria().toString() + " " + cita.getHorario() + " " + cita.getProfesor());
-                    myArrayList.add("Datos cita\nMateria:Fundamentos de programación\nCarrera:TICS\nDepartamento:Sistemas y computacion\nHorario:12:00-13:00hrs\nLugar:Aula 45");
+                    myArrayList.add("Datos cita" + "\n" + cita.getMateria().toString() + "\n" + cita.getProfesor() + "\n" + cita.getHorario() + "\n" +  cita.getStatus());
+                    //myArrayList.add("Datos cita\nMateria:Fundamentos de programación\nCarrera:TICS\nDepartamento:Sistemas y computacion\nHorario:12:00-13:00hrs\nLugar:Aula 45");
                 }
+
+                final Handler handler = new Handler(Looper.getMainLooper());
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Do something after 100ms
+                        container.hideShimmer();
+                    }
+                }, 500);
+
 
                 myListView.setAdapter(adapter);
             }
