@@ -21,6 +21,11 @@
     <string name="huella_subtitle">"Log in"</string>
     <string name="huella_introduzca">" Enter your fingerprint"</string>
 
+    <!-- CONTROLADORES -->
+    <string name="welcome_materia">Assignature details:</string>
+
+
+
     <!--ALUMNO-->
     <string name="asesorias_alumnos">Asesorias Alumnos</string>
     <string name="home">Home</string>

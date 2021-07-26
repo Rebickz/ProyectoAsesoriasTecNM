@@ -20,6 +20,8 @@
     <string name="huella_subtitle">"Inicio de sesión"</string>
     <string name="huella_introduzca">" Introduzca su huella"</string>
 
+    <!-- CONTROLADORES -->
+    <string name="welcome_materia">Datos de la materia:</string>
 
 
 

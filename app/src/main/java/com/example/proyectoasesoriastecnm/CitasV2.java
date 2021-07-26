@@ -10,11 +10,13 @@ import android.os.Handler;
 import android.os.Looper;
 import android.provider.ContactsContract;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,11 +31,12 @@ import java.util.ArrayList;
 public class CitasV2 extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ListView myListView;
-    ArrayList<String> myArrayList;
-    ArrayAdapter<String> adapter;
+    ArrayList<Cita> myArrayList;
+    ArrayAdapter<Cita> adapter;
     FirebaseDatabase database;
     DatabaseReference mref;
     Cita cita;
+    Cita citaSelected;
 
     private FirebaseUser user;
 
@@ -55,7 +58,7 @@ public class CitasV2 extends AppCompatActivity {
         mref = database.getReference("tablaCitas");
 
         myArrayList = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this, R.layout.cita_info,R.id.nombre_cita, myArrayList);
+        adapter = new ArrayAdapter<Cita>(CitasV2.this, android.R.layout.simple_list_item_1, myArrayList);
 
         mref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -63,8 +66,8 @@ public class CitasV2 extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     cita = ds.getValue(Cita.class);
-                    myArrayList.add("Datos cita" + "\n" + cita.getMateria().toString() + "\n" + cita.getProfesor() + "\n" + cita.getHorario() + "\n" +  cita.getStatus());
-                    //myArrayList.add("Datos cita\nMateria:Fundamentos de programación\nCarrera:TICS\nDepartamento:Sistemas y computacion\nHorario:12:00-13:00hrs\nLugar:Aula 45");
+                    //myArrayList.add("Datos cita" + "\n" + cita.getMateria().toString() + "\n" + cita.getProfesor() + "\n" + cita.getHorario() + "\n" +  cita.getStatus());
+                    myArrayList.add(cita);
                 }
 
                 final Handler handler = new Handler(Looper.getMainLooper());
@@ -86,6 +89,26 @@ public class CitasV2 extends AppCompatActivity {
             }
         });
 
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                user = FirebaseAuth.getInstance().getCurrentUser();
+                Intent intent = new Intent(CitasV2.this, QRLector.class);
+                citaSelected = (Cita) adapterView.getItemAtPosition(i);
+                intent.putExtra("carrera", myListView.getItemAtPosition(i).toString());
+                intent.putExtra("dato", user.getEmail());
+                intent.putExtra("fecha", citaSelected.getFecha());
+                intent.putExtra("horaAgendada", citaSelected.getHorario().toString());
+                intent.putExtra("lugar", citaSelected.getLugar());
+                intent.putExtra("materia", citaSelected.getMateria() );
+                intent.putExtra("profesor", citaSelected.getProfesor().toString());
+                intent.putExtra("semestre", citaSelected.getSemestre());
+                intent.putExtra("status", "COMPLETADA");
+                intent.putExtra("uid", citaSelected.getUid());
+                startActivity(intent);
+
+            }
+        });
 
     }
 
