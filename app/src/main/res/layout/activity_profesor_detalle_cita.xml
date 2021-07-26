@@ -39,9 +39,9 @@
                     />
 
                 <TextView
+                    android:id="@+id/datos_Cita"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Datos cita\nMateria:Fundamentos de programación\nCarrera:TICS\nDepartamento:Sistemas y computacion\nHorario:12:00-13:00hrs\nLugar:Aula 45"
                     android:background="@color/white"
                     android:layout_gravity="center"
                     android:textAlignment="center"
