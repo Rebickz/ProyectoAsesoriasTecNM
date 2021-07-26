@@ -35,6 +35,8 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
     String profesor;
     String semestre;
     String status;
+    String uid;
+
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -71,6 +73,7 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
 
         semestre = getIntent().getStringExtra("semestre");
         status = getIntent().getStringExtra("status");
+        uid = getIntent().getStringExtra("uid");
 
     }
 
@@ -168,8 +171,9 @@ public class CitaActivity extends AppCompatActivity implements View.OnClickListe
         cita.setProfesor(profesor);
         cita.setSemestre(semestre);
         cita.setStatus(status);
+        cita.setUid(uid);
 
-        cita.setUid(UUID.randomUUID().toString());
+        //cita.setUid(UUID.randomUUID().toString());
 
         databaseReference.child("tablaCitas").child(cita.getUid()).setValue(cita);
         Toast.makeText(this, R.string.solicitud_sesion, Toast.LENGTH_LONG).show();

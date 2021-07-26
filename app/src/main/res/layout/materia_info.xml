@@ -9,7 +9,7 @@
         android:id="@+id/nombre_materia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="ClickNombre_Materia"
+
         android:text="Nombre"
         android:textSize="20sp"
         android:textStyle="bold"
