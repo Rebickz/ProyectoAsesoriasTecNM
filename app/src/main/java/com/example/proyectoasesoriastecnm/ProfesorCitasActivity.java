@@ -44,7 +44,7 @@ public class ProfesorCitasActivity extends AppCompatActivity {
         cita = new Cita();
         myListView = (ListView) findViewById(R.id.ListViewMaterias);
         database = FirebaseDatabase.getInstance();
-        mref = database.getReference("citas");
+        mref = database.getReference("tablaCitas");
 
         myArrayList = new ArrayList<>();
         adapter = new ArrayAdapter<String>(this, R.layout.profesor_cita_info,R.id.Profesornombre_cita, myArrayList);
@@ -55,8 +55,7 @@ public class ProfesorCitasActivity extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
                     cita = ds.getValue(Cita.class);
-                    //myArrayList.add(cita.getMateria().toString() + " " + cita.getHorario() + " " + cita.getProfesor());
-                    myArrayList.add("Datos cita\nMateria:Fundamentos de programación\nCarrera:TICS\nDepartamento:Sistemas y computacion\nHorario:12:00-13:00hrs\nLugar:Aula 45");
+                    myArrayList.add("Datos cita" + "\n" + cita.getMateria().toString() + "\n" + cita.getProfesor() + "\n" + cita.getHorario() + "\n" +  cita.getStatus());
                 }
 
                 myListView.setAdapter(adapter);
