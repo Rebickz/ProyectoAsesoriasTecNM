@@ -152,6 +152,32 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         tools:ignore="MissingConstraints" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/rate"
+                    android:visibility="visible">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:text="@string/califica"
+                        android:textSize="20dp" />
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:max="5"
+                        android:layout_gravity="center"
+                        android:id="@+id/stars"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="@string/aceptar"
+                        android:id="@+id/submit_rate" />
+                </LinearLayout>
 
             </LinearLayout>
 
