@@ -95,8 +95,8 @@ public class CitasV2 extends AppCompatActivity {
                 user = FirebaseAuth.getInstance().getCurrentUser();
                 Intent intent = new Intent(CitasV2.this, QRLector.class);
                 citaSelected = (Cita) adapterView.getItemAtPosition(i);
-                intent.putExtra("carrera", myListView.getItemAtPosition(i).toString());
-                intent.putExtra("dato", user.getEmail());
+                intent.putExtra("carrera", citaSelected.getCarrera());
+                intent.putExtra("email", user.getEmail());
                 intent.putExtra("fecha", citaSelected.getFecha());
                 intent.putExtra("horaAgendada", citaSelected.getHorario().toString());
                 intent.putExtra("lugar", citaSelected.getLugar());

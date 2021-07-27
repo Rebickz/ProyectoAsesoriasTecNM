@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.vision.CameraSource;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -37,7 +39,18 @@ public class QRLector extends AppCompatActivity  {
     private boolean encendida;
     private Button boton;
     private TextView txt;
-
+    FirebaseDatabase database;
+    DatabaseReference mref;
+    String carrera;
+    String email;
+    String fecha;
+    String horaAgendada;
+    String lugar;
+    String materia;
+    String profesor;
+    String semestre;
+    String status;
+    String uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +60,8 @@ public class QRLector extends AppCompatActivity  {
 
         txt = (TextView)findViewById(R.id.texto);
         boton = (Button)findViewById(R.id.boton);
+
+
         //cameraView = (SurfaceView)findViewById(R.id.camera_view);
 
         //surfaceholder = cameraView.getHolder();
@@ -75,13 +90,39 @@ public class QRLector extends AppCompatActivity  {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        Cita c = new Cita();
+
         super.onActivityResult(requestCode, resultCode, data);
+        carrera = getIntent().getStringExtra("carrera");
+        email = getIntent().getStringExtra("email");
+        fecha = getIntent().getStringExtra("fecha");
+        horaAgendada = getIntent().getStringExtra("horaAgendada");
+        lugar = getIntent().getStringExtra("lugar");
+        materia = getIntent().getStringExtra("materia");
+        profesor = getIntent().getStringExtra("profesor");
+        semestre = getIntent().getStringExtra("semestre");
+        status = getIntent().getStringExtra("COMPLETADA");
+        uid = getIntent().getStringExtra("uid");
+
+        c.setCarrera(carrera);
+        c.setEmail(email);
+        c.setFecha(fecha);
+        c.setHorario(horaAgendada);
+        c.setLugar(lugar);
+        c.setMateria(materia);
+        c.setProfesor(profesor);
+        c.setSemestre(semestre);
+        c.setStatus("COMPLETADA");
+        c.setUid(uid);
+
+
+        database = FirebaseDatabase.getInstance();
+        database.getReference().child("tablaCitas").child(uid).setValue(c);
+
 
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
-
         String datos =  result.getContents();
-        txt.setText(datos);
-
+        txt.setText(datos + "Status: COMPLETADA");
     }
 
     private void startCamera() throws Exception{
