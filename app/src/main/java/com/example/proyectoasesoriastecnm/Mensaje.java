@@ -39,4 +39,13 @@ public class Mensaje {
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;
     }
+
+    @Override
+    public String toString() {
+        return "\nDatos mensaje: \n" +
+                "\nNombre: " + uid + '\'' +
+                "\nProfesor: " + mensaje + '\'' +
+                "\nSemestre: " + email + '\'' ;
+
+    }
 }

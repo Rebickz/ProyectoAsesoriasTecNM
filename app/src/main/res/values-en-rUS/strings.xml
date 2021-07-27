@@ -67,6 +67,7 @@
     <!--DASHBOARD-->
     <string name="usuario">Users</string>
     <string name="materias">Subjects</string>
+    <string name="mensajes">Messages</string>
     <string name="estadisticas">Analytics</string>
     <string name="tituloDashboard">Dashboard Menu</string>
 

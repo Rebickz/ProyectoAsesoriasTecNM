@@ -25,7 +25,6 @@
     <string name="welcome_materia">Datos de la materia:</string>
 
 
-
     <!--ALUMNO-->
     <string name="asesorias_alumnos">Asesorias Alumnos</string>
     <string name="home">Inicio</string>
@@ -68,6 +67,7 @@
     <!--DASHBOARD-->
     <string name="usuario">Usuario</string>
     <string name="materias">Materias</string>
+    <string name="mensajes">Mensajes</string>
     <string name="estadisticas">Estadisticas</string>
     <string name="tituloDashboard">Menu Dashboard</string>
 
@@ -84,8 +84,6 @@
     <string name="usuariosActivos">Usuarios Activos</string>
     <string name="profesorMateria">Profesor</string>
     <string name="fechaMateria">Fecha (Dar doble clic)</string>
-
-
 
 
     <!--AYUDA-->
