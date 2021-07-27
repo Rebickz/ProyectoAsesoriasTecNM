@@ -32,7 +32,7 @@ public class Notification extends FirebaseMessagingService {
         if (remoteMessage.getData().size() > 0){
             String titulo = remoteMessage.getData().get("titulo");
             String detalle = remoteMessage.getData().get("detalle");
-                crearNotificacion(titulo,detalle);
+            crearNotificacion(titulo,detalle);
 
         }
 
