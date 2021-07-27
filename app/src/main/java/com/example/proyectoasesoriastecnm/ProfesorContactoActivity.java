@@ -21,6 +21,8 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -44,12 +46,17 @@ public class ProfesorContactoActivity extends AppCompatActivity {
     private Button mSubmit;
     private String userID;
     private LinearLayout mRate;
+    TextInputEditText contactmssg;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profesor_contacto);
         drawerLayoutP= findViewById(R.id.profesor_drawer_layout);
+
+        contactmssg = (TextInputEditText) findViewById(R.id.CommentEdit_TextProf);
 
         database = FirebaseDatabase.getInstance();
         mRating = (RatingBar) findViewById(R.id.starsP);
@@ -157,4 +164,34 @@ public class ProfesorContactoActivity extends AppCompatActivity {
         //Cerrar drawer
         ProfesorMenuActivity.closeDrawer(drawerLayoutP);
     }
+
+
+    public void ClickButtonProf(View View){
+
+        String mensaje_cont = contactmssg.getText().toString().trim();
+        iniciarFirebase();
+
+        Mensaje mensaje = new Mensaje();
+
+        mensaje.setMensaje(mensaje_cont);
+        mensaje.setUid(user.getUid());
+        mensaje.setEmail(user.getEmail());
+
+        mRef.child("tablaMensajes").child(mensaje.getUid()).setValue(mensaje);
+
+        Toast.makeText(this, R.string.mensaje_contacto, Toast.LENGTH_LONG).show();
+        ProfesorMenuActivity.redirectActivity(this,ProfesorMenuActivity.class);
+
+    }
+
+    private void iniciarFirebase() {
+        FirebaseApp.initializeApp(this);
+        database = FirebaseDatabase.getInstance();
+        mRef = database.getReference();
+    }
+
+
+
+
+
 }

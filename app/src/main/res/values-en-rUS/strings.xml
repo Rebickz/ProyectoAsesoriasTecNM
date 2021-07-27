@@ -20,6 +20,7 @@
     <string name="huella_title">"Fingerprint authentication"</string>
     <string name="huella_subtitle">"Log in"</string>
     <string name="huella_introduzca">" Enter your fingerprint"</string>
+    <string name="mensaje_contacto">" Message sent, the coordinator will contact you"</string>
 
     <!-- CONTROLADORES -->
     <string name="welcome_materia">Assignature details:</string>

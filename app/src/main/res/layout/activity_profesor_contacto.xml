@@ -132,6 +132,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:id="@+id/CommentEdit_TextProf"
                         android:hint="@string/mensajeContacto" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -144,6 +145,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#1B396A"
+                        android:onClick="ClickButtonProf"
                         android:text="@string/enviar"
                         android:textColor="@color/white"
                         android:textSize="12sp"

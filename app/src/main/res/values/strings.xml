@@ -19,6 +19,7 @@
     <string name="huella_title">"Autenticación con huella"</string>
     <string name="huella_subtitle">"Inicio de sesión"</string>
     <string name="huella_introduzca">" Introduzca su huella"</string>
+    <string name="mensaje_contacto">" Mensaje enviado, el coordinador se pondra en contacto contigo"</string>
 
     <!-- CONTROLADORES -->
     <string name="welcome_materia">Datos de la materia:</string>
