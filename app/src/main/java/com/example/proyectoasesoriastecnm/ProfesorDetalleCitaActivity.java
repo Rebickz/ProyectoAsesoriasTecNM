@@ -41,8 +41,8 @@ public class ProfesorDetalleCitaActivity extends AppCompatActivity {
         semestre = getIntent().getStringExtra("semestre");
         status = getIntent().getStringExtra("status");
         uid = getIntent().getStringExtra("uid");
-        datos.setText("Datos de la cita:" +"\nMateria: "+materia  +"\nLugar: "+ lugar +"\nProfesor: "+ profesor +"\nStatus: COMPLETADA");
-        String texto = "Datos de la cita:" +"\nMateria: "+materia  +"\nLugar: "+ lugar +"\nProfesor: "+ profesor +"\nStatus: COMPLETADA";
+        datos.setText("Datos de la cita:" +"\nMateria: "+materia  +"\nLugar: "+ lugar +"\nProfesor: "+ profesor);
+        String texto = "Datos de la cita:" +"\nMateria: "+materia  +"\nLugar: "+ lugar +"\nProfesor: "+ profesor;
         Bitmap bitmap = QRCode.from(texto).bitmap();
 
         ImageView imagenCodigo = findViewById(R.id.qr);
