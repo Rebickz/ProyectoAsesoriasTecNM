@@ -103,4 +103,6 @@
     <string name="redessociales">Facebook</string>
     <string name="enviar">Enviar</string>
     <string name="mensajeContacto">Escribe tu mensaje aqui</string>
+    <string name="califica">Califica nuestra App</string>
+    <string name="aceptar">Aceptar</string>
 </resources>
