@@ -25,6 +25,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.io.Console;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView register, forgotPassword;
@@ -37,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Lineas de codigo de prueba
     private FirebaseUser user;
     private DatabaseReference reference;
+    private DatabaseReference refAn;
     private String userID;
     //Termina
 
@@ -122,6 +130,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     reference = FirebaseDatabase.getInstance().getReference("tablaUsuarios"); //Referenciar la tabla
                     userID = user.getUid(); //Obtener Unique ID
                     //Termina
+                    Date fecha = new Date();
+                    DateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+                    String hoy = formato.format(fecha);
+                    refAn = FirebaseDatabase.getInstance().getReference("Analytics").child("dailyUser");
+                    refAn.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                            boolean newday=true;
+                            if(snapshot.exists()) {
+                                for (DataSnapshot usr : snapshot.getChildren()) {
+                                    int actual = Integer.parseInt(usr.getValue().toString());
+                                    String key = usr.getKey();
+                                    if (key.equals(hoy)) {
+                                        refAn.child(hoy).setValue((actual + 1));
+                                        newday = false;
+                                        break;
+                                    }
+                                }
+                                if(newday)
+                                    refAn.child(hoy).setValue((1));
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+                        }
+                    });
 
                     if(user.isEmailVerified()){
                         //Referenciar al perfil del usuario

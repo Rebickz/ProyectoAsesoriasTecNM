@@ -93,8 +93,10 @@ public class ContactoActivity extends AppCompatActivity {
         mSubmitRate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rate r = new rate(Float.toString(mStarts.getRating()),userID);
+                rate r = new rate((int) mStarts.getRating(),userID);
                 mRef.child(userID).setValue(r);
+                mRate.setVisibility(View.INVISIBLE);
+                Toast.makeText(ContactoActivity.this,"Gracias",Toast.LENGTH_LONG);
             }
         });
 
@@ -158,6 +160,11 @@ class rate{
 
     String raten;
     String uid;
+
+    public rate(int rating, String userID) {
+        this.raten = Integer.toString(rating);
+        this.uid = userID;
+    }
 
     public String getUid() {
         return uid;

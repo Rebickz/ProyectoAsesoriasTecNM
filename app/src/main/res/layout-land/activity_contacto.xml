@@ -170,6 +170,7 @@
                         android:layout_height="match_parent"
                         android:max="5"
                         android:layout_gravity="center"
+                        android:stepSize="1"
                         android:id="@+id/stars"/>
                     <Button
                         android:layout_width="match_parent"

@@ -79,6 +79,7 @@
     <string name="listaMateria">Subject List</string>
     <string name="listaUsuarios">Users List</string>
     <string name="interaccionUsuarios">User Interaction</string>
+    <string name="calificacionUsuarios">User Rates</string>
     <string name="usuariosActivos">Active Users</string>
     <string name="profesorMateria">Teacher</string>
     <string name="fechaMateria">Date (Double click)</string>
@@ -102,6 +103,7 @@
     <string name="mensajeContacto">Write your message here</string>
     <string name="califica">Rate our App</string>
     <string name="aceptar">Accept</string>
+    <string name="rated">Thank you for your rating</string>
 
 
 

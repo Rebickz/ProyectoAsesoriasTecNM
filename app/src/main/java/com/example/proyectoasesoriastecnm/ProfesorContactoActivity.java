@@ -99,8 +99,10 @@ public class ProfesorContactoActivity extends AppCompatActivity {
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rate r = new rate(Float.toString(mRating.getRating()),userID);
+                rate r = new rate((int)mRating.getRating(),userID);
                 mRef.child(userID).setValue(r);
+                mRate.setVisibility(View.INVISIBLE);
+                Toast.makeText(ProfesorContactoActivity.this,"Gracias",Toast.LENGTH_LONG);
             }
         });
 

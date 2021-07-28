@@ -8,11 +8,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
@@ -39,6 +43,7 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference mref;
     DatabaseReference mrefi;
+    DatabaseReference mRefRates;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,89 +55,64 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         mref = database.getReference().child("Analytics").child("Usr");
-        mrefi = database.getReference().child("Analytics").child("Int");
+        mrefi = database.getReference().child("Analytics").child("dailyUser");
+        mRefRates = database.getReference().child("tablaRating");
+        int[] r = new int[5];
 
 
 
-        LineChart ChartUsr = (LineChart) findViewById(R.id.chartUsr);
+
         LineChart ChartInt = (LineChart) findViewById(R.id.chartInt);
+        HorizontalBarChart barChart = (HorizontalBarChart) findViewById(R.id.chartRates);
 
-        List<Entry> entUsr1 = new ArrayList<>();
-        List<Entry> entUsr2 = new ArrayList<>();
-        List<Entry> entUsr3 = new ArrayList<>();
-        List<Long> entUsr1l = new ArrayList<>();
-        List<Long> entUsr2l = new ArrayList<>();
-        List<Long> entUsr3l = new ArrayList<>();
         List<Long> entIntl =  new ArrayList<>();
         List<Entry> entInt =  new ArrayList<>();
+        List<BarEntry> rates = new ArrayList<>();
 
 
-        /*entUsr1.add(new Entry(0,0));
-        entUsr2.add(new Entry(0,2));
-        entUsr3.add(new Entry(0,3));
-        entUsr1.add(new Entry(1,1));
-        entUsr2.add(new Entry(1,3));
-        entUsr3.add(new Entry(1,4));
-        entUsr1.add(new Entry(2,1));
-        entUsr2.add(new Entry(2,2));
-        entUsr3.add(new Entry(2,4));
-        entUsr1.add(new Entry(3,6));
-        entUsr2.add(new Entry(3,6));
-        entUsr3.add(new Entry(3,7));
-        */
-        ValueEventListener LoadData = new ValueEventListener() {
+        ValueEventListener LoadRates = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    entUsr1.clear();
-                    entUsr2.clear();
-                    entUsr3.clear();
-                    for(DataSnapshot usr:snapshot.getChildren()){
-                        Long msj = (Long)usr.child("dia1").getValue();
-                        entUsr1l.add(msj);
-                        msj = (Long)usr.child("dia7").getValue();
-                        entUsr2l.add(msj);
-                        msj = (Long)usr.child("dia28").getValue();
-                        entUsr3l.add(msj);
+                rates.clear();
+                for(DataSnapshot rts:snapshot.getChildren()){
+                    int usrRate = Integer.parseInt(rts.child("raten").getValue().toString());
+                    Toast.makeText(DashboardEstadisticasActivity.this,Integer.toString(usrRate),Toast.LENGTH_LONG);
+                    switch (usrRate){
+                        case 1:
+                            r[0]++;
+                            break;
+                        case 2:
+                            r[1]++;
+                            break;
+                        case 3:
+                            r[2]++;
+                            break;
+                        case 4:
+                            r[3]++;
+                            break;
+                        case 5:
+                            r[4]++;
+                            break;
                     }
-                    for(int i=0;i< entUsr1l.size();i++){
-                        //Toast.makeText(DashboardEstadisticasActivity.this, entUsr1l.get(i).toString()+","+entUsr2l.get(i).toString()+","+entUsr3l.get(i).toString(), Toast.LENGTH_LONG).show();
-                        entUsr1.add(new Entry(i,entUsr1l.get(i)));
-                        entUsr2.add(new Entry(i,entUsr2l.get(i)));
-                        entUsr3.add(new Entry(i,entUsr3l.get(i)));
+                    for(int i=0;i<r.length;i++){
+                        rates.add(new BarEntry((i+1),r[i]));
                     }
-                    LineDataSet datasetusr1 = new LineDataSet(entUsr1,"1 dia");
-                    datasetusr1.setColor(R.color.purple_700);
-                    datasetusr1.setAxisDependency(YAxis.AxisDependency.LEFT);
-                    LineDataSet datasetusr2 = new LineDataSet(entUsr2,"7 dias");
-                    datasetusr2.setColor(R.color.black);
-                    datasetusr2.setAxisDependency(YAxis.AxisDependency.LEFT);
-                    LineDataSet datasetusr3 = new LineDataSet(entUsr3,"28 dia");
-                    datasetusr3.setColor(R.color.teal_200);
-                    datasetusr3.setAxisDependency(YAxis.AxisDependency.LEFT);
-
-                    final String[] quarters = new String[] { "18 Jul", "19 Jul", "20 Jul", "21 Jul" };
-                    ValueFormatter formatter = new ValueFormatter() {
-                        @Override
-                        public String getAxisLabel(float value, AxisBase axis) {
-                            return quarters[(int) value];
-                        }
-                    };
-                    XAxis xAxis = ChartUsr.getXAxis();
-                    xAxis.setGranularity(1f); // minimum axis-step (interval) is 1
-                    xAxis.setValueFormatter(formatter);
-
-                    List<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
-                    dataSets.add(datasetusr1);
-                    dataSets.add(datasetusr2);
-                    dataSets.add(datasetusr3);
-                    LineData data = new LineData(dataSets);
-                    data.setDrawValues(true);
-                    Description des = new Description();
-                    des.setText("Usuarios Activos");
-                    ChartUsr.setDescription(des);
-                    ChartUsr.setData(data);
-                    ChartUsr.invalidate();
+                    BarDataSet barras = new BarDataSet(rates,"Rates");
+                    BarData data = new BarData(barras);
+                    barChart.setData(data);
+                    barChart.invalidate();
+                    XAxis xAxis = barChart.getXAxis();
+                    YAxis leftAxis = barChart.getAxisLeft();
+                    YAxis rightAxis = barChart.getAxisRight();
+                    rightAxis.setEnabled(false);
+                    xAxis.setEnabled(true);
+                    xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+                    xAxis.setDrawGridLines(false);
+                    xAxis.setAxisMinimum((float) 0.5);
+                    xAxis.setAxisMaximum((float) 5.5);
+                    xAxis.setLabelCount(5);
+                    leftAxis.setEnabled(false);
+                    barChart.setDrawValueAboveBar(true);
                 }
             }
 
@@ -141,6 +121,7 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
 
             }
         };
+
 
         ValueEventListener LoadInt = new ValueEventListener() {
             @Override
@@ -154,11 +135,10 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
                     for (int i = 0; i < entIntl.size(); i++) {
                         entInt.add(new Entry(i, entIntl.get(i)));
                     }
-                    LineDataSet datasetInt = new LineDataSet(entInt, "Promedio");
+                    LineDataSet datasetInt = new LineDataSet(entInt, "Usuarios");
                     datasetInt.setColor(R.color.purple_700);
                     datasetInt.setAxisDependency(YAxis.AxisDependency.LEFT);
-
-                    final String[] dates = new String[]{"13 Jul", "14 Jul", "15 Jul", "16 Jul", "17 Jul", "18 Jul", "19 Jul", "20 Jul", "21 Jul"};
+                    final String[] dates = new String[]{ "22 Jul", "23 Jul", "24 Jul", "25 Jul", "26 Jul", "27 Jul", "28 Jul"};
                     ValueFormatter formatter = new ValueFormatter() {
                         @Override
                         public String getAxisLabel(float value, AxisBase axis) {
@@ -168,10 +148,11 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
                     XAxis xAxis = ChartInt.getXAxis();
                     xAxis.setGranularity(1f); // minimum axis-step (interval) is 1
                     xAxis.setValueFormatter(formatter);
+
                     LineData data = new LineData(datasetInt);
                     data.setDrawValues(true);
                     Description des = new Description();
-                    des.setText("Eventos por usuario");
+                    des.setText("Sesiones iniciadas por dia");
                     ChartInt.setDescription(des);
                     ChartInt.setData(data);
                     ChartInt.invalidate();
@@ -183,8 +164,8 @@ public class DashboardEstadisticasActivity extends AppCompatActivity {
 
             }
         };
-        mref.addValueEventListener(LoadData);
         mrefi.addValueEventListener(LoadInt);
+        mRefRates.addValueEventListener(LoadRates);
 
 
     }

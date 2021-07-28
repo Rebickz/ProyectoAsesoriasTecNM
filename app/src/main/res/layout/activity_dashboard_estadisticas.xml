@@ -35,26 +35,34 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/interaccionUsuarios"
+                    android:text="@string/calificacionUsuarios"
                     android:textSize="20dp"
                     android:layout_margin="10dp"
                     />
-                <com.github.mikephil.charting.charts.LineChart
-                    android:id="@+id/chartInt"
+
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                    android:id="@+id/chartRates"
                     android:layout_width="match_parent"
-                    android:layout_height="221dp" />
+                    android:layout_height="117dp"
+                    android:paddingLeft="100dp"
+                    android:paddingRight="100dp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/usuariosActivos"
+                    android:text="@string/interaccionUsuarios"
                     android:textSize="20dp"
                     android:layout_margin="10dp"
                     />
 
                 <com.github.mikephil.charting.charts.LineChart
-                    android:id="@+id/chartUsr"
+                    android:id="@+id/chartInt"
                     android:layout_width="match_parent"
-                    android:layout_height="221dp" />
+                    android:layout_height="200dp" />
+
+
+
+
             </LinearLayout>
 
         </ScrollView>
