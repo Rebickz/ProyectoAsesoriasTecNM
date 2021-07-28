@@ -21,24 +21,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="4dp"
-            >
+            android:padding="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:background="@color/white"
-                >
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@color/purple_700"
-                    android:src="@drawable/tecnm"/>
+                    android:src="@drawable/tecnm" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="475dp"
+                    android:layout_height="468dp"
                     android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="20dp">
@@ -129,8 +128,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
-                        android:textSize="20sp"
                         android:text="Student"
+                        android:textSize="20sp"
                         app:layout_constraintLeft_toLeftOf="@+id/nameTitle"
                         app:layout_constraintTop_toBottomOf="@+id/lastNameTitle" />
 
@@ -139,24 +138,10 @@
                         android:layout_height="94dp">
 
                         <Button
-                            android:id="@+id/guardarPerfil"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="#1B396A"
-                            android:text="@string/Guardar"
-                            android:textColor="#ffff"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/signOut"
-                            app:layout_constraintHorizontal_bias="0.874"
-                            app:layout_constraintStart_toStartOf="parent"
-                            tools:ignore="MissingConstraints" />
-
-                        <Button
                             android:id="@+id/signOut"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
                             android:backgroundTint="#1B396A"
                             android:text="@string/cerrar_sesion"
                             android:textColor="@color/white"
@@ -165,14 +150,8 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             tools:ignore="MissingConstraints" />
-
-
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
                 </LinearLayout>
-
-
             </LinearLayout>
         </ScrollView>
 

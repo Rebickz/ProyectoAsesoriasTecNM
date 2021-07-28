@@ -13,7 +13,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     //Inicializar variable
     DrawerLayout drawerLayoutP;
-    Button btnUsers, btnMaterias,btnStatistics;
+    Button btnUsers, btnMaterias,btnStatistics, btnMensajes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
         btnStatistics =(Button) findViewById(R.id.Estadisticas);
         btnStatistics.setOnClickListener(this);
+
+        btnMensajes = (Button) findViewById(R.id.Mensajes);
+        btnMensajes.setOnClickListener(this);
 
         //Asignar la variable drawerLayout
         drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
@@ -47,6 +50,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 startActivity(new Intent(this,DashboardMateriaActivity.class));
                 break;
 
+            case R.id.Mensajes:
+                startActivity(new Intent(this,MensajesActivity.class));
+                break;
 
         }
     }

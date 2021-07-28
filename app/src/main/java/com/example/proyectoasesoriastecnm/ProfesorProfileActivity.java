@@ -49,7 +49,7 @@ public class ProfesorProfileActivity extends AppCompatActivity {
         });
 
         user = FirebaseAuth.getInstance().getCurrentUser(); //Referenciar al usuario logeado actualmente
-        reference = FirebaseDatabase.getInstance().getReference("Users"); //Referenciar la tabla
+        reference = FirebaseDatabase.getInstance().getReference("tablaUsuarios"); //Referenciar la tabla
         userID = user.getUid(); //Obtener Unique ID
 
         //Crear TextView Objects con final

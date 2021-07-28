@@ -71,7 +71,16 @@
                     android:layout_weight="1"
                     />
 
-
+                <Button
+                    android:text="@string/mensajes"
+                    android:drawableTop="@drawable/ic__messages"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:id="@+id/Mensajes"
+                    android:layout_weight="1"
+                    />
 
 
             </LinearLayout>

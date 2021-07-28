@@ -29,52 +29,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfesorCitasActivity extends AppCompatActivity {
-    /*DrawerLayout drawerLayoutP;
-    ListView myListView;
-    ArrayList<String> myArrayList;
-    ArrayAdapter<String> adapter;
-    FirebaseDatabase database;
-    DatabaseReference mref;
-    Cita cita;
-
-    private FirebaseUser user;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profesor_citas);
-
-        //Asignar la variable drawerLayout
-        drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
-
-        cita = new Cita();
-        myListView = (ListView) findViewById(R.id.ListViewMaterias);
-        database = FirebaseDatabase.getInstance();
-        mref = database.getReference("tablaCitas");
-
-        myArrayList = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this, R.layout.profesor_cita_info,R.id.Profesornombre_cita, myArrayList);
-
-        mref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                for(DataSnapshot ds: snapshot.getChildren())
-                {
-                    cita = ds.getValue(Cita.class);
-                    myArrayList.add("Datos cita" + "\n" + cita.getMateria().toString() + "\n" + cita.getProfesor() + "\n" + cita.getHorario() + "\n" +  cita.getStatus());
-                }
-
-                myListView.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
-
-            }
-        });
-
-
-    }*/
 
     DrawerLayout drawerLayoutP;
     ListView myListView;
@@ -84,9 +38,15 @@ public class ProfesorCitasActivity extends AppCompatActivity {
     DatabaseReference mref;
     Cita materia;
     Cita materiaSelected;
+    Usuario usuario;
 
-    private FirebaseUser user;
-
+    //FILTRO
+    FirebaseUser user;
+    DatabaseReference uref;
+    String userID;
+    String profesorU;
+    String profesorM;
+    //FILTRO
 
     private List<Cita> listMateria = new ArrayList<Cita>();
 
@@ -95,14 +55,6 @@ public class ProfesorCitasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profesor_citas);
-
-        //SE AGREGA SHIMMER
-        /*ShimmerFrameLayout container =
-                (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
-        container.startShimmer(); // If auto-start is set to false
-        */
-
-
         drawerLayoutP = findViewById(R.id.profesor_drawer_layout);
 
         materia = new Cita();
@@ -110,27 +62,56 @@ public class ProfesorCitasActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         mref = database.getReference("tablaCitas");
 
+        //FILTRO
+        user = FirebaseAuth.getInstance().getCurrentUser(); //Referenciar al usuario logeado actualmente
+        uref = FirebaseDatabase.getInstance().getReference("tablaUsuarios"); //Referenciar la tabla
+        userID = user.getUid(); //Obtener Unique ID
+
+        uref.child(userID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                profesorU = "";
+                User userProfile = snapshot.getValue(User.class);
+
+                if(userProfile != null){
+                    profesorU = userProfile.name+" "+userProfile.lastName;
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(ProfesorCitasActivity.this, "Ocurrió un error al cargar los datos",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        //FILTRO
+
+
+
         myArrayList = new ArrayList<Cita>();
-        //adapter = new ArrayAdapter<String>(this, R.layout.materia_info,R.id.nombre_materia, myArrayList);
         adapter = new ArrayAdapter<Cita>(ProfesorCitasActivity.this, android.R.layout.simple_list_item_1, myArrayList);
+
         mref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                profesorM="";
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
+                    Cita materia = ds.getValue(Cita.class);
+
+                    profesorM = materia.getProfesor(); //
+
                     materia = ds.getValue(Cita.class);
                     //myArrayList.add(materia.getNombre() + "\n" + materia.getHorario() + "\n" + materia.getProfesor()+ "\n"+ materia.getDepartamento()+ "\n"+ materia.getLugar());
-                    myArrayList.add(materia);
+                    //IF materia
+                    if(profesorM.equals(profesorU)){
+                        myArrayList.add(materia);
+                    }
+
+                    //
+
                 }
 
-                /*final Handler handler = new Handler(Looper.getMainLooper());
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        //Do something after 100ms
-                        container.hideShimmer();
-                    }
-                }, 500);*/
                 myListView.setAdapter(adapter);
 
 
@@ -143,9 +124,6 @@ public class ProfesorCitasActivity extends AppCompatActivity {
         });
 
         //***********************INICIA ON CLICK LISTENER//***********************
-
-
-
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

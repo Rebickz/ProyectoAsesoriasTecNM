@@ -38,7 +38,13 @@ public class CitasV2 extends AppCompatActivity {
     Cita cita;
     Cita citaSelected;
 
-    private FirebaseUser user;
+    //FILTRO
+    FirebaseUser user;
+    DatabaseReference uref;
+    String userID;
+    String emailU;
+    String emailM;
+    //FILTRO
 
 
     @Override
@@ -57,17 +63,53 @@ public class CitasV2 extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         mref = database.getReference("tablaCitas");
 
+        //FILTRO
+        user = FirebaseAuth.getInstance().getCurrentUser(); //Referenciar al usuario logeado actualmente
+        uref = FirebaseDatabase.getInstance().getReference("tablaUsuarios"); //Referenciar la tabla
+        userID = user.getUid(); //Obtener Unique ID
+
+        uref.child(userID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                emailU = "";
+                User userProfile = snapshot.getValue(User.class);
+
+                if(userProfile != null){
+                    emailU = userProfile.email;
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(CitasV2.this, "Ocurrió un error al cargar los datos",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        //FILTRO
+
         myArrayList = new ArrayList<>();
         adapter = new ArrayAdapter<Cita>(CitasV2.this, android.R.layout.simple_list_item_1, myArrayList);
 
         mref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                emailM="";
                 for(DataSnapshot ds: snapshot.getChildren())
                 {
-                    cita = ds.getValue(Cita.class);
-                    //myArrayList.add("Datos cita" + "\n" + cita.getMateria().toString() + "\n" + cita.getProfesor() + "\n" + cita.getHorario() + "\n" +  cita.getStatus());
-                    myArrayList.add(cita);
+                    Cita materia = ds.getValue(Cita.class);
+
+                    emailM = materia.getEmail(); //
+                    Toast.makeText(CitasV2.this, emailM + " " + emailU, Toast.LENGTH_LONG).show();
+
+                    materia = ds.getValue(Cita.class);
+                    //myArrayList.add(materia.getNombre() + "\n" + materia.getHorario() + "\n" + materia.getProfesor()+ "\n"+ materia.getDepartamento()+ "\n"+ materia.getLugar());
+                    //IF materia
+                    if(emailM.equals(emailU)){
+                        myArrayList.add(materia);
+                    }
+
+                    //
+
                 }
 
                 final Handler handler = new Handler(Looper.getMainLooper());

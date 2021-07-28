@@ -139,21 +139,6 @@
                         android:layout_height="94dp">
 
                         <Button
-                            android:id="@+id/guardarPerfil"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="#1B396A"
-                            android:text="@string/Guardar"
-                            android:textColor="#ffff"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/signOut"
-                            app:layout_constraintHorizontal_bias="0.874"
-                            app:layout_constraintStart_toStartOf="parent"
-                            tools:ignore="MissingConstraints" />
-
-                        <Button
                             android:id="@+id/signOut"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -34,6 +36,9 @@ public class ContactoActivity extends AppCompatActivity {
     FirebaseDatabase database;
     private DatabaseReference mRef;
     private String userID;
+    TextInputEditText contactmssg;
+
+
 
 
     @Override
@@ -42,6 +47,12 @@ public class ContactoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contacto);
         drawerLayout = findViewById(R.id.drawer_layout);
 
+        contactmssg = (TextInputEditText) findViewById(R.id.CommentEdit_Text);
+
+
+
+
+;
         mStarts = (RatingBar) findViewById(R.id.stars);
         mSubmitRate= (Button) findViewById(R.id.submit_rate);
         mRate = (LinearLayout) findViewById(R.id.rate);
@@ -155,6 +166,34 @@ public class ContactoActivity extends AppCompatActivity {
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
     }
+
+    public void ClickButton(View View){
+
+        String mensaje_cont = contactmssg.getText().toString().trim();
+        iniciarFirebase();
+
+        Mensaje mensaje = new Mensaje();
+
+        mensaje.setMensaje(mensaje_cont);
+        mensaje.setUid(user.getUid());
+        mensaje.setEmail(user.getEmail());
+
+        mRef.child("tablaMensajes").child(mensaje.getUid()).setValue(mensaje);
+
+        Toast.makeText(this, R.string.mensaje_contacto, Toast.LENGTH_LONG).show();
+        MenuActivity.redirectActivity(this,MenuActivity.class);
+
+    }
+
+    private void iniciarFirebase() {
+        FirebaseApp.initializeApp(this);
+        database = FirebaseDatabase.getInstance();
+        mRef = database.getReference();
+    }
+
+
+
+
 }
 class rate{
 
