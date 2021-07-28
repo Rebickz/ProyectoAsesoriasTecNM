@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.proyectoasesoriastecnm">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
     <application
         android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
@@ -11,7 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoAsesoriasTecNM"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MensajesActivity"></activity>
+        <activity android:name=".PreguntaDosP"></activity>
+        <activity android:name=".PreguntaDos" />
+        <activity android:name=".PreguntaUnoP" />
+        <activity android:name=".PreguntaUno" />
+        <activity android:name=".MensajesActivity" />
         <activity android:name=".Huella" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".ProfesorContactoActivity" />
@@ -20,15 +28,15 @@
         <activity
             android:name=".DashboardMateriaActivity"
             android:parentActivityName=".DashboardActivity"
-            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar"></activity>
+            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar" />
         <activity
             android:name=".DashboardUsuarioActivity"
             android:parentActivityName=".DashboardActivity"
-            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar"></activity>
+            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar" />
         <activity
             android:name=".DashboardEstadisticasActivity"
             android:parentActivityName=".DashboardActivity"
-            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar"></activity>
+            android:theme="@style/Theme.ProyectoAsesoriasTecNMActionBar" />
         <activity android:name=".ContactoActivity" />
         <activity android:name=".AyudaActivity" />
         <activity android:name=".ProfesorDetalleCitaActivity" />
@@ -62,9 +70,5 @@
             </intent-filter>
         </service>
     </application>
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
 </manifest>
