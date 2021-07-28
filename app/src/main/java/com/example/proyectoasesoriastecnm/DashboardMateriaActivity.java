@@ -82,7 +82,12 @@ public class DashboardMateriaActivity extends AppCompatActivity {
                 nomMateria.setText(materiaSelected.getNombre());
                 semMateria.setText(materiaSelected.getSemestre());
                 carreraMateria.setText(materiaSelected.getCarrera());
+                dptoMateria.setText(materiaSelected.getDepartamento());
+                lugarMateria.setText(materiaSelected.getLugar());
+                profesorMateria.setText(materiaSelected.getProfesor());
+                fechaMateria.setText(materiaSelected.getFecha());
                 horaInicioMateria.setText(materiaSelected.getHorario());
+                horaFinMateria.setText(materiaSelected.getHorario());
             }
         });
         //TERMINA CRUD
@@ -263,9 +268,9 @@ public class DashboardMateriaActivity extends AppCompatActivity {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                 if(minute<10){
-                    horaInicioMateria.setText(hourOfDay + ":0" +minute);
+                    horaFinMateria.setText(hourOfDay + ":0" +minute);
                 }else{
-                    horaInicioMateria.setText(hourOfDay + ":" +minute);
+                    horaFinMateria.setText(hourOfDay + ":" +minute);
                 }
             }
         }, hora, minutos,false);
