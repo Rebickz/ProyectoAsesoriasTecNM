@@ -67,7 +67,7 @@ public class ProfesorCitasActivity extends AppCompatActivity {
         uref = FirebaseDatabase.getInstance().getReference("tablaUsuarios"); //Referenciar la tabla
         userID = user.getUid(); //Obtener Unique ID
 
-        uref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+        uref.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 profesorU = "";
