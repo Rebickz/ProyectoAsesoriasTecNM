@@ -190,8 +190,38 @@ public class ProfesorContactoActivity extends AppCompatActivity {
         mRef = database.getReference();
     }
 
+}
 
+class rateP{
 
+    String raten;
+    String uid;
 
+    public String getUid() {
+        return uid;
+    }
+    public String getRaten() {
+        return raten;
+    }
 
+    public void setRaten(String raten) {
+        this.raten = raten;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public rateP(String raten, String uid){
+        this.raten = raten;
+        this.uid = uid;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "raten='" + raten + '\'' +
+                ", uid='" + uid + '\'' +
+                '}';
+    }
 }

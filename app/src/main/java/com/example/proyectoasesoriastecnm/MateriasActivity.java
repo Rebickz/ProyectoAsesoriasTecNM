@@ -113,7 +113,7 @@ public class MateriasActivity extends AppCompatActivity {
                 user = FirebaseAuth.getInstance().getCurrentUser();
                 Intent intent = new Intent(MateriasActivity.this, CitaActivity.class);
                 materiaSelected = (Materia) adapterView.getItemAtPosition(i);
-                intent.putExtra("carrera", myListView.getItemAtPosition(i).toString());
+                intent.putExtra("carrera", materiaSelected.getCarrera());
                 intent.putExtra("dato", user.getEmail());
                 intent.putExtra("fecha", materiaSelected.getFecha());
                 intent.putExtra("horaAgendada", materiaSelected.getHorario().toString());
