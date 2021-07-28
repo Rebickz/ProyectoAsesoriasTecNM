@@ -77,6 +77,8 @@ public class ProfesorAyudaActivity extends AppCompatActivity {
     }
 
     public void preguntaDos(View view) {
+        Intent intent = new Intent(ProfesorAyudaActivity.this, PreguntaDosP.class);
+        startActivity(intent);
     }
 
 

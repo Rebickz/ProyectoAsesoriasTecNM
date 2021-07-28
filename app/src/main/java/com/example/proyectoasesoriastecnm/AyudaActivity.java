@@ -3,6 +3,7 @@ package com.example.proyectoasesoriastecnm;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -72,5 +73,21 @@ public class AyudaActivity extends AppCompatActivity {
         super.onPause();
         //Cerrar drawer
         MenuActivity.closeDrawer(drawerLayout);
+    }
+
+    public void preguntaUno(View view) {
+        Intent intent = new Intent(AyudaActivity.this, PreguntaUno.class);
+        startActivity(intent);
+    }
+
+    public void preguntaDos(View view) {
+        Intent intent = new Intent(AyudaActivity.this, PreguntaDos.class);
+        startActivity(intent);
+    }
+
+
+    public void btnContacto(View view) {
+        Intent intent = new Intent(AyudaActivity.this, ContactoActivity.class);
+        startActivity(intent);
     }
 }

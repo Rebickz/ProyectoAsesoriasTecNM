@@ -91,6 +91,13 @@
     <!--AYUDA-->
     <string name="preguntasFrecuentes">FAQ</string>
     <string name="pregunta1">How can I schedule an appointment?</string>
+    <string name="p1p1">First, you have to make sure if there is a FAQ that can solve your question or problem. To do this, you must enter the Menu, then click down to "Help" and search for the question or problem you have.</string>
+    <string name="p1p2">In case you do not find any question that can solve your problem, the next step is to go to the contact button in the same activity. Another method to access this part is to go to the menu and click on the "Contact" option.</string>
+    <string name="p1p3">Once inside this part, you will have the options of contacting some of the methods shown or sending a personalized message within the application. Once you send this message, a coordinator will contact you.</string>
+    <string name="p2p1">In order to schedule an appointment, you need to go to the Menu, then click on Schedule, once inside, you will see a list of subjects, of which, by clicking on any of them, you will see a list of the subjects offered for that career.</string>
+    <string name="p2p2">Once you click on a subject that interests you, you will be sent to another activity, where you will be able to see the details of the appointment, in case you want to take it, click on the button to request it.</string>
+    <string name="p2p3">Once you have scheduled your counseling, you will have to go to the appointments option, within the menu, to verify that your subject has been uploaded. Remember that at the end of each counseling you must scan the QR code that your teacher will provide you with, this is done by accessing the appointment.</string>
+
     <string name="pregunta2">How do I file a complaint?</string>
     <string name="pregunta3">How do I know if a student is attending? </string>
     <string name="pregunta4">How can I cancel an assessment? </string>

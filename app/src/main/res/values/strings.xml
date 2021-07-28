@@ -90,6 +90,12 @@
     <!--AYUDA-->
     <string name="preguntasFrecuentes">Preguntas frecuentes</string>
     <string name="pregunta1">¿Como puedo agendar una cita?</string>
+    <string name="p1p1">Primero, hay que asegurarse si existe alguna pregunta frecuente que pueda resolver tu duda o tu problema. Para ello, debes de entrar al Menu, después dar clic hasta abajo en "Ayuda" y buscar la pregunta o problema que tengas.</string>
+    <string name="p1p2">En caso de no encontrar ninguna pregunta que pueda dar solución a tu problema, lo que sigue es en esa misma actividad, ir al boton de contacto. Otro metodo para acceder a esta parte, es ir al menu y dar clic en la opcion de "Contacto".</string>
+    <string name="p1p3">Una vez dentro de esta parte, tendrás las opciones de ponerte en contacto con algunos de los metodos que se muestran o enviar un mensaje personalizado dentro de la aplicacion. Una vez que envies este mensaje, un coordinador se pondrá en contacto contigo.</string>
+    <string name="p2p1">Para poder agendar una cita, es necesario que vayas al Menu, después de  eso dar clic en Agendar, una vez dentro, te aparecerán una lista de materias, de las cuales, al dar clic en alguna, se te van a listar las materias que se ofertan para dicha carrera.</string>
+    <string name="p2p2">Una vez que des clic en alguna materia que te interese, se te mandará a otra actividad, en la cual podrás ver los detalles de la cita, en caso de querer tomarla, darás clic en el boton para solicitar dicha asesoría.</string>
+    <string name="p2p3">Una vez agendada tu asesoría, tendrás que ir a la opcion de citas, dentro del menu, para poder verificar que se te haya cargado tu materia. Recuerda que al final de cada asesoría debes de escanear el codigo QR que tu profesor te va a brindar, eso se logra accediendo a la cita.</string>
     <string name="pregunta2">¿Como puedo presentar una queja?</string>
     <string name="pregunta3">¿Como saber si un alumno asiste?</string>
     <string name="pregunta4">¿Cómo puedo dar de baja una asesoria?</string>
