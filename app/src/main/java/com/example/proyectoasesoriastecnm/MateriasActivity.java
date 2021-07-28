@@ -49,7 +49,7 @@ public class MateriasActivity extends AppCompatActivity {
 
 
     private List<Materia> listMateria = new ArrayList<Materia>();
-
+    String carrera;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +70,13 @@ public class MateriasActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         mref = database.getReference("tablaMaterias");
 
+        // Filtro por carrera
+
+        carrera = getIntent().getStringExtra("carrera");
+
+
+
+
         myArrayList = new ArrayList<Materia>();
         //adapter = new ArrayAdapter<String>(this, R.layout.materia_info,R.id.nombre_materia, myArrayList);
         adapter = new ArrayAdapter<Materia>(MateriasActivity.this, android.R.layout.simple_list_item_1, myArrayList);
@@ -81,7 +88,9 @@ public class MateriasActivity extends AppCompatActivity {
                 {
                     materia = ds.getValue(Materia.class);
                     //myArrayList.add(materia.getNombre() + "\n" + materia.getHorario() + "\n" + materia.getProfesor()+ "\n"+ materia.getDepartamento()+ "\n"+ materia.getLugar());
-                    myArrayList.add(materia);
+                    if(carrera.equals(materia.getCarrera())) {
+                        myArrayList.add(materia);
+                    }
                 }
 
                 final Handler handler = new Handler(Looper.getMainLooper());

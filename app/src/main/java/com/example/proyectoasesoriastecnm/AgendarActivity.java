@@ -37,50 +37,72 @@ public class AgendarActivity extends AppCompatActivity {
 
     public  void  ClickElec(View view){
 
-        MenuActivity.redirectActivity(this,MateriasActivity.class);
+        Intent i = new Intent( this, MateriasActivity.class);
+        i.putExtra("carrera", "Electronica");
+        startActivity(i);
+        //MenuActivity.redirectActivity(this,MateriasActivity.class);
 
     }
 
     public  void  ClickGestion(View view){
 
-        MenuActivity.redirectActivity(this,MateriasActivity.class);
+        Intent i = new Intent( this, MateriasActivity.class);
+        i.putExtra("carrera", "Gestion Empresarial");
+        startActivity(i);
+        //MenuActivity.redirectActivity(this,MateriasActivity.class);
 
     }
 
     public  void  ClickIndustrial(View view){
 
-        MenuActivity.redirectActivity(this,MateriasActivity.class);
+        Intent i = new Intent( this, MateriasActivity.class);
+        i.putExtra("carrera", "Ing Industrial");
+        startActivity(i);
+        //MenuActivity.redirectActivity(this,MateriasActivity.class);
 
     }
 
     public  void  ClickTics(View view){
 
-        MenuActivity.redirectActivity(this,MateriasActivity.class);
-
+        Intent i = new Intent( this, MateriasActivity.class);
+        i.putExtra("carrera", "TICS");
+        startActivity(i);
+        //MenuActivity.redirectActivity(this,MateriasActivity.class);
     }
 
     public  void  ClickAdminI(View view){
 
-        MenuActivity.redirectActivity(this,MateriasActivity.class);
+        Intent i = new Intent( this, MateriasActivity.class);
+        i.putExtra("carrera", "Administracion");
+        startActivity(i);
+        //MenuActivity.redirectActivity(this,MateriasActivity.class);
 
     }
 
     public  void  ClickMateriales(View view){
 
-        MenuActivity.redirectActivity(this,MateriasActivity.class);
+        Intent i = new Intent( this, MateriasActivity.class);
+        i.putExtra("carrera", "Ing Materiales");
+        startActivity(i);
+        //MenuActivity.redirectActivity(this,MateriasActivity.class);
 
     }
 
     public  void  ClickMecanica(View view){
 
-        MenuActivity.redirectActivity(this,MateriasActivity.class);
+        Intent i = new Intent( this, MateriasActivity.class);
+        i.putExtra("carrera", "Ing Mecanica");
+        startActivity(i);
+        //MenuActivity.redirectActivity(this,MateriasActivity.class);
 
     }
 
     public  void  ClickQuimica(View view){
 
-        MenuActivity.redirectActivity(this,MateriasActivity.class);
-
+        Intent i = new Intent( this, MateriasActivity.class);
+        i.putExtra("carrera", "Ing Quimica");
+        startActivity(i);
+        //MenuActivity.redirectActivity(this,MateriasActivity.class);
     }
 
 
